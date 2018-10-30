@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Subscriptions</title>
+    <title>Log in</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,900" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 </head>
 
 <body>
     <div data-navigation="home"></div>
     <header>
-        <div class="container">
-            <!-- <div class="mobile-header">
+        <!-- <div class="container"> -->
+        <!-- <div class="mobile-header">
                 <a href="#home" class="logo" data-navigation-link="home"><img src="img/icons/Logo_Ex2_180_180.svg"></a>
                 <div class="hamburger" data-burger>
                     <span></span>
@@ -40,168 +41,65 @@
                     </ul>
                 </div>
             </div> -->
-            <a href="#home" class="logo" data-navigation-link="home"><img src="img/icons/Logo_Ex2_180_180.svg"></a>
-            <nav>
-                <ul class="header-menu">
-                    <li class="header-menu-item" data-navigation-link="team"><a href="#team">about</a></li>
-                    <li class="header-menu-item" data-navigation-link="about"><a href="#features">skills</a></li>
-                    <li class="header-menu-item" data-navigation-link="roadmap"><a href="#feedback">roadmap</a></li>
-                    <li class="header-menu-item" data-navigation-link="accessible"><a href="#accessible">create platform</a></li>
-                    <li class="header-menu-item" data-navigation-link="accessible"><a href="#accessible">team</a></li>
-                    <li class="header-menu-item" data-navigation-link="accessible"><a href="#accessible">blog</a></li>
-                    <li class="header-menu-item" data-navigation-link="accessible"><a href="#accessible">contact</a></li>
-                </ul>
-                <ul class="header-menu">
-                    <li class="header-menu-item">
-                        <a href="" class="js-popup" data-modal="sign-in">log in</a>
-                    </li>
-                    <li class="header-menu-item">
-                        <a href="#" class="js-popup" data-modal="sign-up">
-                            <button class="btn btn-green">sign in</button>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <a href="index.html" class="logo"><img src="img/logo.svg"></a>
+        <nav>
+            <ul class="header-menu">
+                <li class="header-menu-item"><a href="index.html#about">about</a></li>
+                <li class="header-menu-item"><a href="index.html#skills">skills</a></li>
+                <li class="header-menu-item"><a href="index.html#roadmap">roadmap</a></li>
+                <li class="header-menu-item"><a href="index.html#create-platform">create platform</a></li>
+                <li class="header-menu-item"><a href="index.html#team">team</a></li>
+                <li class="header-menu-item"><a href="">blog</a></li>
+                <li class="header-menu-item"><a href="index.html#contact">contact</a></li>
+            </ul>
+            <ul class="header-menu">
+                <li class="header-menu-item active">
+                    <a href="login.html" class="js-popup">log in</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="signup.html" class="js-popup">sign up</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- </div> -->
     </header>
     <main>
-        <div>LOG IN
-        <img src="" alt="">
-        </div>
-
-        <div>
-            <button>log in</button><button>sign in</button>
-            <form action="">
-                <input type="text">
-                <input type="text">
-                <button>Log in</button>
+    <div class="login-section">          
+        <div class="form-block">                    
+            <div class="form-block__bg" style="background: url(img/sign-up.jpeg)"><span class="form-block__bg_text">LOG <br>IN</span></div>
+            <form action="" class="form" id="login-form"  novalidate="">
+                <ul class="form-block__tabs">
+                    <li class="active"><a href="login.html">log in</a></li>
+                    <li><a href="signup.html">sign up</a></li>
+                </ul>
+                <input type="email" class="input" placeholder="Email" required data-pattern="email" name="email" data-error-msg="Email is invalid">
+                <input type="password" class="input" placeholder="Password" required data-pattern="password"  name="password" data-error-msg="Password is invalid (Minimum 7 characters)">
+                <button class="btn">Log in</button>
             </form>
         </div>
+    </div>
     </main>
-
-
-    <footer class="flex j-c-s-b a-i-c">
-        <div class="container">
-            <div class="footer-socials">
-                <a href=""><img src="img/icons/FB_footer.svg" alt=""></a>
-                <a href=""><img src="img/icons/twitter_footer.svg" alt=""></a>
-                <a href=""><img src="img/icons/telegram_footer.svg" alt=""></a>
-            </div>
-            <div class="copyright">© Exchange2.net 2018</div>
+    <footer class="footer">
+        <div class="footer-socials">
+            <a href=""><img src="img/facebook.svg" alt=""></a>
+            <a href=""><img src="img/twitter.svg" alt=""></a>
+            <a href=""><img src="img/telegram.svg" alt=""></a>
         </div>
+        <div class="scroll-down">
+            <img src="img/noun_Mouse_744299.svg" alt="">
+        </div>
+        <div class="copyright">© Exchange2.net 2018</div>
+
+      
+        <a href="" class="create-trading-btn">Create Trading Platform</a>
+    
     </footer>
-    <div class="modal-overlay" id="modal-overlay"></div>
-    <div class="modal" data-modal="sign-in">
-        <div class="modal-body">
-            <div class="modal-logo"><img class="modal-logo" src="img/icons/Logo_Ex2_180_180.svg"></div>
-                <div class="js-close-modal modal__close"></div>
-                <div class="modal-line-text"><span>LOG IN</span></div>
-                <form novalidate>
-                    <div class="modal-text">Please check that you are visiting <a href="">https://www.exchange2.net</a></div>
-                    <div class="modal-input-link">
-                        <div class="modal-input-link-icon"><img src="img/padlock.svg" alt=""></div><span><b>https:</b>//www.exchange2.net</span></div>
-                </form>
-                <div class="modal-line-text"></div>
-                <form id="sign-in-form" novalidate>
-                    <div class="modal-label">Email</div>
-                    <div class="modal-input">
-                        <input type="text" placeholder="Email" required data-pattern="email">
-                    </div>
-                    <div class="modal-label">Password</div>
-                    <div class="modal-input">
-                        <input type="password" placeholder="Password" required data-pattern="password">
-                    </div>
-                    <div class="modal-link">forgot password?</div>
-                    <button class="btn">LOG IN</button>
-                    <div class="modal-bottom-text">Not on Exchange#2 yet? <span class="modal-link js-popup" data-modal="sign-up">register</span></div>
-                </form>
-            </div>
-        </div>
-        <div class="modal" data-modal="sign-up">
-            <div class="modal-body">
-                <div class="js-close-modal modal__close"></div>
-                <div class="modal-logo"><img class="modal-logo" src="img/icons/Logo_Ex2_180_180.svg"></div>
-                    <div class="modal-line-text"><span>Create your account now</span></div>
-                    <form id="sign-up-form" novalidate>
-                        <div class="js-close-modal modal__close"></div>
-                        <div class="modal-label">Login</div>
-                        <div class="modal-input">
-                            <input type="text" placeholder="Login" required data-pattern="login">
-                        </div>
-                        <div class="modal-label">Email</div>
-                        <div class="modal-input">
-                            <input type="text" placeholder="Provide an active address" required data-pattern="email">
-                        </div>
-                        <div class="modal-label">Password</div>
-                        <div class="modal-input">
-                            <input type="password" placeholder="Minimum 7 characters" required data-pattern="password">
-                        </div>
-                        <div class="modal-label">Confirm Password</div>
-                        <div class="modal-input">
-                            <input type="text" placeholder="Passwords must match" required data-pass-confirm="true">
-                        </div>
-                        <label class="modal-checkbox">
-                            <input type="checkbox" data-pattern="checkbox" reuired data-pattern="checkbox">
-                            <div class="modal-checkbox-icon"></div>
-                            I agree with service <a href="">Terms &amp; Conditions</a>
-                        </label>
-                        <button class="btn">REGISTER</button>
-                        <div class="modal-bottom-text">Already have an account?<span class="modal-link js-popup" data-modal="sign-in">LOG IN</span></div>
-                    </form>
-                </div>
-            </div>
-            <div class="modal" data-modal="thank-you">
-                <div class="modal-body">
-                    <div class="js-close-modal modal__close"></div>
-                    <div class="thank-you">
-                        <img class="modal-img" src="img/png/Like.png" alt="">
-                        <div class="thank-you__title">thank you!</div>
-                        <div class="thank-you__text">We are grateful for your interest in our project. We will keep you in touch of our success. We won`t bother you and spam your email!)) You will definitely get early access to our platform! In the meantime, subscribe to our social networking pages:</div>
-                        <div class="socials">
-                            <div class="socials__item"><a href="" target="_blank"><img src="img/icons/Icons/Facebook.svg" alt=""></a></div>
-                            <div class="socials__item"><a href="" target="_blank"><img src="img/icons/Icons/Twitter.svg" alt=""></a></div>
-                            <div class="socials__item"><a href="" target="_blank"><img src="img/icons/Icons/Telegram.svg" alt=""></a></div>
-                            <div class="socials__item"><a href="" target="_blank"><img src="img/icons/Icons/Bitcoin.svg" alt=""></a></div>
-                            <div class="socials__item"><a href="" target="_blank"><img src="img/icons/Icons/Medium.svg" alt=""></a></div>
-                            <div class="socials__item"><a href="" target="_blank"><img src="img/icons/Icons/Instagram.svg" alt=""></a></div>
-                            <div class="socials__item"><a href="" target="_blank"><img src="img/icons/Icons/Youtube.svg" alt=""></a></div>
-                            <div class="socials__item"><a href="" target="_blank"><img src="img/icons/Icons/Reddit.svg" alt=""></a></div>
-                            <div class="socials__item"><a href="" target="_blank"><img src="img/icons/Icons/LinkedIN.svg" alt=""></a></div>
-                            <div class="socials__item"><a href="" target="_blank"><img src="img/icons/Icons/Github.svg" alt=""></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal" data-modal="be-first">
-                <div class="modal-body">
-                    <div class="js-close-modal modal__close"></div>
-                    <div class="thank-you">
-                        <div class="be-first__text">
-                            <b>Be first!</b>
-                            <br> Be the ambulant of crypto-exchange no.2
-                            <br> and <b>get 100 tokens</b> in one click
-                        </div>
-                        <img class="modal-img" src="img/png/hands_1.png" alt="">
-                        <form novalidate class="js-email-form">
-                            <div class="input">
-                                <input type="text" required data-pattern="email">
-                                <button class="btn">
-                                    Join Now
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="modal" data-modal="video">
-                <div class="modal-body">
-                    <div class="js-close-modal modal__close"></div>
-                    <iframe src="https://www.youtube.com/embed/-rKwPblSdQA"></iframe>
-                </div>
-            </div>
-            <script src="js/jquery-3.3.1.min.js"></script>
-            <script src="js/jquery.easeScroll.js"></script>
-            <script src="js/all.js"></script>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- <script src="js/jquery.easeScroll.js"></script> -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/all.js"></script>
 </body>
 
 </html>

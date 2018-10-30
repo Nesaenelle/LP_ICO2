@@ -1,36 +1,37 @@
 header {
-    height: 67px; // border-bottom: 1px solid #ccc;
+    // height: 100px; // border-bottom: 1px solid #ccc;
     position: fixed;
-    top: 40px;
+    top: 0px;
     left: 0;
-    width: 100%; // background: #fff;
+    width: 100%; 
+    background: #fff;
     z-index: 100;
-    .container {
+    height: 89px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 100%;
-    }
+        box-shadow: 0 0px 10px -1px rgba(0, 0, 0, 0.2);
+
     .logo {
-        width: 120px;
+        width: 88px;
         font-size: 0;
         position: relative;
-        top: 8px;
+        // top: 0;
+        // left: 0;
         img {
-            border-radius: 100%;
-            box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+            // box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
             width: 100%;
         }
     }
     nav {
         height: 100%;
         display: flex;
-        background: #516173;
+        // background: #516173;
         width: 70%;
         border-radius: 4px;
         justify-content: space-between;
         padding: 0 20px 0 30px;
-        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+        // box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
     }
     .header-menu {
         display: flex;
@@ -62,14 +63,14 @@ header {
             height: 100%;
 
             a {
-                color: #b0b0b1;
+                color: #000;
                 height: 100%;
                 font-family: Helvetica;
                 font-size: 14px;
                 letter-spacing: 0.5px;
-                color: #ffffff;
                 display: flex;
                 align-items: center;
+                font-weight: bold;
                 white-space: nowrap;
             }
 
@@ -82,16 +83,19 @@ header {
                 letter-spacing: 0.7px;
             }
             &.active {
-                a {
-                    // color: #354052;
-                    // font-weight: 600;
-                    color: #39b54a;
-                }
+                // a {
+                //     // color: #354052;
+                //     // font-weight: 600;
+                //     color: #39b54a;
+                // }
                 &:after {
-                    border-bottom: 3px solid $c-green;
+                    // border-bottom: 3px solid $c-green;
                     position: absolute;
                     content: '';
-                    bottom: 0;
+                    margin-top: 13px;
+                    left: 0;
+                    height: 4px;
+                    background-color: #56a54b;
                     width: 100%;
                 }
             }
@@ -184,7 +188,7 @@ header {
         transition: 0.2s;
         box-shadow: 0 0 30px -5px #000;
         &__close {
-            background: url(img/icons/icon/close.svg) no-repeat;
+            // background: url(img/icons/icon/close.svg) no-repeat;
             background-size: cover;
             position: absolute;
             right: 15px;
