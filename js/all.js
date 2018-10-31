@@ -403,51 +403,126 @@
 
     NES_API.add('navigation', {
         constructor: function() {
-            var self = this;
-            this.tabs = $.findAll('[data-navigation]');
+            // var self = this;
+            // this.tabs = $.findAll('[data-navigation]');
 
-            self.check();
-            window.addEventListener('scroll', function() {
-                self.check();
-            }, false);
-
+            // self.check();
+            // window.addEventListener('scroll', function() {
+            //     self.check();
+            // }, false);
+            var links = $.findAll('[data-navigation-link');
+            var routes = [''];
             jQuery('[data-navigation-link]').on('click', function(e) {
                 e.preventDefault();
                 var id = this.getAttribute('data-navigation-link');
-                self.navigate(id, 0, 500);
+                // self.navigate(id, 0, 500);
+                
+                jQuery(".main").moveTo(id);
             });
 
-            if (window.location.hash) {
-                setTimeout(function() {
-                    self.navigate(window.location.hash.substr(1), 0, 500);
-                }, 100);
+            // if (window.location.hash) {
+            //     setTimeout(function() {
+            //         self.navigate(window.location.hash.substr(1), 0, 500);
+            //     }, 100);
 
+            // }
+
+            jQuery(".scroll-down").on('click', function() {
+                jQuery(".main").moveDown();
+            });
+
+            if(jQuery(".main").length){
+                jQuery(".main").onepage_scroll({
+                    easing: "ease",  
+                    animationTime: 800,
+                    beforeMove: function(index) {
+                        links.forEach(function(link) {
+                            if (link.getAttr('data-navigation-link') == index) {
+                                link.addClass('active');
+                            } else {
+                                link.removeClass('active');
+                            }
+                        });
+                        if(index == 4) {
+                            $.find('.roadmap').setAttr('data-animate', true);
+                        }
+                    },
+                    afterMove: function(index) {
+                        if(index == 4) {
+                            $.find('.roadmap').setAttr('data-animate', true);
+                        }
+                    }, 
+                     // loop: false,
+                     keyboard: true,
+                     pagination: true
+                });
             }
+
+
         },
         check: function() {
-            this.tabs.forEach(function(elem) {
-                if (isScrolledIntoView(elem.el, 300)) {
-                    var id = elem.getAttr('data-navigation');
-                    var links = $.findAll('[data-navigation-link');
+            // this.tabs.forEach(function(elem) {
+            //     if (isScrolledIntoView(elem.el, 300)) {
+            //         var id = elem.getAttr('data-navigation');
+            //         var links = $.findAll('[data-navigation-link');
 
-                    links.forEach(function(link) {
-                        if (link.getAttr('data-navigation-link') === id) {
+            //         links.forEach(function(link) {
+            //             if (link.getAttr('data-navigation-link') === id) {
 
-                            link.addClass('active');
-                        } else {
-                            link.removeClass('active');
-                        }
-                    });
-                }
-            });
+            //                 link.addClass('active');
+            //             } else {
+            //                 link.removeClass('active');
+            //             }
+            //         });
+            //     }
+            // });
         },
         navigate: function(id, topOffset, ms) {
-            var body = jQuery("html, body");
-            var elem = document.querySelector('[data-navigation="' + id + '"]');
+        //     var body = jQuery("html, body");
+        //     var elem = document.querySelector('[data-navigation="' + id + '"]');
 
-            if (elem) {
-                body.stop().animate({ scrollTop: offset(elem).top - (topOffset || 200) }, ms);
-            }
+        //     if (elem) {
+        //         body.stop().animate({ scrollTop: offset(elem).top - (topOffset || 200) }, ms);
+        //     }
+        }
+    });
+
+    NES_API.add('roadmap', {
+        constructor: function() {
+            var self = this;
+            this.roadmap = $.findAll('[data-roadmap]');
+            this.timelines = $.findAll('[data-roadmap-timeline]');
+            this.years = $.findAll('[data-roadmap-year]');
+
+
+            this.timelines.forEach(function(elem, i) {
+                i === 0 ? elem.show() : elem.hide();
+            });
+
+            this.years.forEach(function(elem, i) {
+                elem.addEvent('click', function() {
+                    var id = elem.getAttr('data-roadmap-year');
+                    self.years.forEach(function(el) { el.el === elem.el ? el.addClass('active') : el.removeClass('active')});
+                    self.timelines.forEach(function(el) { el.getAttr('data-roadmap-timeline') === id ? el.show() : el.hide()});
+                });
+            });
+        }
+    });
+
+    NES_API.add('animation', {
+        constructor: function() {
+ 
+            var elements = $.findAll('[data-animate]');
+
+            window.addEventListener('scroll', function(){
+                elements.forEach(function(elem) {
+                    if (isInViewport(elem.el, 90)) {
+                        if (!elem.getAttr('data-animate')) {
+                            elem.setAttr('data-animate', true);
+                        }
+                    }
+                });
+            }, false);
         }
     });
 
@@ -481,7 +556,6 @@
     NES_API.init();
 
 }($, NES_API));
-
 
 $('.slick-slider').slick({
     dots: false,

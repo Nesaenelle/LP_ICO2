@@ -11,7 +11,6 @@
 </head>
 
 <body>
-    <div data-navigation="home"></div>
     <header>
         <!-- <div class="container"> -->
         <!-- <div class="mobile-header">
@@ -41,16 +40,16 @@
                     </ul>
                 </div>
             </div> -->
-            <a href="#home" class="logo" data-navigation-link="home"><img src="img/logo.svg"></a>
+            <a href="#home" class="logo" data-navigation-link="1"><img src="img/logo.svg"></a>
             <nav>
                 <ul class="header-menu">
-                    <li class="header-menu-item" data-navigation-link="about"><a href="#about">about</a></li>
-                    <li class="header-menu-item" data-navigation-link="skills"><a href="#skills">skills</a></li>
-                    <li class="header-menu-item" data-navigation-link="roadmap"><a href="#feedback">roadmap</a></li>
-                    <li class="header-menu-item" data-navigation-link="create-platform"><a href="#create-platform">create platform</a></li>
-                    <li class="header-menu-item" data-navigation-link="team"><a href="#team">team</a></li>
+                    <li class="header-menu-item" data-navigation-link="2"><a href="#">about</a></li>
+                    <li class="header-menu-item" data-navigation-link="3"><a href="#">skills</a></li>
+                    <li class="header-menu-item" data-navigation-link="4"><a href="#">roadmap</a></li>
+                    <li class="header-menu-item" data-navigation-link="create-platform"><a href="#">create platform</a></li>
+                    <li class="header-menu-item" data-navigation-link="5"><a href="#">team</a></li>
                     <li class="header-menu-item"><a href="#">blog</a></li>
-                    <li class="header-menu-item" data-navigation-link="contact"><a href="#contact">contact</a></li>
+                    <li class="header-menu-item" data-navigation-link="6"><a href="#">contact</a></li>
                 </ul>
                 <ul class="header-menu">
                     <li class="header-menu-item">
@@ -63,9 +62,10 @@
             </nav>
         <!-- </div> -->
     </header>
-    <main>
+
+    <main class="main">
        
-            <div class="main-section">        
+            <section class="main-section">        
                 <div class="container">    
                     <div class="main-title">CRYPTO TRADING PLATFORM <br>WHAT YOU NEED!</div>
                     <ul class="currencies-list" data-currency>
@@ -224,8 +224,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="about-section" data-navigation="about">
+            </section>
+            <section class="about-section">
                  <div class="container">   
                     <div class="main-title">WHY WE ARE BETTER THAN <br>ANOTHER 100000+ PLATFORMS? <div class="main-title__shadow">ABOUT</div></div>
                     <div class="about-list">                    
@@ -252,9 +252,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="skills-section" data-navigation="skills">
+            <section class="skills-section">
                 <div class="container">   
                     <div class="main-title">WE HAVE <br>THE THINGS YOU LOVE <div class="main-title__shadow">SKILLS</div></div>
                 </div>
@@ -282,20 +282,68 @@
                     </div>
                 </div>
                 
-            </div>
+            </section>
 
-            <div class="roadmap-section" data-navigation="roadmap">
+            <section class="roadmap-section">
                 <div class="container">   
                     <div class="main-title">THIS IS <br>OUR PLAN <div class="main-title__shadow">ROAD</div></div>
-                    <div>
-                        <div>2018</div>
-                        <div>2019</div>
-                    </div>
-                    <div></div>
                 </div>
-            </div>
+                <div class="roadmap" data-roadmap data-animate>
+                    <div class="roadmap__years">
+                        <div class="container">
+                            <div class="roadmap__years_item active" data-roadmap-year="1">2018</div>
+                            <div class="roadmap__years_item" data-roadmap-year="2">2019</div>
+                        </div>
+                    </div>
+                    <div class="roadmap__timeline" data-roadmap-timeline="1">
+                        <div class="container">
+                            <div class="roadmap__timeline_item" style="width: 20%">
+                                <div class="roadmap__timeline_text">Start of development <br>Exchange #2</div>
+                                <div class="roadmap__timeline_month">MARCH<div class="roadmap__timeline_month_line"></div></div>
+                            </div>
+                            <div class="roadmap__timeline_item" style="width: 30%">
+                                <div class="roadmap__timeline_text">First introduction to the public Interviewing potential users</div>
+                                <div class="roadmap__timeline_month">JUNE<div class="roadmap__timeline_month_line"></div></div>
+                            </div>
+                            <div class="roadmap__timeline_item" style="width: 20%">
+                                <div class="roadmap__timeline_text">Beta release of the trading <br>platform with BTH/ETH trading <br>pair</div>
+                                <div class="roadmap__timeline_month">SEPTEMBER<div class="roadmap__timeline_month_line"></div></div>
+                            </div>
+                            <div class="roadmap__timeline_item" style="width: 20%">
+                                <div class="roadmap__timeline_text">Incorporation in Estonia and getting Virtual Currency Exchange and Wallet Service license</div>
+                                <div class="roadmap__timeline_month">OCTOBER <div class="roadmap__timeline_month_line"></div>            <div class="we-are-here">We are here</div></div>
+                     
+                            </div>
+                        </div>
+                        <div class="roadmap__timeline_line"></div>
+                    </div>
 
-            <div class="team-section" data-navigation="team">
+                    <div class="roadmap__timeline" data-roadmap-timeline="2">
+                        <div class="container">
+                            <div class="roadmap__timeline_item" style="width: 20%">
+                                <div class="roadmap__timeline_text">Official launch of exchange <br>and support of FIAT currencies</div>
+                                <div class="roadmap__timeline_month">JANUARY<div class="roadmap__timeline_month_line"></div></div>
+                            </div>
+                            <div class="roadmap__timeline_item" style="width: 20%">
+                                <div class="roadmap__timeline_text">Launch of mobile <br>wallet service</div>
+                                <div class="roadmap__timeline_month">MARCH<div class="roadmap__timeline_month_line"></div></div>
+                            </div>
+                            <div class="roadmap__timeline_item" style="width: 20%">
+                                <div class="roadmap__timeline_text">Launch of payment <br> gateway service</div>
+                                <div class="roadmap__timeline_month">MAY<div class="roadmap__timeline_month_line"></div></div>
+                            </div>
+                            <div class="roadmap__timeline_item" style="width: 20%">
+                                <div class="roadmap__timeline_text">You can now buy a cup of coffee <br> using wallet app  and br NFC <br> on your smartphone</div>
+                                <div class="roadmap__timeline_month">JULY<div class="roadmap__timeline_month_line"></div></div>
+                                <!-- <div>We are here</div> -->
+                            </div>
+                        </div>
+                        <div class="roadmap__timeline_line"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team-section">
                 <div class="container">   
                     <div  class="main-title">WE <br>ARE <div class="main-title__shadow">TEAM</div></div>
                  </div>
@@ -306,7 +354,7 @@
                             <div class="team-list__item_position">Development</div>
                             <div class="team-list__item_socials">
                                 <img src="img/facebook.svg" alt="">
-                                <img src="" alt="">
+                                <img src="img/linkedin-logo.svg" alt="">
                             </div>
                         </div>
                         <div class="team-list__item">
@@ -314,7 +362,7 @@
                             <div class="team-list__item_position">Support</div>
                             <div class="team-list__item_socials">
                                 <img src="img/facebook.svg" alt="">
-                                <img src="" alt="">
+                                <img src="img/linkedin-logo.svg" alt="">
                             </div>
                         </div>
                         <div class="team-list__item">
@@ -322,7 +370,7 @@
                             <div class="team-list__item_position">ArtDirection</div>
                             <div class="team-list__item_socials">
                                 <img src="img/facebook.svg" alt="">
-                                <img src="" alt="">
+                                <img src="img/linkedin-logo.svg" alt="">
                             </div>
                         </div>
                         <div class="team-list__item">
@@ -330,7 +378,7 @@
                             <div class="team-list__item_position">Marketing</div>
                             <div class="team-list__item_socials">
                                 <img src="img/facebook.svg" alt="">
-                                <img src="" alt="">
+                                <img src="img/linkedin-logo.svg" alt="">
                             </div>
                         </div>
                         <div class="team-list__item">
@@ -338,14 +386,14 @@
                             <div class="team-list__item_position">Founder & CTO </div>
                             <div class="team-list__item_socials">
                                 <img src="img/facebook.svg" alt="">
-                                <img src="" alt="">
+                                <img src="img/linkedin-logo.svg" alt="">
                             </div>
                         </div>
                     </div>
                
-            </div>
+            </section>
 
-            <div class="contacts-section" data-navigation="contact">          
+            <section class="contacts-section">          
                 <div class="container">     
                     <div class="main-title">CONTACT <br>WITH US <div class="main-title__shadow">HELLO</div></div>
                 </div>
@@ -358,13 +406,14 @@
                         <button class="btn">Send</button>
                     </form>
                 </div>
-            </div>
+            </section>
     </main>
+
     <footer class="footer">
         <div class="footer-socials">
-            <a href=""><img src="img/facebook.svg" alt=""></a>
-            <a href=""><img src="img/twitter.svg" alt=""></a>
-            <a href=""><img src="img/telegram.svg" alt=""></a>
+            <a href="" target="_blank"><img src="img/facebook.svg" alt=""></a>
+            <a href="" target="_blank"><img src="img/twitter.svg" alt=""></a>
+            <a href="" target="_blank"><img src="img/telegram.svg" alt=""></a>
         </div>
         <div class="scroll-down">
             <img src="img/noun_Mouse_744299.svg" alt="">
@@ -507,6 +556,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <!-- <script src="js/jquery.easeScroll.js"></script> -->
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.onepage-scroll.min.js"></script>
     <script src="js/core.js"></script>
     <script src="js/all.js"></script>
 </body>

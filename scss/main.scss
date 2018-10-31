@@ -1,12 +1,11 @@
 body {
     font-family: Poppins, sans-serif;
     min-width: 320px;
+    overflow: hidden;
 }
 
 main {
-    // background: #e2e7ee;
-    padding-top: 170px;
-    padding-bottom: 100px;
+    height: 100%;
 }
 
 a {
@@ -34,6 +33,20 @@ a {
     max-width: 1480px;
     margin: auto;
     padding: 0 20px;
+}
+
+.wrapper {
+    height: 100% !important;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    padding-top: 120px;
+    overflow: hidden;
 }
 
 .main-title {
@@ -116,7 +129,7 @@ a {
             color: #798e8a;
             font-size: 14px;
             font-weight: 400;
-
+            padding: 0 20px;
             &:first-child {
                 text-align: left;
 
@@ -135,7 +148,7 @@ a {
                 height: 34px;
                 color: #000;
                 font-size: 14px;
-
+            padding: 0 20px;
                 &:first-child {
                     text-align: left;
 
@@ -219,7 +232,7 @@ a {
 }
 
 .about-section {
-    margin-top: 100px;
+    // margin-top: 100px;
 
     .about {
         &-list {
@@ -238,8 +251,8 @@ a {
                 width: 30%;
 
                 .about__item_img {
-                    &_bg {
                         width: 255px;
+                    &_bg {
                         height: 418px;
                     }
                 }
@@ -313,7 +326,7 @@ a {
 }
 
 .skills-section {
-    margin-top: 150px;
+    // margin-top: 150px;
 
     .skills {
         display: flex;
@@ -332,31 +345,37 @@ a {
             font-size: 36px;
             font-weight: bold;
         }
+
         &__content {
             margin-top: 60px;
         }
+
         &__list {
             li {
                 font-size: 24px;
             }
 
         }
+
         &__try-now {
             margin-top: 50px;
-             font-size: 21px;
-             b{
+            font-size: 21px;
+
+            b {
                 text-align: right;
                 font-size: 24px;
                 width: 150px;
                 margin-right: 20px;
                 display: inline-block;
-             }
+            }
         }
+
         &__soon {
             margin-top: 15px;
             font-size: 21px;
             color: #e8e8e8;
-            b{
+
+            b {
                 text-align: right;
                 font-size: 24px;
                 width: 150px;
@@ -368,259 +387,147 @@ a {
 }
 
 .roadmap-section {
-    margin-top: 40px;
+    // margin-top: 150px;
 }
 
 .roadmap {
     box-sizing: content-box; // min-height: 100vh;
-    height: 100vh;
-    overflow: hidden;
-
-    &.fixed {
-        .container {
-            top: 0;
-            left: 0;
-            position: fixed;
-            z-index: 1;
-            max-width: 100%;
-        }
-    }
-
-    .container {
-        background: linear-gradient(135deg, rgba(52, 146, 72, 1) 0%, rgba(39, 49, 66, 1) 83%, rgba(39, 49, 66, 1) 100%);
-        min-height: 100vh;
-        position: relative;
-        padding: 40px 0; // height: 100%;
-        max-width: 100%;
-    }
-
-    &__title {
-        text-align: center;
-        color: #fff;
-        font-family: BebasNeue;
-        font-size: 20px;
-        letter-spacing: 4px;
-    }
-
-    &-canvas {
-        max-width: 1385px;
-        margin: auto;
-        position: absolute;
-        width: 100%;
-        top: 0;
-        bottom: 0; // margin: auto;
-        right: 0;
-        left: 0;
-        // padding: 0 5
-        padding: 0 70px;
-        height: 10px;
-
-        &__text {
-            color: #fff;
-            position: absolute;
-            width: 335px;
-            font-size: 20px;
-            margin-left: -150px;
-            transform: scale(0);
-            opacity: 0;
-            transition: 1s;
-            line-height: 1.5em;
-            font-family: Helvetica;
-        }
-
-        &__month {
-            text-transform: uppercase;
-            color: #abbdb4;
-            font-weight: 600;
-            position: absolute;
-            white-space: nowrap;
-            width: 180px;
-            font-size: 20px;
-            margin-left: -76px;
-            text-align: center;
-            transform: scale(0);
-            opacity: 0;
-            font-family: Helvetica;
-            transition: 1s;
-        }
-
-        &__arrow {
-            opacity: 0;
-            transform: scale(0);
-            transition: 1s;
-            content: '';
-            border-left: 2px solid #fff;
-            border-bottom: 2px solid #fff;
-            width: 170px;
-            height: 100px;
-            top: -180px;
-            left: -170px;
-            border-radius: 0 0 0 20px;
-            position: absolute;
-
-            &:before {
-                content: '';
-                background: #fff;
-                border-radius: 100%;
-                width: 10px;
-                height: 10px;
-                left: -6px;
-                position: absolute;
-                transition: 1s;
+    // height: 100vh;
+    // overflow: hidden;
+    &[data-animate="true"] {
+        .roadmap__timeline_item {
+            &:nth-child(1) {
+                animation: slideInLeft 1s;
+                animation-delay: 0s;
             }
+
+            &:nth-child(2) {
+                animation: slideInLeft 1s;
+                animation-delay: 0.5s;
+            }
+
+            &:nth-child(3) {
+                animation: slideInLeft 1s;
+                animation-delay: 1s;
+            }
+
+            &:nth-child(4) {
+                animation: slideInLeft 1s;
+                animation-delay: 1.5s;
+            }
+        }
+
+        .we-are-here {
+            animation: slideInLeft 1s;
+            animation-delay: 2s;
+        }
+    }
+    &__years {
+        margin-top: 100px;
+
+        .container {
+            display: flex;
+        }
+
+        &_item {
+            font-size: 80px;
+            font-weight: 300;
+            color: #e8e8e8;
+            margin-right: 40px;
+            cursor: pointer;
+
+            &.active {
+                color: #000;
+            }
+        }
+    }
+
+    &__timeline {
+        margin-top: 50px;
+
+        .container {
+            display: flex;
+        }
+
+        &_item {
+            height: 220px;
+            position: relative;
+            opacity: 0;
+            animation-fill-mode: forwards!important;
+        }
+
+        &_line {
+            height: 2px;
+            background-color: #798e8a;
+        }
+
+        &_text {
+            width: 300px;
+            height: 70px;
+            font-size: 14px;
+        }
+
+        &_month {
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
 
             &:after {
                 content: '';
-                border-top: 2px solid #fff;
-                border-right: 2px solid #fff;
-                width: 42px;
-                height: 80px;
-                top: 98px;
-                left: 150px;
-                border-radius: 0px 20px 0 20px;
-                position: absolute;
-                transition: 1s;
-            }
-        }
-
-        &__points {
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            top: -12px; // padding: 0 10%;
-            width: 100%;
-        }
-
-        &__point {
-            width: 50px;
-            height: 50px;
-            position: relative;
-
-            &_circle {
-                position: relative;
-                width: 26px;
-                height: 26px;
-                border-radius: 100%; // background: #fff;
-                border: 3px solid #fff;
-                box-shadow: 0 0 4px 0px #fff; // &:before {
+                width: 28px;
+                height: 28px;
+                bottom: 0;
+                background: #56a54b;
+                left: 0;
+                right: 0;
                 margin: auto;
-                transition: 0.5s;
-                top: 0;
+                bottom: -16px;
+                z-index: 10;
+                border: 3px solid #fff;
+                position: absolute;
+            }
 
+            &_line {
+                width: 2px;
+                height: 124px;
+                // height: 0;
+                transition: 0.3s;
+                background-color: #56a54b;
+                // margin-left: 50px;
+                margin: auto;
+                position: relative;
+
+            }
+
+            .we-are-here {
+                position: absolute;
+                font-size: 18px;
+                font-weight: bold;
+                position: absolute;
+                width: 139px;
+                bottom: 5px;
+                left: calc(100% - 10px);
+                opacity: 0;
+                animation-fill-mode: forwards!important;
                 &:after {
                     content: '';
-                    position: absolute;
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 100%;
-                    margin: auto;
-                    top: 0;
-                    right: 0;
+                    width: 10px;
+                    height: 10px;
                     bottom: 0;
+                    background: #56a54b;
                     left: 0;
-                    background: #fff;
-                    box-shadow: 0 0 4px 0px #fff;
-                    transition: 0.5s;
+                    bottom: -13px;
+                    z-index: 10;
+                    border: 3px solid #fff;
+                    position: absolute;
                 }
-            }
-
-
-            &.active {
-                .roadmap-canvas__point_circle {
-                    width: 50px;
-                    height: 50px;
-                    top: -13px; // left: -12px;
-
-                    &:after {
-                        width: 34px;
-                        height: 34px;
-                    }
-                }
-
-                .roadmap-canvas__text,
-                .roadmap-canvas__month,
-                .roadmap-canvas__arrow {
-                    transform: scale(1);
-                    opacity: 1;
-                }
-            }
-
-            &.activated {
-                .roadmap-canvas__point_circle {
-                    background: #fff;
-                    width: 26px;
-                    height: 26px;
-                    top: 0;
-
-                    &:after {
-                        opacity: 0;
-                    }
-                }
-            }
-
-            &:nth-child(odd) .roadmap-canvas__month {
-                top: 50px;
-            }
-
-            &:nth-child(even) .roadmap-canvas__month {
-                top: -50px;
-            }
-
-            &:nth-child(odd) .roadmap-canvas__text {
-                top: -210px;
-            }
-
-            &:nth-child(even) .roadmap-canvas__text {
-                top: 180px;
-                text-align: right;
-            }
-
-
-            &:nth-child(odd) .roadmap-canvas__arrow {}
-
-            &:nth-child(even) .roadmap-canvas__arrow {
-                top: 26px;
-                left: 24px;
-                height: 80px;
-
-                &:after {
-                    height: 100px;
-                    top: 78px;
-                }
-
-                &:before {
-                    top: 172px;
-                    left: 188px;
-                }
-            }
-        }
-
-        &__line {
-            height: 3px;
-            width: 100%;
-            background: #769885;
-            position: relative;
-
-            &_inner {
-                transition: 0.3s;
-                width: 0%;
-                height: 7px;
-                top: -2px;
-                position: absolute;
-                background: #fff;
-                box-shadow: 0 3px 15px 0 #fff;
-                z-index: 3;
-                border-radius: 4px;
             }
         }
     }
 }
 
 .form-block {
-    // background: url(img/png/form.jpg);
-    // background-size: cover;
-    // padding: 87px 0 78px 0;
-    // background-position: top center; // background-position: bottom;
     display: flex;
     align-items: flex-start;
 
@@ -677,7 +584,7 @@ a {
 
 
 .team-section {
-    margin-top: 100px;
+    // margin-top: 150px;
 
     .team-banner {
         background: url(img/team.jpg);
@@ -718,7 +625,7 @@ a {
 }
 
 .contacts-section {
-    margin-top: 100px;
+    // margin-top: 100px;
 
     .form-block {
         margin-top: 30px;
@@ -732,5 +639,72 @@ a {
 
 .login-section,
 .signup-section {
-    margin-top: 100px;
+    // margin-top: 100px;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    min-height: 700px;
+    .form-block {
+        width: 100%;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes monthHeight {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 123px;
+    }
+}
+
+
+.onepage-pagination {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  z-index: 5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.onepage-pagination li {
+  padding: 0;
+  text-align: center;
+}
+.onepage-pagination li a{
+  padding: 10px;
+  width: 4px;
+  height: 50px;
+  display: block;
+  
+}
+.onepage-pagination li a:before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  background: rgba(150,150, 150, 0.85);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.onepage-pagination li a.active:before{
+    background: rgba(20,20, 20, 0.85);
 }

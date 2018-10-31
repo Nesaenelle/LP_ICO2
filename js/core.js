@@ -49,6 +49,9 @@
     ELEM.prototype.getAttr = function(name) {
         return this.el.getAttribute(name);
     };
+    ELEM.prototype.setAttr = function(name, value) {
+        return this.el.setAttribute(name, value);
+    };
     ELEM.prototype.hide = function(name) {
         return this.el.style.display = 'none';
     };

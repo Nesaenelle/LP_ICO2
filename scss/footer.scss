@@ -29,30 +29,12 @@ footer {
     }
 
     .scroll-down {
+        cursor: pointer;
         img{
             width: 42px;
         }
-        // width: 25px;
-        // height: 38px;
-        // border: 2px solid #000;
-        // border-radius: 11px;
-        // position: relative;
-
-        // &:after {
-        //     content: '';
-        //     position: absolute;
-        //     border-radius: 100%;
-        //     border: 1px solid #000;
-        //     width: 2px;
-        //     height: 2px;
-        //     left: 0;
-        //     right: 0;
-        //     margin: auto;
-        //     top: 8px;
-        //     background: #000;
-        // }
-
-        // &:hover {}
+        animation: go-go 1.5s infinite;
+          animation-timing-function: ease-out; 
     }
 
     .create-trading-btn {
@@ -70,5 +52,18 @@ footer {
         display: none;
         align-items: center;
         justify-content: center;
+    }
+}
+
+
+@keyframes go-go {
+    0% {
+        transform: translateY(0px);
+    }
+    30% {
+        transform: translateY(12px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
