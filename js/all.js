@@ -527,11 +527,42 @@
     });
 
     if ($.exists('#contact-form')) {
-        var loginForm = new NES_API.FORM($.find('#contact-form').el);
+        var contactForm = new NES_API.FORM($.find('#contact-form').el);
 
-        loginForm.onSubmit(function(data) {
+        contactForm.onSubmit(function(data) {
             // ajax here
-            alert('Success');
+            alert('Success'); return;
+            jQuery.ajax({
+                method: 'POST',
+                url: '',
+                data: {},
+                success: function() {
+
+                },
+                error: function() {
+
+                }
+            })
+        });
+    }
+
+    if ($.exists('#create-platform-form')) {
+        var contactForm = new NES_API.FORM($.find('#create-platform-form').el);
+
+        contactForm.onSubmit(function(data) {
+            // ajax here
+            alert('Success'); return;
+            jQuery.ajax({
+                method: 'POST',
+                url: '',
+                data: {},
+                success: function() {
+
+                },
+                error: function() {
+
+                }
+            })
         });
     }
 
@@ -541,7 +572,18 @@
 
         loginForm.onSubmit(function(data) {
             // ajax here
-            alert('Success');
+            alert('Success'); return;
+            jQuery.ajax({
+                method: 'POST',
+                url: '',
+                data: {},
+                success: function() {
+
+                },
+                error: function() {
+
+                }
+            })
         });
     }
 
@@ -549,7 +591,18 @@
         var signupForm = new NES_API.FORM($.find('#signup-form').el);
         signupForm.onSubmit(function(data) {
             // ajax here
-            alert('Success');
+            alert('Success'); return;
+            jQuery.ajax({
+                method: 'POST',
+                url: '',
+                data: {},
+                success: function() {
+
+                },
+                error: function() {
+
+                }
+            })
         });
     }
 
@@ -558,8 +611,10 @@
 }($, NES_API));
 
 $('.slick-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 2,
     slidesToScroll: 2,
@@ -575,23 +630,6 @@ $('.slick-slider').slick({
                 dots: true
             }
         }
-        // {
-        //   breakpoint: 600,
-        //   settings: {
-        //     slidesToShow: 1,
-        //     slidesToScroll: 2
-        //   }
-        // }
-        // {
-        //   breakpoint: 480,
-        //   settings: {
-        //     slidesToShow: 1,
-        //     slidesToScroll: 1
-        //   }
-        // }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
     ]
 });
 
