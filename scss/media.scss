@@ -316,15 +316,25 @@
     }
 
     .about-section .about__item {
-        width: 100%!important;
-        display: none!important;
-        &.active {
-            display: block!important;
-        }
-        &_text {
+        &:nth-child(1),  &:nth-child(2),  &:nth-child(3) {
             width: 100%;
-            min-width: 100%!important;
-        }
+            display: none;
+            margin: 0;
+            position: static;
+            &.active {
+                display: block;
+            }
+            .about__item_img {
+                width: 100%;
+            }
+            .about__item_img_bg {
+                width: 100%;
+            }
+            .about__item_text {
+                width: 100%;
+                min-width: 100%;
+            }
+        } 
     }
 
     .team-section .team-banner {

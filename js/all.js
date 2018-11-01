@@ -19,7 +19,7 @@
                 });
             }
 
-            if(this.toggleBtn.el) {
+            if (this.toggleBtn.el) {
                 this.toggleBtn.addEvent('click', function(e) {
                     e.stopPropagation();
                     jQuery('.currencies-list').toggleClass('active')
@@ -189,6 +189,46 @@
         }
     });
 
+    NES_API.add('swipe', {
+        constructor: function() {
+
+            var array = $.findAll('[data-swipe]');
+
+            array.forEach(function(content) {
+                var index = 0;
+                var indicator = content.find('.swipe-indicator');
+                var indicatorItems = indicator.findAll('span');
+
+                jQuery(content.el).swipe({
+                    swipeStatus: function(event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
+                        if (phase == "end") {
+                            var items = content.findAll('[data-swipe-item]');
+                            if (direction == 'left') {
+                                index++;
+                                if(index > items.length - 1 ) index = items.length - 1;
+
+                                indicatorItems.forEach(function(r, i) { i == index ? r.addClass('active') : r.removeClass('active')});
+                                items.forEach(function(item) {
+                                    item.getAttr('data-swipe-item') == index ? item.addClass('active') : item.removeClass('active');
+                                })
+                            }
+
+                            if (direction == 'right') {
+                                index--;
+                                if(index <= 0) index = 0;
+
+                                indicatorItems.forEach(function(r, i) { i == index ? r.addClass('active') : r.removeClass('active')});
+                                items.forEach(function(item) {
+                                    item.getAttr('data-swipe-item') == index ? item.addClass('active') : item.removeClass('active');
+                                })
+                            }
+                        }
+                    }
+                });
+            });
+        }
+    });
+
     if ($.exists('#contact-form')) {
         var contactForm = new NES_API.FORM($.find('#contact-form').el);
 
@@ -294,11 +334,11 @@
         });
     }
 
-    jQuery('.create-trading-btn').on('click', function(){
+    jQuery('.create-trading-btn').on('click', function() {
         jQuery('.footer-form').toggleClass('ready');
     });
 
-    if(jQuery('.footer-form').length){
+    if (jQuery('.footer-form').length) {
         window.addEventListener('click', function(e) {
             if (!jQuery('.footer-form')[0].contains(e.target)) {
                 // burger.classList.remove('active');
@@ -307,10 +347,8 @@
         }, false);
     }
 
-    jQuery(".about-section").on("swipeleft",function(){
-      // $(this).hide();
-      alert(1);
-    });
+
+
 
     NES_API.init();
 

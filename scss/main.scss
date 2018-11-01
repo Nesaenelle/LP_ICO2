@@ -298,6 +298,24 @@ a {
     }
 }
 
+.swipe-indicator {
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    display: flex;
+    span{
+        display: block;
+        width: 40px;
+        height: 4px;
+        background: #e8e8e8;
+        margin-right: 10px;
+        transition: 0.3s;
+        &.active {
+            background: #56a54b;
+        }
+    }
+}
+
 .about-section {
     // margin-top: 100px;
 
