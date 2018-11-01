@@ -32,7 +32,7 @@ a {
     width: 100%;
     max-width: 1190px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .wrapper {
@@ -56,6 +56,7 @@ a {
     letter-spacing: normal;
     position: relative;
     transition: 0.3s;
+
     &:before {
         content: '';
         position: absolute;
@@ -88,6 +89,17 @@ a {
     line-height: normal;
     letter-spacing: normal;
     margin-top: 30px;
+}
+
+.mobile-currency {
+    display: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+
 }
 
 .currencies-list {
@@ -468,6 +480,7 @@ a {
     &__timeline {
         margin-top: 91px;
         transition: 0.3s;
+
         .container {
             display: flex;
         }
@@ -568,7 +581,7 @@ a {
             // margin-top: 20px;
             background-repeat: no-repeat !important;
             background-position: right top !important;
-            background-size: cover!important;
+            background-size: cover !important;
             width: 50%;
             margin-top: 14px;
             height: 709px;
@@ -618,6 +631,7 @@ a {
             .input {
                 width: 335px;
                 margin-right: 32px;
+
                 &::-webkit-input-placeholder {
                     color: #000;
                 }
@@ -722,6 +736,7 @@ a {
             &:first-child {
                 width: 16%;
             }
+
             &_name {
                 font-size: 18px;
                 font-weight: bold;
@@ -736,9 +751,11 @@ a {
 
             &_socials {
                 margin-top: 40px;
+
                 a {
                     margin-right: 15px;
                 }
+
                 img {
                     width: 22px;
                 }
@@ -753,13 +770,16 @@ a {
     .form-block {
         margin-top: 30px;
     }
+
     .form {
         margin-left: 30px;
         margin-top: 89px;
     }
+
     .form-block__bg {
-        background-position: initial!important;
+        background-position: initial !important;
     }
+
     .form .btn {
         margin-top: 5px;
     }
