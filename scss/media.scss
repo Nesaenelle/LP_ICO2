@@ -92,6 +92,7 @@
     .roadmap__timeline_item {
         height: 186px;
     }
+
     .roadmap__timeline_month_line {
         height: 90px;
     }
@@ -99,16 +100,20 @@
     .create-platform-section .create-platform__content {
         margin-top: 40px;
     }
+
     .create-platform-section .create-platform__title {
         font-size: 38px;
     }
+
     .create-platform-section .create-platform__descr {
         // margin-top: 20px;
         font-size: 16px;
     }
+
     .create-platform-section .create-platform__form-title {
         margin-top: 30px;
     }
+
     .create-platform-section .create-platform__bg {
         height: 100vh;
     }
@@ -116,13 +121,16 @@
     .team-section .team-banner {
         height: 220px;
     }
+
     .team-section .team-list__item_name {
         font-size: 16px;
     }
+
     .team-section .team-list__item_position {
         font-size: 16px;
         margin-top: 15px;
     }
+
     .team-section .team-list__item_socials {
         margin-top: 25px;
     }
@@ -130,23 +138,24 @@
 
 
 
-@media screen and (max-width: 1600px) {
-
-}
+@media screen and (max-width: 1600px) {}
 
 
 @media screen and (max-width: 1280px) {
-    header{
+    header {
         height: 70px;
     }
+
     header .logo {
         height: 70px;
         min-width: 70px;
         max-width: 70px;
     }
+
     header .header-menu-item {
         padding: 0 13px;
     }
+
     .team-section .team-banner {
         background-size: 152%;
     }
@@ -156,7 +165,7 @@
     }
 
     .contacts-section .form-block__bg {
-        background-position: center!important;
+        background-position: center !important;
     }
 }
 
@@ -173,24 +182,29 @@
 }
 
 //mobile
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .container {
         padding: 0 20px;
     }
-    header{
+
+    header {
         height: 44px;
+
         .header-menu {
             display: none;
         }
+
         .burger {
             display: block;
         }
     }
+
     header .logo {
         height: 44px;
         min-width: 44px;
         max-width: 44px;
     }
+
     .main-title {
         font-size: 20px;
     }
@@ -198,13 +212,16 @@
     .section {
         padding-top: 90px;
     }
+
     .mobile-currency {
         display: block;
     }
+
     .currencies-list {
         // position: absolute;
         display: none;
     }
+
     .onepage-pagination {
         right: 2px;
         height: calc((25px) *7);
@@ -219,29 +236,35 @@
             }
         }
     }
+
     .secondary-title {
         display: none;
     }
-    .slick-slider{
-        display: none!important;
+
+    .slick-slider {
+        display: none !important;
     }
+
     .main-title__shadow {
-        font-size: 180px;
+        display: none;
     }
 
     .team-section .team-banner {
         height: 150px;
     }
-    
+
     .team-section .team-list {
         width: 90%;
     }
-    .team-section .team-list__item_name, .team-section .team-list__item_position {
+
+    .team-section .team-list__item_name,
+    .team-section .team-list__item_position {
         font-size: 14px;
     }
 
     .team-section .team-list__item_socials a {
         margin-right: 5px;
+
         img {
             width: 18px;
             height: 18px;
@@ -253,11 +276,38 @@
         padding-right: 30px;
     }
 
-    .table thead th , .table tbody tr td{
+    .table thead th,
+    .table tbody tr td {
         font-size: 12px;
+
         &:nth-child(n + 4) {
             display: none;
         }
+    }
+
+
+    .contacts-section .form-block__bg {
+        display: none;
+    }
+
+    .contacts-section .form-block {
+        margin-top: 0;
+    }
+
+    .contacts-section .form {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .form .btn {
+        height: 44px;
+    }
+    .form .input,
+    .form .textarea {
+        font-size: 16px;
+    }
+    .form .textarea {
+        height: 150px;
     }
 
     footer .footer-socials img {
@@ -269,6 +319,7 @@
     footer .scroll-down img {
         width: 30px;
     }
+
     footer .copyright {
         // display: none
         width: 108px;
@@ -277,20 +328,12 @@
 }
 
 
-@media screen and (max-width: 600px) {
-    
-    .main-title {
-        font-size: 20px;
-    }
-
-}
-
 @media screen and (max-width: 375px) {
-  
+
     header {
-        .dropdown-menu  {
-          width: 100%;
-          padding: 10px 0;
+        .dropdown-menu {
+            width: 100%;
+            padding: 10px 0;
         }
     }
 }
