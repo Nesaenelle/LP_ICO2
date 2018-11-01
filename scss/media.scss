@@ -137,7 +137,6 @@
 }
 
 
-
 @media screen and (max-width: 1600px) {}
 
 
@@ -373,6 +372,18 @@
             width: 65%;
 
          }
+    }
+
+    @media screen and (max-height: 620px) {
+
+        .skills-section .skills__bg{
+            height: 125px;
+        }
+    }
+
+    .roadmap__years_item {
+        font-size: 48px;
+        margin-right: 35px;
     }
 
     .team-section .team-banner {
