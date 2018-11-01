@@ -145,7 +145,7 @@ header {
         opacity: 0;
         visibility: hidden;
         position: absolute;
-        width: 346px;
+        width: 331px;
         // background-color: #516173;
         // border-radius: 4px;
          background-color: #56a54b;
@@ -184,13 +184,13 @@ header {
         .header-menu {
             display: block;
             width: 100%;
-
+            
             &:last-child {
-                margin-top: 30px;
+                // margin-top: 30px;
 
                 .header-menu-item:last-child {
                     a {
-                        padding-top: 0;
+                        // padding-top: 0;
                         // padding: 0px;
                     }
                 }
@@ -208,6 +208,12 @@ header {
                         margin: 0;
                     }
                 }
+                &.highlighted {
+                    background: #fff;
+                     a {
+                        color: #56a54b;
+                     }
+                }
 
                 &.active:after {
                     width: 40%;
@@ -222,7 +228,7 @@ header {
         ul {
             li {
                 a {
-                    padding: 20px;
+                    padding: 15px;
                     display: block;
                     text-align: center;
                 }
