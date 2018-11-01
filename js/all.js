@@ -33,13 +33,6 @@
 
     NES_API.add('navigation', {
         constructor: function() {
-            // var self = this;
-            // this.tabs = $.findAll('[data-navigation]');
-
-            // self.check();
-            // window.addEventListener('scroll', function() {
-            //     self.check();
-            // }, false);
             var links = $.findAll('[data-navigation-link');
             var routes = [''];
             jQuery('[data-navigation-link]').on('click', function(e) {
@@ -49,13 +42,6 @@
                 
                 jQuery(".main").moveTo(id);
             });
-
-            // if (window.location.hash) {
-            //     setTimeout(function() {
-            //         self.navigate(window.location.hash.substr(1), 0, 500);
-            //     }, 100);
-
-            // }
 
             jQuery(".scroll-down").on('click', function() {
                 jQuery(".main").moveDown();
@@ -83,37 +69,11 @@
                         }
                     }, 
                      loop: false,
-                     keyboard: true,
+                     keyboard: false,
                      pagination: true
                 });
             }
 
-
-        },
-        check: function() {
-            // this.tabs.forEach(function(elem) {
-            //     if (isScrolledIntoView(elem.el, 300)) {
-            //         var id = elem.getAttr('data-navigation');
-            //         var links = $.findAll('[data-navigation-link');
-
-            //         links.forEach(function(link) {
-            //             if (link.getAttr('data-navigation-link') === id) {
-
-            //                 link.addClass('active');
-            //             } else {
-            //                 link.removeClass('active');
-            //             }
-            //         });
-            //     }
-            // });
-        },
-        navigate: function(id, topOffset, ms) {
-        //     var body = jQuery("html, body");
-        //     var elem = document.querySelector('[data-navigation="' + id + '"]');
-
-        //     if (elem) {
-        //         body.stop().animate({ scrollTop: offset(elem).top - (topOffset || 200) }, ms);
-        //     }
         }
     });
 
@@ -135,7 +95,19 @@
                     self.years.forEach(function(el) { el.el === elem.el ? el.addClass('active') : el.removeClass('active')});
                     self.timelines.forEach(function(el) { el.getAttr('data-roadmap-timeline') === id ? el.show() : el.hide()});
                 });
-            });
+            }); 
+
+            var months= ["January","February","March","April","May","June","July",
+            "August","September","October","November","December"];
+            var date = new Date();
+            var monthIndex = date.getMonth();
+            var monthName = months[monthIndex - 1].toLowerCase();
+            var year = date.getFullYear();
+            
+            var weAreHere = jQuery('<div class="we-are-here">We are here</div>');
+            var a = jQuery('[ data-roadmap-month="'+ monthName +'-'+ year +'"]');
+            a.append(weAreHere);
+            
         }
     });
 
@@ -152,6 +124,37 @@
                         }
                     }
                 });
+            }, false);
+        }
+    });
+
+
+    NES_API.add('mobile-menu', {
+        constructor: function() {
+            var openBtn = $.find('[data-menu]');
+            var dropdown = $.find('[data-menu-dropdown]');
+            var closeBtn = $.find('[data-menu-dropdown-close]');
+
+            openBtn.addEvent('click', function(e) {
+                e.stopPropagation();
+                // if (burger.classList.contains('active')) {
+                //     burger.classList.remove('active');
+                // } else {
+                //     burger.classList.add('active');
+                // }
+                    dropdown.addClass('active');
+            });
+
+            closeBtn.addEvent('click', function(e) {
+                // burger.classList.remove('active');
+                dropdown.removeClass('active');
+            });
+
+            window.addEventListener('click', function(e) {
+                if (!dropdown.el.contains(e.target)) {
+                    // burger.classList.remove('active');
+                    dropdown.removeClass('active');
+                }
             }, false);
         }
     });

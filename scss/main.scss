@@ -30,7 +30,7 @@ a {
 
 .container {
     width: 100%;
-    max-width: 1480px;
+    max-width: 1190px;
     margin: auto;
     padding: 0 20px;
 }
@@ -45,7 +45,7 @@ a {
 .section {
     width: 100%;
     height: 100%;
-    padding-top: 130px;
+    padding-top: 172px;
     overflow: hidden;
 }
 
@@ -55,11 +55,11 @@ a {
     line-height: 1.13;
     letter-spacing: normal;
     position: relative;
-
+    transition: 0.3s;
     &:before {
         content: '';
         position: absolute;
-        top: -10px;
+        top: -2px;
         left: 0;
         width: 100px;
         height: 4px;
@@ -69,12 +69,14 @@ a {
     &__shadow {
         top: 0;
         line-height: 0.5em;
-        right: 0;
+        // right: 0;
+        left: 30%;
         position: absolute;
         font-size: 279px;
         font-weight: bold;
         color: #e8e8e8;
         z-index: -1;
+        transition: 0.3s;
     }
 }
 
@@ -85,20 +87,23 @@ a {
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
+    margin-top: 30px;
 }
 
 .currencies-list {
     display: flex;
     justify-content: flex-end;
+    margin-top: 5px;
 
     li {
         font-size: 14px;
         font-weight: 600;
         color: #798e8a;
         text-align: center;
-        margin-left: 25px;
+        margin-left: 16px;
+        padding: 0 5px;
         cursor: pointer;
-        transition: 0.2s;
+        transition: 0.3s;
 
         &.active {
             color: #000;
@@ -107,10 +112,10 @@ a {
             &:after {
                 content: '';
                 position: absolute;
-                bottom: -10px;
+                bottom: -2px;
                 left: 0;
                 width: 100%;
-                height: 4px;
+                height: 3px;
                 background-color: #56a54b;
             }
         }
@@ -120,7 +125,7 @@ a {
 .table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 17px;
 
     thead {
         th {
@@ -128,8 +133,8 @@ a {
             height: 34px;
             color: #798e8a;
             font-size: 14px;
-            font-weight: 400;
-            padding: 0 20px;
+            font-weight: 300;
+            padding: 0 18px;
 
             &:first-child {
                 text-align: left;
@@ -146,10 +151,10 @@ a {
 
             td {
                 text-align: center;
-                height: 34px;
+                height: 33px;
                 color: #000;
                 font-size: 14px;
-                padding: 0 20px;
+                padding: 0 18px;
 
                 &:first-child {
                     text-align: left;
@@ -162,8 +167,8 @@ a {
 
 .slick-slider {
     margin-top: 20px;
-    width: 60%;
-    margin: auto;
+    width: 70%;
+    margin: 11px auto 0;
 
     &__item {
         margin: 0 15px;
@@ -190,12 +195,15 @@ a {
         &_text {
             font-size: 14px;
             color: #212121;
+            margin-top: 5px;
         }
 
         &_link {
             font-size: 14px;
-            font-weight: bold;
+            font-weight: 700;
+            margin-top: 0px;
             color: #56a54b;
+            display: block;
         }
     }
 
@@ -205,8 +213,8 @@ a {
         width: 30px;
         height: 30px;
         position: absolute;
-        left: -50px;
-        top: calc(50% - 16px);
+        left: -60px;
+        top: calc(50% - 28px);
         cursor: pointer;
         transition: 0.1s;
 
@@ -222,8 +230,8 @@ a {
         width: 30px;
         height: 30px;
         position: absolute;
-        right: -50px;
-        top: calc(50% - 16px);
+        right: -60px;
+        top: calc(50% - 28px);
         cursor: pointer;
         transition: 0.1s;
 
@@ -238,10 +246,10 @@ a {
 
     .about {
         &-list {
-            overflow: hidden;
+            // overflow: hidden;
             // display: flex;
             // flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 24px;
         }
 
         &__item {
@@ -250,7 +258,7 @@ a {
             float: left;
 
             &:nth-child(1) {
-                width: 30%;
+                width: 34%;
 
                 .about__item_img {
                     width: 255px;
@@ -258,6 +266,10 @@ a {
                     &_bg {
                         height: 418px;
                     }
+                }
+
+                .about__item_text {
+                    min-width: 420px;
                 }
             }
 
@@ -274,7 +286,7 @@ a {
                 }
 
                 .about__item_text {
-                    width: 380px;
+                    min-width: 380px;
                 }
             }
 
@@ -282,7 +294,9 @@ a {
                 width: 60%;
                 display: flex;
                 margin-left: 40px;
-                margin-top: 50px;
+                margin-top: 89px;
+                position: relative;
+                left: 60px;
 
                 .about__item_img {
                     &_bg {
@@ -300,6 +314,7 @@ a {
             &_text {
                 font-size: 18px;
                 color: #212121;
+                line-height: 24px
             }
 
             &_img {
@@ -342,6 +357,7 @@ a {
             background-position: right top !important;
             width: 50%;
             height: 610px;
+            transition: 0.3s;
         }
 
         &__title {
@@ -350,18 +366,20 @@ a {
         }
 
         &__content {
-            margin-top: 60px;
+            transition: 0.3s;
+            margin-top: 79px;
         }
 
         &__list {
+            margin-top: 19px;
+
             li {
                 font-size: 24px;
             }
-
         }
 
         &__try-now {
-            margin-top: 50px;
+            margin-top: 67px;
             font-size: 21px;
 
             b {
@@ -422,13 +440,13 @@ a {
         }
 
         .we-are-here {
-            animation: slideInLeft 1s;
+            animation: slideInUp 1s;
             animation-delay: 2s;
         }
     }
 
     &__years {
-        margin-top: 100px;
+        margin-top: 88px;
 
         .container {
             display: flex;
@@ -438,7 +456,7 @@ a {
             font-size: 80px;
             font-weight: 300;
             color: #e8e8e8;
-            margin-right: 40px;
+            margin-right: 57px;
             cursor: pointer;
 
             &.active {
@@ -448,14 +466,14 @@ a {
     }
 
     &__timeline {
-        margin-top: 50px;
-
+        margin-top: 91px;
+        transition: 0.3s;
         .container {
             display: flex;
         }
 
         &_item {
-            height: 220px;
+            height: 225px;
             position: relative;
             opacity: 0;
             animation-fill-mode: forwards !important;
@@ -480,8 +498,8 @@ a {
 
             &:after {
                 content: '';
-                width: 28px;
-                height: 28px;
+                width: 26px;
+                height: 26px;
                 bottom: 0;
                 background: #56a54b;
                 left: 0;
@@ -495,7 +513,7 @@ a {
 
             &_line {
                 width: 2px;
-                height: 124px;
+                height: 129px;
                 // height: 0;
                 transition: 0.3s;
                 background-color: #56a54b;
@@ -541,17 +559,19 @@ a {
 
         &__content {
             width: 550px;
-            margin-top: 80px;
+            margin-top: 137px;
             margin-right: 40px;
+            transition: 0.3s;
         }
 
         &__bg {
             // margin-top: 20px;
             background-repeat: no-repeat !important;
-            background-size: 100% !important;
             background-position: right top !important;
+            background-size: cover!important;
             width: 50%;
-            height: 610px;
+            margin-top: 14px;
+            height: 709px;
         }
 
         &__title {
@@ -567,7 +587,7 @@ a {
         }
 
         &__form-title {
-            margin-top: 60px;
+            margin-top: 72px;
             font-size: 24px;
             color: #212121;
             display: flex;
@@ -577,7 +597,7 @@ a {
                 content: '';
                 width: 100px;
                 height: 4px;
-                margin-right: 20px;
+                margin-right: 8px;
                 background-color: #56a54b;
                 display: inline-block;
             }
@@ -585,22 +605,41 @@ a {
 
         .form {
             display: flex;
-            width: 595px;
+            width: 607px;
             position: relative;
-            left: 120px;
+            left: 109px;
+            margin-top: 12px;
 
             .input-error-text {
                 position: absolute;
-                bottom: 12px;
+                bottom: -7px;
             }
 
             .input {
-                width: 334px;
-                margin-right: 40px;
+                width: 335px;
+                margin-right: 32px;
+                &::-webkit-input-placeholder {
+                    color: #000;
+                }
+
+                &::-moz-placeholder {
+                    color: #000;
+                }
+
+                /* Firefox 19+ */
+                &:-moz-placeholder {
+                    color: #000;
+                }
+
+                /* Firefox 18- */
+                &:-ms-input-placeholder {
+                    color: #000;
+                }
             }
 
             .btn {
                 width: 255px;
+                margin-top: 19px;
             }
         }
     }
@@ -670,16 +709,19 @@ a {
         background-size: cover;
         background-position: center 78%;
         height: 242px;
-        margin-top: 30px;
+        margin-top: 27px;
     }
 
     .team-list {
         display: flex;
         justify-content: space-between;
         width: 50%;
-        margin: auto;
+        margin: 10px auto 0;
 
         &__item {
+            &:first-child {
+                width: 16%;
+            }
             &_name {
                 font-size: 18px;
                 font-weight: bold;
@@ -687,16 +729,18 @@ a {
             }
 
             &_position {
-                margin-top: 10px;
+                margin-top: 20px;
                 font-size: 18px;
                 color: #000;
             }
 
             &_socials {
-                margin-top: 30px;
-
+                margin-top: 40px;
+                a {
+                    margin-right: 15px;
+                }
                 img {
-                    width: 25px;
+                    width: 22px;
                 }
             }
         }
@@ -709,10 +753,16 @@ a {
     .form-block {
         margin-top: 30px;
     }
-
-    // .form .btn {
-    //     margin-top: 5px;
-    // }
+    .form {
+        margin-left: 30px;
+        margin-top: 89px;
+    }
+    .form-block__bg {
+        background-position: initial!important;
+    }
+    .form .btn {
+        margin-top: 5px;
+    }
 }
 
 
@@ -747,6 +797,18 @@ a {
     }
 }
 
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
 @keyframes monthHeight {
     from {
         height: 0;
@@ -761,10 +823,12 @@ a {
 .onepage-pagination {
     position: absolute;
     right: 10px;
-    top: 35%;
+    top: 0;
+    bottom: 0;
+    height: calc((50px)*7);
     z-index: 5;
     list-style: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
 }
 

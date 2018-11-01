@@ -7,48 +7,48 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 </head>
 
 <body>
     <header>
-        <!-- <div class="container"> -->
-        <!-- <div class="mobile-header">
-                <a href="#home" class="logo" data-navigation-link="home"><img src="img/icons/Logo_Ex2_180_180.svg"></a>
-                <div class="hamburger" data-burger>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="dropdown-menu">
-                    <div class="dropdown-menu__close"></div>
-                    <ul class="header-menu">
-                        <li class="header-menu-item" data-navigation-link="team"><a href="#team">about</a></li>
-                        <li class="header-menu-item" data-navigation-link="about"><a href="#features">skills</a></li>
-                        <li class="header-menu-item" data-navigation-link="roadmap"><a href="#feedback">roadmap</a></li>
-                        <li class="header-menu-item" data-navigation-link="accessible"><a href="#accessible">create platform</a></li>
-                    </ul>
-                    <ul class="header-menu">
-                        <li class="header-menu-item">
-                            <a href="" class="js-popup" data-modal="sign-in">LOG IN</a>
-                        </li>
-                        <li class="header-menu-item">
-                            <a href="#" class="js-popup" data-modal="sign-up">
-                                <button class="btn btn-green">REGISTER</button>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
             <a href="#home" class="logo" data-navigation-link="1"><img src="img/logo.svg"></a>
-            <nav>
+         
+            <ul class="header-menu center">
+                <li class="header-menu-item" data-navigation-link="2"><a href="#">about</a></li>
+                <li class="header-menu-item" data-navigation-link="3"><a href="#">skills</a></li>
+                <li class="header-menu-item" data-navigation-link="4"><a href="#">roadmap</a></li>
+                <li class="header-menu-item highlighted" data-navigation-link="5"><a href="#">create platform</a></li>
+                <li class="header-menu-item" data-navigation-link="6"><a href="#">team</a></li>
+                <li class="header-menu-item"><a href="/" target="_blank">blog</a></li>
+                <li class="header-menu-item" data-navigation-link="7"><a href="#">contact</a></li>
+            </ul>
+            <ul class="header-menu right">
+                <li class="header-menu-item">
+                    <a href="login.html" class="js-popup">log in</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="signup.html" class="js-popup">sign up</a>
+                </li>
+            </ul>
+            
+            <div class="burger" data-menu>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </div>
+
+            <div class="dropdown-menu" data-menu-dropdown>
+                <div class="dropdown-menu__close" data-menu-dropdown-close></div>
                 <ul class="header-menu">
                     <li class="header-menu-item" data-navigation-link="2"><a href="#">about</a></li>
                     <li class="header-menu-item" data-navigation-link="3"><a href="#">skills</a></li>
                     <li class="header-menu-item" data-navigation-link="4"><a href="#">roadmap</a></li>
-                    <li class="header-menu-item" data-navigation-link="5"><a href="#">create platform</a></li>
+                    <li class="header-menu-item highlighted" data-navigation-link="5"><a href="#">create platform</a></li>
                     <li class="header-menu-item" data-navigation-link="6"><a href="#">team</a></li>
-                    <li class="header-menu-item"><a href="#">blog</a></li>
+                    <li class="header-menu-item"><a href="/" target="_blank">blog</a></li>
                     <li class="header-menu-item" data-navigation-link="7"><a href="#">contact</a></li>
                 </ul>
                 <ul class="header-menu">
@@ -59,8 +59,7 @@
                         <a href="signup.html" class="js-popup">sign up</a>
                     </li>
                 </ul>
-            </nav>
-        <!-- </div> -->
+            </div>
     </header>
 
     <main class="main">
@@ -299,20 +298,19 @@
                         <div class="container">
                             <div class="roadmap__timeline_item" style="width: 20%">
                                 <div class="roadmap__timeline_text">Start of development <br>Exchange #2</div>
-                                <div class="roadmap__timeline_month">MARCH<div class="roadmap__timeline_month_line"></div></div>
+                                <div class="roadmap__timeline_month" data-roadmap-month="march-2018">MARCH<div class="roadmap__timeline_month_line"></div></div>
                             </div>
                             <div class="roadmap__timeline_item" style="width: 30%">
                                 <div class="roadmap__timeline_text">First introduction to the public Interviewing potential users</div>
-                                <div class="roadmap__timeline_month">JUNE<div class="roadmap__timeline_month_line"></div></div>
+                                <div class="roadmap__timeline_month" data-roadmap-month="june-2018">JUNE<div class="roadmap__timeline_month_line"></div></div>
                             </div>
                             <div class="roadmap__timeline_item" style="width: 20%">
                                 <div class="roadmap__timeline_text">Beta release of the trading <br>platform with BTH/ETH trading <br>pair</div>
-                                <div class="roadmap__timeline_month">SEPTEMBER<div class="roadmap__timeline_month_line"></div></div>
+                                <div class="roadmap__timeline_month" data-roadmap-month="september-2018">SEPTEMBER<div class="roadmap__timeline_month_line"></div></div>
                             </div>
                             <div class="roadmap__timeline_item" style="width: 20%">
                                 <div class="roadmap__timeline_text">Incorporation in Estonia and getting Virtual Currency Exchange and Wallet Service license</div>
-                                <div class="roadmap__timeline_month">OCTOBER <div class="roadmap__timeline_month_line"></div>            <div class="we-are-here">We are here</div></div>
-                     
+                                <div class="roadmap__timeline_month" data-roadmap-month="october-2018">OCTOBER <div class="roadmap__timeline_month_line"></div></div>
                             </div>
                         </div>
                         <div class="roadmap__timeline_line"></div>
@@ -322,20 +320,19 @@
                         <div class="container">
                             <div class="roadmap__timeline_item" style="width: 20%">
                                 <div class="roadmap__timeline_text">Official launch of exchange <br>and support of FIAT currencies</div>
-                                <div class="roadmap__timeline_month">JANUARY<div class="roadmap__timeline_month_line"></div></div>
+                                <div class="roadmap__timeline_month" data-roadmap-month="january-2019">JANUARY<div class="roadmap__timeline_month_line"></div></div>
                             </div>
                             <div class="roadmap__timeline_item" style="width: 20%">
                                 <div class="roadmap__timeline_text">Launch of mobile <br>wallet service</div>
-                                <div class="roadmap__timeline_month">MARCH<div class="roadmap__timeline_month_line"></div></div>
+                                <div class="roadmap__timeline_month" data-roadmap-month="march-2019">MARCH<div class="roadmap__timeline_month_line"></div></div>
                             </div>
                             <div class="roadmap__timeline_item" style="width: 20%">
                                 <div class="roadmap__timeline_text">Launch of payment <br> gateway service</div>
-                                <div class="roadmap__timeline_month">MAY<div class="roadmap__timeline_month_line"></div></div>
+                                <div class="roadmap__timeline_month" data-roadmap-month="may-2019">MAY<div class="roadmap__timeline_month_line"></div></div>
                             </div>
                             <div class="roadmap__timeline_item" style="width: 20%">
                                 <div class="roadmap__timeline_text">You can now buy a cup of coffee <br> using wallet app  and br NFC <br> on your smartphone</div>
-                                <div class="roadmap__timeline_month">JULY<div class="roadmap__timeline_month_line"></div></div>
-                                <!-- <div>We are here</div> -->
+                                <div class="roadmap__timeline_month" data-roadmap-month="july-2019">JULY<div class="roadmap__timeline_month_line"></div></div>
                             </div>
                         </div>
                         <div class="roadmap__timeline_line"></div>
@@ -356,7 +353,7 @@
                         </div>
                         <div class="create-platform__form-title">Become exchange platform owner</div>
                         <form novalidate="" class="form" id="create-platform-form">
-                            <input type="email" class="input" placeholder="Your email" required data-pattern="email" name="email" data-error-msg="Email is invalid">
+                            <input type="email" class="input" placeholder="your email" required data-pattern="email" name="email" data-error-msg="Email is invalid">
                             <button class="btn">Join Now</button>
                         </form>
                     </div>
