@@ -426,6 +426,18 @@
         padding-right: 30px;
     }
 
+    .login-section, .signup-section {
+        min-height: 450px;
+        .form-block__bg {
+            display: none;
+        }
+        .form-block .form  {
+            width: 100%;
+            margin: 0;
+            padding: 0 20px;
+        }
+    }
+
     .table thead th,
     .table tbody tr td {
         font-size: 12px;
