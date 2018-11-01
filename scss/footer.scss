@@ -6,6 +6,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 60px;
     // background: #fff;
 
     .copyright {
@@ -18,9 +19,9 @@ footer {
 
     .footer-socials {
         display: flex;
-        a {
 
-        }
+        a {}
+
         img {
             margin-right: 38px;
             width: 22px;
@@ -30,28 +31,69 @@ footer {
 
     .scroll-down {
         cursor: pointer;
-        img{
+
+        img {
             width: 42px;
         }
+
         animation: go-go 1.5s infinite;
-          animation-timing-function: ease-out; 
+        animation-timing-function: ease-out;
+    }
+
+    .footer-form {
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        bottom: -60px;
+        opacity: 0;
+        visibility: hidden;
+        transition: bottom 0.3s;
+        background: #fff;
+        width: 395px;
+        .form {
+            width: 100%;
+            padding: 0px 30px 30px 30px;
+            margin-bottom: 30px;
+            display: none;
+        }
+        &__text {
+            font-weight: 500;
+            line-height: 1.25;
+            color: #212121;
+            padding: 30px 30px 20px 20px;
+            font-size: 24px;
+            display: none;
+        }
+
+        &.active {
+            bottom: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+        &.ready {
+            box-shadow: 0 0 30px -5px #000;
+            .form {
+                display: block;
+            }
+            .footer-form__text {
+                display: block;
+            }
+        }
     }
 
     .create-trading-btn {
-
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 325px;
+        cursor:pointer;
+        width: 100%;
         height: 60px;
         background-color: #56a54b;
         font-size: 20px;
         font-weight: bold;
         color: #ffffff;
         display: flex;
-        display: none;
         align-items: center;
         justify-content: center;
+
     }
 }
 
@@ -60,9 +102,11 @@ footer {
     0% {
         transform: translateY(0px);
     }
+
     30% {
         transform: translateY(12px);
     }
+
     100% {
         transform: translateY(0px);
     }

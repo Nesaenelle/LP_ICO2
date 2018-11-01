@@ -185,17 +185,6 @@ header {
             display: block;
             width: 100%;
             
-            &:last-child {
-                // margin-top: 30px;
-
-                .header-menu-item:last-child {
-                    a {
-                        // padding-top: 0;
-                        // padding: 0px;
-                    }
-                }
-            }
-
             &-item {
                 width: 100%;
                 margin: 0 !important;
@@ -215,12 +204,15 @@ header {
                      }
                 }
 
-                &.active:after {
-                    width: 40%;
+                &.active a:after {
+                    width: 70px;
+                    height: 3px;
+                    bottom: 5px;
                     margin: auto;
                     display: block;
                     left: 0;
                     right: 0;
+                    background-color: #fff;
                 }
             }
         }

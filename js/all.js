@@ -1,4 +1,3 @@
-
 (function(jQuery, NES_API) {
 
 
@@ -8,14 +7,37 @@
         constructor: function() {
             var self = this;
             this.currency = $.find('[data-currency]');
+            this.toggleBtn = $.find('[data-currency-toggle]');
+            this.menuBtn = $.find('.mobile-currency__title');
+
             if (this.currency.el) {
-                this.list = this.currency.findAll('li');
+                this.list = this.currency.findAll('[data-currency-item]');
                 this.list.forEach(function(item) {
                     item.addEvent('click', function() {
                         self.setActive(item);
                     });
                 });
             }
+
+            if(this.toggleBtn.el) {
+                this.toggleBtn.addEvent('click', function(e) {
+                    e.stopPropagation();
+                    jQuery('.currencies-list').toggleClass('active')
+                });
+            }
+
+            if (this.menuBtn.el) {
+                this.menuBtn.addEvent('click', function() {
+                    jQuery('.currencies-list').toggleClass('active')
+                });
+            }
+
+            window.addEventListener('click', function(e) {
+                if (!jQuery('.currencies-list')[0].contains(e.target)) {
+                    // burger.classList.remove('active');
+                    jQuery('.currencies-list').removeClass('active');
+                }
+            }, false);
         },
         setActive: function(curItem) {
             this.list.forEach(function(item) {
@@ -39,17 +61,18 @@
                 e.preventDefault();
                 var id = this.getAttribute('data-navigation-link');
                 // self.navigate(id, 0, 500);
-                
+
                 jQuery(".main").moveTo(id);
+                NES_API['mobile-menu'].close();
             });
 
             jQuery(".scroll-down").on('click', function() {
                 jQuery(".main").moveDown();
             });
 
-            if(jQuery(".main").length){
+            if (jQuery(".main").length) {
                 jQuery(".main").onepage_scroll({
-                    easing: "ease",  
+                    easing: "ease",
                     animationTime: 800,
                     beforeMove: function(index) {
                         links.forEach(function(link) {
@@ -59,18 +82,25 @@
                                 link.removeClass('active');
                             }
                         });
-                        if(index == 4) {
+                        if (index == 4) {
+                            $.find('.roadmap').setAttr('data-animate', true);
+                        }
+
+                        if (index == 7) {
+                            jQuery('.footer-form').removeClass('active ready');
+                        } else {
+                            jQuery('.footer-form').addClass('active');
+                        }
+
+                    },
+                    afterMove: function(index) {
+                        if (index == 4) {
                             $.find('.roadmap').setAttr('data-animate', true);
                         }
                     },
-                    afterMove: function(index) {
-                        if(index == 4) {
-                            $.find('.roadmap').setAttr('data-animate', true);
-                        }
-                    }, 
-                     loop: false,
-                     keyboard: false,
-                     pagination: true
+                    loop: false,
+                    keyboard: false,
+                    pagination: true
                 });
             }
 
@@ -92,31 +122,32 @@
             this.years.forEach(function(elem, i) {
                 elem.addEvent('click', function() {
                     var id = elem.getAttr('data-roadmap-year');
-                    self.years.forEach(function(el) { el.el === elem.el ? el.addClass('active') : el.removeClass('active')});
-                    self.timelines.forEach(function(el) { el.getAttr('data-roadmap-timeline') === id ? el.show() : el.hide()});
+                    self.years.forEach(function(el) { el.el === elem.el ? el.addClass('active') : el.removeClass('active') });
+                    self.timelines.forEach(function(el) { el.getAttr('data-roadmap-timeline') === id ? el.show() : el.hide() });
                 });
-            }); 
+            });
 
-            var months= ["January","February","March","April","May","June","July",
-            "August","September","October","November","December"];
+            var months = ["January", "February", "March", "April", "May", "June", "July",
+                "August", "September", "October", "November", "December"
+            ];
             var date = new Date();
             var monthIndex = date.getMonth();
             var monthName = months[monthIndex - 1].toLowerCase();
             var year = date.getFullYear();
-            
+
             var weAreHere = jQuery('<div class="we-are-here">We are here</div>');
-            var a = jQuery('[ data-roadmap-month="'+ monthName +'-'+ year +'"]');
+            var a = jQuery('[ data-roadmap-month="' + monthName + '-' + year + '"]');
             a.append(weAreHere);
-            
+
         }
     });
 
     NES_API.add('animation', {
         constructor: function() {
- 
+
             var elements = $.findAll('[data-animate]');
 
-            window.addEventListener('scroll', function(){
+            window.addEventListener('scroll', function() {
                 elements.forEach(function(elem) {
                     if (isInViewport(elem.el, 90)) {
                         if (!elem.getAttr('data-animate')) {
@@ -131,31 +162,30 @@
 
     NES_API.add('mobile-menu', {
         constructor: function() {
+            var self = this;
             var openBtn = $.find('[data-menu]');
-            var dropdown = $.find('[data-menu-dropdown]');
+            this.dropdown = $.find('[data-menu-dropdown]');
             var closeBtn = $.find('[data-menu-dropdown-close]');
 
             openBtn.addEvent('click', function(e) {
                 e.stopPropagation();
-                // if (burger.classList.contains('active')) {
-                //     burger.classList.remove('active');
-                // } else {
-                //     burger.classList.add('active');
-                // }
-                    dropdown.addClass('active');
+                self.dropdown.addClass('active');
             });
 
             closeBtn.addEvent('click', function(e) {
                 // burger.classList.remove('active');
-                dropdown.removeClass('active');
+                self.dropdown.removeClass('active');
             });
 
             window.addEventListener('click', function(e) {
-                if (!dropdown.el.contains(e.target)) {
+                if (!self.dropdown.el.contains(e.target)) {
                     // burger.classList.remove('active');
-                    dropdown.removeClass('active');
+                    self.dropdown.removeClass('active');
                 }
             }, false);
+        },
+        close: function() {
+            this.dropdown.removeClass('active');
         }
     });
 
@@ -164,7 +194,8 @@
 
         contactForm.onSubmit(function(data) {
             // ajax here
-            alert('Success'); return;
+            alert('Success');
+            return;
             jQuery.ajax({
                 method: 'POST',
                 url: '',
@@ -180,11 +211,33 @@
     }
 
     if ($.exists('#create-platform-form')) {
-        var contactForm = new NES_API.FORM($.find('#create-platform-form').el);
+        var createForm = new NES_API.FORM($.find('#create-platform-form').el);
 
-        contactForm.onSubmit(function(data) {
+        createForm.onSubmit(function(data) {
             // ajax here
-            alert('Success'); return;
+            alert('Success');
+            return;
+            jQuery.ajax({
+                method: 'POST',
+                url: '',
+                data: {},
+                success: function() {
+
+                },
+                error: function() {
+
+                }
+            })
+        });
+    }
+
+    if ($.exists('#footer-create-platform-form')) {
+        var footerCreateForm = new NES_API.FORM($.find('#footer-create-platform-form').el);
+
+        footerCreateForm.onSubmit(function(data) {
+            // ajax here
+            alert('Success');
+            return;
             jQuery.ajax({
                 method: 'POST',
                 url: '',
@@ -205,7 +258,8 @@
 
         loginForm.onSubmit(function(data) {
             // ajax here
-            alert('Success'); return;
+            alert('Success');
+            return;
             jQuery.ajax({
                 method: 'POST',
                 url: '',
@@ -224,7 +278,8 @@
         var signupForm = new NES_API.FORM($.find('#signup-form').el);
         signupForm.onSubmit(function(data) {
             // ajax here
-            alert('Success'); return;
+            alert('Success');
+            return;
             jQuery.ajax({
                 method: 'POST',
                 url: '',
@@ -238,6 +293,24 @@
             })
         });
     }
+
+    jQuery('.create-trading-btn').on('click', function(){
+        jQuery('.footer-form').toggleClass('ready');
+    });
+
+    if(jQuery('.footer-form').length){
+        window.addEventListener('click', function(e) {
+            if (!jQuery('.footer-form')[0].contains(e.target)) {
+                // burger.classList.remove('active');
+                jQuery('.footer-form').removeClass('ready');
+            }
+        }, false);
+    }
+
+    jQuery(".about-section").on("swipeleft",function(){
+      // $(this).hide();
+      alert(1);
+    });
 
     NES_API.init();
 
@@ -255,15 +328,14 @@ $('.slick-slider').slick({
     nextArrow: '<div class="arrow-right"></div>',
     prevArrow: '<div class="arrow-left"></div>',
     responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-            }
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
         }
-    ]
+    }]
 });
 
 

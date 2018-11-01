@@ -11,48 +11,19 @@
 </head>
 
 <body>
-    <div data-navigation="home"></div>
     <header>
-        <!-- <div class="container"> -->
-        <!-- <div class="mobile-header">
-                <a href="#home" class="logo" data-navigation-link="home"><img src="img/icons/Logo_Ex2_180_180.svg"></a>
-                <div class="hamburger" data-burger>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="dropdown-menu">
-                    <div class="dropdown-menu__close"></div>
-                    <ul class="header-menu">
-                        <li class="header-menu-item" data-navigation-link="team"><a href="#team">about</a></li>
-                        <li class="header-menu-item" data-navigation-link="about"><a href="#features">skills</a></li>
-                        <li class="header-menu-item" data-navigation-link="roadmap"><a href="#feedback">roadmap</a></li>
-                        <li class="header-menu-item" data-navigation-link="accessible"><a href="#accessible">create platform</a></li>
-                    </ul>
-                    <ul class="header-menu">
-                        <li class="header-menu-item">
-                            <a href="" class="js-popup" data-modal="sign-in">LOG IN</a>
-                        </li>
-                        <li class="header-menu-item">
-                            <a href="#" class="js-popup" data-modal="sign-up">
-                                <button class="btn btn-green">REGISTER</button>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
-        <a href="index.html" class="logo"><img src="img/logo.svg"></a>
-        <nav>
-            <ul class="header-menu">
+            <a href="index.html" class="logo""><img src="img/logo.svg"></a>
+         
+            <ul class="header-menu center">
                 <li class="header-menu-item"><a href="index.html#2">about</a></li>
                 <li class="header-menu-item"><a href="index.html#3">skills</a></li>
                 <li class="header-menu-item"><a href="index.html#4">roadmap</a></li>
-                <li class="header-menu-item"><a href="index.html#5">create platform</a></li>
+                <li class="header-menu-item highlighted"><a href="index.html#5">create platform</a></li>
                 <li class="header-menu-item"><a href="index.html#6">team</a></li>
-                <li class="header-menu-item"><a href="">blog</a></li>
+                <li class="header-menu-item"><a href="/" target="_blank">blog</a></li>
                 <li class="header-menu-item"><a href="index.html#7">contact</a></li>
             </ul>
-            <ul class="header-menu">
+            <ul class="header-menu right">
                 <li class="header-menu-item">
                     <a href="login.html" class="js-popup">log in</a>
                 </li>
@@ -60,9 +31,35 @@
                     <a href="signup.html" class="js-popup">sign up</a>
                 </li>
             </ul>
-        </nav>
-        <!-- </div> -->
+            
+            <div class="burger" data-menu>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </div>
+
+            <div class="dropdown-menu" data-menu-dropdown>
+                <div class="dropdown-menu__close" data-menu-dropdown-close></div>
+                <ul class="header-menu">
+                    <li class="header-menu-item"><a href="index.html#2">about</a></li>
+                    <li class="header-menu-item"><a href="index.html#3">skills</a></li>
+                    <li class="header-menu-item"><a href="index.html#4">roadmap</a></li>
+                    <li class="header-menu-item highlighted"><a href="index.html#5">create platform</a></li>
+                    <li class="header-menu-item"><a href="index.html#6">team</a></li>
+                    <li class="header-menu-item"><a href="/" target="_blank">blog</a></li>
+                    <li class="header-menu-item"><a href="index.html#7">contact</a></li>
+                </ul>
+                <ul class="header-menu">
+                    <li class="header-menu-item">
+                        <a href="login.html" class="js-popup">log in</a>
+                    </li>
+                    <li class="header-menu-item active">
+                        <a href="signup.html" class="js-popup">sign up</a>
+                    </li>
+                </ul>
+            </div>
     </header>
+
     <main>
     <div class="signup-section">          
         <div class="form-block">                    
@@ -86,14 +83,10 @@
             <a href="" target="_blank"><img src="img/twitter.svg" alt=""></a>
             <a href="" target="_blank"><img src="img/telegram.svg" alt=""></a>
         </div>
-<!--         <div class="scroll-down">
+        <div class="scroll-down">
             <img src="img/noun_Mouse_744299.svg" alt="">
-        </div> -->
+        </div>
         <div class="copyright">© Exchange2.net 2018</div>
-
-      
-        <!-- <a href="" class="create-trading-btn">Create Trading Platform</a> -->
-    
     </footer>
 
     <script src="js/jquery-3.3.1.min.js"></script>
