@@ -76,7 +76,7 @@
                 jQuery(".main").onepage_scroll({
                     easing: "ease",
                     animationTime: 800,
-                    updateURL: true, 
+                    // updateURL: true, 
                     beforeMove: function(index) {
                         links.forEach(function(link) {
                             if (link.getAttr('data-navigation-link') == index) {
