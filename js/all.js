@@ -155,14 +155,24 @@
             var a = jQuery('[ data-roadmap-month="' + monthName + '-' + year + '"]');
             a.append(weAreHere);
 
-            // jQuery('.roadmap').swipe({
-            //     swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
-            //         if (phase == "end") {
-            //             if (direction == 'left') {
+            jQuery('.roadmap').swipe({
+                swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
+                    if (phase == "end") {
+                        var roadmap__timeline = jQuery('.roadmap__timeline:visible');
 
-            //             }
-            //         }
-            //     });
+                        if (direction == 'left') {
+                                roadmap__timeline.animate({
+                                    scrollLeft: roadmap__timeline[0].scrollLeft + jQuery('.roadmap__timeline_item:visible').width()
+                                }, 500);
+                        }
+                        if (direction == 'right') {
+                            roadmap__timeline.animate({
+                                scrollLeft: roadmap__timeline[0].scrollLeft - jQuery('.roadmap__timeline_item:visible').width()
+                            }, 500);
+                        }
+                    }
+                }});
+
             jQuery('.roadmap__timeline').on('scroll', function() {
                 if(jQuery(this).is(':visible')) {
                     var procent = (this.scrollLeft/(this.scrollWidth - window.innerWidth) ) * 100;
