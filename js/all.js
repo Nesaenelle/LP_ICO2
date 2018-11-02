@@ -32,12 +32,14 @@
                 });
             }
 
-            window.addEventListener('click', function(e) {
-                if (!jQuery('.currencies-list')[0].contains(e.target)) {
-                    // burger.classList.remove('active');
-                    jQuery('.currencies-list').removeClass('active');
-                }
-            }, false);
+            if(jQuery('.currencies-list').length) {
+                window.addEventListener('click', function(e) {
+                    if (!jQuery('.currencies-list')[0].contains(e.target)) {
+                        // burger.classList.remove('active');
+                        jQuery('.currencies-list').removeClass('active');
+                    }
+                }, false);
+            }
         },
         setActive: function(curItem) {
             this.list.forEach(function(item) {
