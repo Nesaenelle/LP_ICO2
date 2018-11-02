@@ -91,8 +91,10 @@
 
                         if (index == 7) {
                             jQuery('.footer-form').removeClass('active ready');
+                            jQuery('.scroll-down').fadeOut(200);
                         } else {
                             jQuery('.footer-form').addClass('active');
+                            jQuery('.scroll-down').fadeIn(200);
                         }
 
                         if (index == 1) {
