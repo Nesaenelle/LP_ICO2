@@ -159,16 +159,30 @@
                 swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
                     if (phase == "end") {
                         var roadmap__timeline = jQuery('.roadmap__timeline:visible');
+                        var width = jQuery('.roadmap__timeline_item:visible').width();
+                        var scrollLeft = roadmap__timeline[0].scrollLeft;
 
                         if (direction == 'left') {
-                                roadmap__timeline.animate({
-                                    scrollLeft: roadmap__timeline[0].scrollLeft + jQuery('.roadmap__timeline_item:visible').width()
-                                }, 500);
+                                roadmap__timeline.animate({scrollLeft: scrollLeft + width}, 500);
                         }
                         if (direction == 'right') {
-                            roadmap__timeline.animate({
-                                scrollLeft: roadmap__timeline[0].scrollLeft - jQuery('.roadmap__timeline_item:visible').width()
-                            }, 500);
+                            roadmap__timeline.animate({scrollLeft: scrollLeft - width}, 500);
+                        }
+                    }
+                }});
+
+            jQuery('.team-section .scroller').swipe({
+                swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
+                    if (phase == "end") {
+                        var roadmap__timeline = jQuery('.team-section .scroller');
+                        var width = window.innerWidth;
+                        var scrollLeft = roadmap__timeline[0].scrollLeft;
+
+                        if (direction == 'left') {
+                                roadmap__timeline.animate({scrollLeft: scrollLeft + width}, 500);
+                        }
+                        if (direction == 'right') {
+                            roadmap__timeline.animate({scrollLeft: scrollLeft - width}, 500);
                         }
                     }
                 }});
@@ -179,10 +193,18 @@
                     self.updateIndicator(procent);
                 }
             });
+
+            jQuery('.team-section .scroller').on('scroll', function() {
+                var procent = (this.scrollLeft/(this.scrollWidth - window.innerWidth) ) * 100;
+                self.updateTeamIndicator(procent);
+            });
         },
 
         updateIndicator: function(procent) {
             jQuery('.roadmap-indicator').width(procent+'%');
+        },
+        updateTeamIndicator: function(procent) {
+            jQuery('.team-indicator').width(procent+'%');
         }
     });
 

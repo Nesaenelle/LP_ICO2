@@ -487,15 +487,15 @@ a {
 
 .roadmap-section {
     // margin-top: 150px;
-    .roadmap-indicator {
-        height: 4px;
-        background-color: #56a54b;
-        position: absolute;
-        display: none;
-        width: 0%;
-        bottom: 50px;
-        // transition: 0.2s;
-    }
+}
+.roadmap-indicator, .team-indicator{
+    height: 4px;
+    background-color: #56a54b;
+    position: absolute;
+    display: none;
+    width: 0%;
+    bottom: 50px;
+    // transition: 0.2s;
 }
 
 .roadmap {
