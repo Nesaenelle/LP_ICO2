@@ -31,7 +31,8 @@ footer {
 
     .scroll-down {
         cursor: pointer;
-
+        position: relative;
+        z-index: 100;
         img {
             width: 42px;
         }

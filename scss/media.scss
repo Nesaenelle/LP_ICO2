@@ -19,7 +19,7 @@
     }
 
     .section {
-        padding-top: 120px;
+        padding-top: 110px;
     }
 
     .onepage-pagination {
@@ -155,6 +155,10 @@
         padding: 0 13px;
     }
 
+    .main-title__shadow {
+        font-size: 180px;
+    }
+
     .team-section .team-banner {
         background-size: 152%;
     }
@@ -166,46 +170,236 @@
     .contacts-section .form-block__bg {
         background-position: center !important;
     }
+
+    .about-section .about__item_img span {
+        font-size: 38px;
+    }
+
+    .about-section .about__item:nth-child(1) {
+        width: 220px;
+    }
+
+    .about-section .about__item:nth-child(1) .about__item_text {
+        min-width: 100%;
+    }
+
+    .about-section .about__item:nth-child(1) .about__item_img {
+        width: 200px;
+    }
+
+    .about-section .about__item:nth-child(2) {
+        width: calc(100% - 220px);
+    }
+
+    .about-section .about__item:nth-child(2) .about__item_img_bg {
+        width: 290px;
+    }
+
+    .about-section .about__item:nth-child(2) .about__item_text {
+        width: 200px;
+    }
+
+    .about-section .about__item:nth-child(3) {
+        width: 450px;
+        position: static;
+    }
+
+    .about-section .about__item:nth-child(3) .about__item_img_bg {
+        width: 220px;
+    }
+
+    .skills-section .skills__title {
+        font-size: 24px;
+    }
+
+    .skills-section .skills__list li {
+        font-size: 16px;
+    }
+
+    .skills-section .skills__bg {
+        height: 350px;
+        width: 45%;
+        margin-right: 10px;
+    }
+
+    .skills-section .skills__content {
+        margin-top: 60px;
+        width: 55%;
+    }
+
+    .skills-section .skills__try-now,
+    .skills-section .skills__soon {
+        font-size: 14px;
+
+        b {
+            width: 35%;
+            font-size: 18px;
+            margin-right: 15px;
+        }
+
+        span {
+            text-align: right;
+            width: 65%;
+
+        }
+    }
+
+    .roadmap__timeline .container {
+        padding: 0 20px;
+    }
+
+    .roadmap__years_item {
+        font-size: 68px;
+        margin-right: 50px;
+    }
+
+    .roadmap__timeline_text {
+        font-size: 12px;
+        width: 100%;
+        padding-right: 5px;
+    }
+
+    .roadmap__timeline_month {
+        font-size: 16px;
+    }
+
+    .roadmap__timeline_item {
+        width: 25% !important;
+    }
+
+    .create-platform-section .create-platform__title {
+        font-size: 28px;
+    }
+
+    .create-platform-section .create-platform__descr {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .create-platform-section .create-platform__form-title {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 980px) {
 
     footer .footer-form {
-        width: 300px;
+        width: 260px;
+
         .form .input {
             font-size: 16px;
 
         }
+
         .form .btn {
             font-size: 16px;
             width: 100%;
-                        height: 50px;
+            height: 50px;
         }
     }
+
     footer .create-trading-btn {
         font-size: 16px;
     }
 
     footer .footer-form__text {
         font-size: 18px;
+        padding: 20px 20px 20px 20px;
+    }
+
+    footer .footer-form .form {
+        padding: 0 20px 20px;
+    }
+
+    .about-section .about__item_img span {
+        font-size: 28px;
+    }
+
+    .about-section .about__item:nth-child(1),
+    .about-section .about__item:nth-child(2),
+    .about-section .about__item:nth-child(3) {
+        width: 100%;
+        display: flex;
+        margin: 0 0 15px 0;
+        overflow: hidden;
+
+        .about__item_img {
+            min-width: 240px;
+            min-height: 60px;
+            height: 60px;
+            width: 240px;
+        }
+
+        .about__item_text {
+            width: calc(100% - 240px);
+            min-width: calc(100% - 240px);
+            padding-left: 20px;
+            // padding-right: 20px;
+        }
+
+        .about__item_img_bg {
+            width: 100%;
+        }
+    }
+
+    .create-platform-section .create-platform__form-title {
+        font-size: 16px;
+    }
+
+    .create-platform-section .create-platform__content {
+        width: 100%;
+        // margin-top: 0;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .create-platform__bg {
+        display: none;
+    }
+
+    .form .input,
+    .form .textarea {
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 800px) {
-    header .header-menu-item, header .header-menu.right .header-menu-item{
-        padding: 0 6px; 
-         a {
+
+    header .header-menu-item,
+    header .header-menu.right .header-menu-item {
+        padding: 0 6px;
+
+        a {
             font-size: 12px;
-         }
+        }
     }
-    .table tbody tr td, .table thead th {
+
+    .table tbody tr td,
+    .table thead th {
         padding: 0 10px;
+
         &:nth-child(n + 6) {
             display: none;
         }
     }
 
+    .create-platform-section .create-platform .form {
+        display: block;
+    }
+
+    .team-section .team-list {
+        width: 90%;
+        .team-list__item_name, .team-list__item_position {
+            font-size: 14px;
+        }
+        .team-list__item_socials img {
+            width: 19px;
+            height: 19px;
+        }
+    }
+
 }
+
 //mobile
 @media screen and (max-width: 600px) {
     .container {
@@ -216,7 +410,7 @@
         display: none;
     }
 
-    .footer-form  {
+    .footer-form {
         display: none;
     }
 
@@ -255,6 +449,7 @@
 
     .mobile-currency {
         display: block;
+
         &__title {
             display: block;
         }
@@ -269,18 +464,22 @@
         flex-wrap: wrap;
         background-color: #e8e8e8;
         z-index: 99;
+
         li {
             width: 100%;
             margin-top: 10px;
             text-align: right;
             padding-right: 20px;
             margin-left: 0;
+
             &:first-child {
                 margin-top: 15px;
             }
+
             &:last-child {
                 margin-bottom: 15px;
             }
+
             &.active:after {
                 content: none;
             }
@@ -313,32 +512,48 @@
     .main-title__shadow {
         display: none;
     }
-    
+
     .about-section .about__item {
         float: none;
-        &:nth-child(1),  &:nth-child(2),  &:nth-child(3) {
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
             width: 100%;
             display: none;
             margin: 0;
             position: static;
+            overflow: visible;
+
             &.active {
                 display: block;
             }
+
             .about__item_img {
                 width: 100%;
+                height: auto;
+
                 span {
                     font-size: 32px;
                 }
             }
+
             .about__item_img_bg {
                 width: 100%;
                 height: 245px;
             }
+
             .about__item_text {
                 width: 100%;
                 min-width: 100%;
+                padding: 0;
+                margin-top: 10px;
             }
-        } 
+        }
+    }
+
+    .swipe-indicator {
+        display: flex;
     }
 
 
@@ -348,41 +563,50 @@
         margin-top: 15px;
         width: 100%;
     }
+
     .skills-section .skills__title {
         font-size: 16px;
     }
+
     .skills-section .skills__bg {
         height: 186px;
-        margin: 20px auto 10px; 
+        margin: 20px auto 10px;
         width: 100%;
-        background-position: center!important;
+        background-position: center !important;
     }
+
     .skills-section .skills__list li {
         font-size: 14px;
     }
-    .skills-section .skills__try-now , .skills-section .skills__soon{
+
+    .skills-section .skills__try-now,
+    .skills-section .skills__soon {
         font-size: 12px;
-         b {
+
+        b {
             width: 35%;
             font-size: 16px;
             margin-right: 15px;
-         }
-         span {
+        }
+
+        span {
             text-align: right;
             width: 65%;
 
-         }
+        }
     }
 
     @media screen and (max-height: 620px) {
 
-        .skills-section .skills__bg{
+        .skills-section .skills__bg {
             height: 125px;
         }
     }
+
     .roadmap__years {
         margin-top: 20px;
     }
+
     .roadmap__years_item {
         font-size: 50px;
         margin-right: 35px;
@@ -391,11 +615,38 @@
     .roadmap__timeline {
         overflow: auto;
         padding-bottom: 20px;
+
         .container {
             width: 1200px;
         }
+
         .roadmap__timeline_line {
             width: 1200px;
+        }
+
+        .roadmap__timeline_text {
+            font-size: 14px;
+            width: 300px;
+        }
+
+        .roadmap__timeline_month {
+            font-size: 18px;
+        }
+    }
+
+    .create-platform-section .create-platform .form {
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 0;
+
+        .input {
+            width: 100%;
+        }
+
+        .input-error-text {
+            bottom: auto;
+            position: absolute;
         }
     }
 
@@ -405,6 +656,27 @@
 
     .team-section .team-list {
         width: 90%;
+    }
+    .team-section {
+        .scroller {
+            overflow: auto;
+            &__content {
+                width: 1200px;
+            }
+        }
+        .team-banner {
+            height: 260px;
+        }
+        .team-list {
+            width: 75%;
+        }
+
+        .team-list__item:first-child {
+            width: 13%;
+        }
+        .team-list__item:nth-child(2) {
+            width: 7%;
+        }
     }
 
     .team-section .team-list__item_name,
@@ -426,12 +698,15 @@
         padding-right: 30px;
     }
 
-    .login-section, .signup-section {
+    .login-section,
+    .signup-section {
         min-height: 450px;
+
         .form-block__bg {
             display: none;
         }
-        .form-block .form  {
+
+        .form-block .form {
             width: 100%;
             margin: 0;
             padding: 0 20px;
@@ -461,24 +736,28 @@
     }
 
     .contacts-section .form {
-        margin-top: 0;
+        margin: 0;
+        padding: 0 20px;
         width: 100%;
     }
 
     .form .btn {
         height: 44px;
     }
-    .form .input,
-    .form .textarea {
-        font-size: 16px;
-    }
+
+    // .form .input,
+    // .form .textarea {
+    //     font-size: 16px;
+    // }
+
     .form .textarea {
         height: 150px;
     }
-    
+
     footer {
         height: auto;
     }
+
     footer .footer-socials img {
         width: 18px;
         height: 18px;

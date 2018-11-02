@@ -302,7 +302,8 @@ a {
     position: absolute;
     bottom: 70px;
     left: 20px;
-    display: flex;
+    display: none;
+
     // margin-top: 50px;
     span{
         display: block;
@@ -430,7 +431,7 @@ a {
             margin-top: 20px;
             background-repeat: no-repeat !important;
             background-size: 100% !important;
-            background-position: right top !important;
+            background-position: right center !important;
             width: 50%;
             height: 610px;
             transition: 0.3s;
@@ -638,13 +639,14 @@ a {
             width: 550px;
             margin-top: 137px;
             margin-right: 40px;
+            margin-left: 20px;
             transition: 0.3s;
         }
 
         &__bg {
             // margin-top: 20px;
             background-repeat: no-repeat !important;
-            background-position: right top !important;
+            background-position: center !important;
             background-size: cover !important;
             width: 50%;
             margin-top: 14px;
@@ -838,6 +840,7 @@ a {
     .form {
         margin-left: 30px;
         margin-top: 89px;
+        margin-right: 30px;
     }
 
     .form-block__bg {
