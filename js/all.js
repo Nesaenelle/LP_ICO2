@@ -138,6 +138,8 @@
                     self.timelines.forEach(function (el) {
                         el.getAttr('data-roadmap-timeline') === id ? el.show() : el.hide()
                     });
+                    jQuery('.roadmap__timeline').scrollLeft(0);
+                    self.updateIndicator(0);
                 });
             });
 
@@ -153,6 +155,24 @@
             var a = jQuery('[ data-roadmap-month="' + monthName + '-' + year + '"]');
             a.append(weAreHere);
 
+            // jQuery('.roadmap').swipe({
+            //     swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
+            //         if (phase == "end") {
+            //             if (direction == 'left') {
+
+            //             }
+            //         }
+            //     });
+            jQuery('.roadmap__timeline').on('scroll', function() {
+                if(jQuery(this).is(':visible')) {
+                    var procent = (this.scrollLeft/(this.scrollWidth - window.innerWidth) ) * 100;
+                    self.updateIndicator(procent);
+                }
+            });
+        },
+
+        updateIndicator: function(procent) {
+            jQuery('.roadmap-indicator').width(procent+'%');
         }
     });
 
@@ -244,6 +264,8 @@
                     }
                 });
             });
+
+
         }
     });
 
