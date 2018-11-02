@@ -76,6 +76,7 @@
                 jQuery(".main").onepage_scroll({
                     easing: "ease",
                     animationTime: 800,
+                    updateURL: true, 
                     beforeMove: function(index) {
                         links.forEach(function(link) {
                             if (link.getAttr('data-navigation-link') == index) {
@@ -343,6 +344,9 @@
 
     jQuery('.create-trading-btn').on('click', function() {
         jQuery('.footer-form').toggleClass('ready');
+    });
+    jQuery('.submit-create-trading-form').on('click', function() {
+        jQuery('#footer-create-platform-form').submit();
     });
 
     if (jQuery('.footer-form').length) {

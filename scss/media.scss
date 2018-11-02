@@ -604,7 +604,16 @@
         .skills-section .skills__bg {
             height: 125px;
         }
+        .about-section  .about__item{
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                .about__item_img_bg {
+                    height: 140px;
+                }
+            }
+        }
     }
+
+
 
     .roadmap__years {
         margin-top: 20px;
