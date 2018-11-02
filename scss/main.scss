@@ -100,6 +100,7 @@ a {
     font-size: 12px;
     font-weight: bold;
     position: relative;
+    z-index: 30;
     &:after {
         content: '';
         position: absolute;
