@@ -681,13 +681,20 @@
         }
         .team-list {
             width: 75%;
+            justify-content: flex-start;
         }
 
         .team-list__item:first-child {
-            width: 13%;
+            width: 254px;
         }
         .team-list__item:nth-child(2) {
-            width: 7%;
+            width: 170px;
+        }
+        .team-list__item:nth-child(3) {
+            width: 185px;
+        }
+        .team-list__item:nth-child(4) {
+            width: 192px;
         }
     }
 
@@ -799,5 +806,19 @@
 
     .main-btn {
         width: 100%;
+    }
+
+    .team-section .team-banner {
+        background-position-y: 72%;
+    }
+
+    .team-section .team-banner {
+        height: 180px;
+    }
+    .skills-section .skills__bg {
+        height: 85px;
+    }
+    .about-section .about__item:nth-child(1) .about__item_text, .about-section .about__item:nth-child(2) .about__item_text, .about-section .about__item:nth-child(3) .about__item_text {
+        font-size: 12px;
     }
 }
