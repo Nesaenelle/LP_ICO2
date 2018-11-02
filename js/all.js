@@ -1,10 +1,10 @@
-(function(jQuery, NES_API) {
+(function (jQuery, NES_API) {
 
 
     var $ = NES_API.SELECTOR;
 
     NES_API.add('currency', {
-        constructor: function() {
+        constructor: function () {
             var self = this;
             this.currency = $.find('[data-currency]');
             this.toggleBtn = $.find('[data-currency-toggle]');
@@ -12,28 +12,28 @@
 
             if (this.currency.el) {
                 this.list = this.currency.findAll('[data-currency-item]');
-                this.list.forEach(function(item) {
-                    item.addEvent('click', function() {
+                this.list.forEach(function (item) {
+                    item.addEvent('click', function () {
                         self.setActive(item);
                     });
                 });
             }
 
             if (this.toggleBtn.el) {
-                this.toggleBtn.addEvent('click', function(e) {
+                this.toggleBtn.addEvent('click', function (e) {
                     e.stopPropagation();
                     jQuery('.currencies-list').toggleClass('active')
                 });
             }
 
             if (this.menuBtn.el) {
-                this.menuBtn.addEvent('click', function() {
+                this.menuBtn.addEvent('click', function () {
                     jQuery('.currencies-list').toggleClass('active')
                 });
             }
 
-            if(jQuery('.currencies-list').length) {
-                window.addEventListener('click', function(e) {
+            if (jQuery('.currencies-list').length) {
+                window.addEventListener('click', function (e) {
                     if (!jQuery('.currencies-list')[0].contains(e.target)) {
                         // burger.classList.remove('active');
                         jQuery('.currencies-list').removeClass('active');
@@ -41,8 +41,8 @@
                 }, false);
             }
         },
-        setActive: function(curItem) {
-            this.list.forEach(function(item) {
+        setActive: function (curItem) {
+            this.list.forEach(function (item) {
                 if (item.el === curItem.el) {
                     item.addClass('active')
                 } else {
@@ -50,16 +50,16 @@
                 }
             });
         },
-        update: function() {
+        update: function () {
 
         }
     });
 
     NES_API.add('navigation', {
-        constructor: function() {
+        constructor: function () {
             var links = $.findAll('[data-navigation-link');
             var routes = [''];
-            jQuery('[data-navigation-link]').on('click', function(e) {
+            jQuery('[data-navigation-link]').on('click', function (e) {
                 e.preventDefault();
                 var id = this.getAttribute('data-navigation-link');
                 // self.navigate(id, 0, 500);
@@ -68,7 +68,7 @@
                 NES_API['mobile-menu'].close();
             });
 
-            jQuery(".scroll-down").on('click', function() {
+            jQuery(".scroll-down").on('click', function () {
                 jQuery(".main").moveDown();
             });
 
@@ -77,8 +77,8 @@
                     easing: "ease",
                     animationTime: 800,
                     // updateURL: true, 
-                    beforeMove: function(index) {
-                        links.forEach(function(link) {
+                    beforeMove: function (index) {
+                        links.forEach(function (link) {
                             if (link.getAttr('data-navigation-link') == index) {
                                 link.addClass('active');
                             } else {
@@ -95,13 +95,13 @@
                             jQuery('.footer-form').addClass('active');
                         }
 
-                        if(index == 1) {
+                        if (index == 1) {
                             jQuery('.header-create-platform').removeClass('active');
                         } else {
                             jQuery('.header-create-platform').addClass('active');
                         }
                     },
-                    afterMove: function(index) {
+                    afterMove: function (index) {
                         if (index == 4) {
                             $.find('.roadmap').setAttr('data-animate', true);
                         }
@@ -116,22 +116,26 @@
     });
 
     NES_API.add('roadmap', {
-        constructor: function() {
+        constructor: function () {
             var self = this;
             this.roadmap = $.findAll('[data-roadmap]');
             this.timelines = $.findAll('[data-roadmap-timeline]');
             this.years = $.findAll('[data-roadmap-year]');
 
 
-            this.timelines.forEach(function(elem, i) {
+            this.timelines.forEach(function (elem, i) {
                 i === 0 ? elem.show() : elem.hide();
             });
 
-            this.years.forEach(function(elem, i) {
-                elem.addEvent('click', function() {
+            this.years.forEach(function (elem, i) {
+                elem.addEvent('click', function () {
                     var id = elem.getAttr('data-roadmap-year');
-                    self.years.forEach(function(el) { el.el === elem.el ? el.addClass('active') : el.removeClass('active') });
-                    self.timelines.forEach(function(el) { el.getAttr('data-roadmap-timeline') === id ? el.show() : el.hide() });
+                    self.years.forEach(function (el) {
+                        el.el === elem.el ? el.addClass('active') : el.removeClass('active')
+                    });
+                    self.timelines.forEach(function (el) {
+                        el.getAttr('data-roadmap-timeline') === id ? el.show() : el.hide()
+                    });
                 });
             });
 
@@ -151,12 +155,12 @@
     });
 
     NES_API.add('animation', {
-        constructor: function() {
+        constructor: function () {
 
             var elements = $.findAll('[data-animate]');
 
-            window.addEventListener('scroll', function() {
-                elements.forEach(function(elem) {
+            window.addEventListener('scroll', function () {
+                elements.forEach(function (elem) {
                     if (isInViewport(elem.el, 90)) {
                         if (!elem.getAttr('data-animate')) {
                             elem.setAttr('data-animate', true);
@@ -169,64 +173,68 @@
 
 
     NES_API.add('mobile-menu', {
-        constructor: function() {
+        constructor: function () {
             var self = this;
             var openBtn = $.find('[data-menu]');
             this.dropdown = $.find('[data-menu-dropdown]');
             var closeBtn = $.find('[data-menu-dropdown-close]');
 
-            openBtn.addEvent('click', function(e) {
+            openBtn.addEvent('click', function (e) {
                 e.stopPropagation();
                 self.dropdown.addClass('active');
             });
 
-            closeBtn.addEvent('click', function(e) {
+            closeBtn.addEvent('click', function (e) {
                 // burger.classList.remove('active');
                 self.dropdown.removeClass('active');
             });
 
-            window.addEventListener('click', function(e) {
+            window.addEventListener('click', function (e) {
                 if (!self.dropdown.el.contains(e.target)) {
                     // burger.classList.remove('active');
                     self.dropdown.removeClass('active');
                 }
             }, false);
         },
-        close: function() {
+        close: function () {
             this.dropdown.removeClass('active');
         }
     });
 
     NES_API.add('swipe', {
-        constructor: function() {
+        constructor: function () {
 
             var array = $.findAll('[data-swipe]');
 
-            array.forEach(function(content) {
+            array.forEach(function (content) {
                 var index = 0;
                 var indicator = content.find('.swipe-indicator');
                 var indicatorItems = indicator.findAll('span');
 
                 jQuery(content.el).swipe({
-                    swipeStatus: function(event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
+                    swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
                         if (phase == "end") {
                             var items = content.findAll('[data-swipe-item]');
                             if (direction == 'left') {
                                 index++;
-                                if(index > items.length - 1 ) index = items.length - 1;
+                                if (index > items.length - 1) index = items.length - 1;
 
-                                indicatorItems.forEach(function(r, i) { i == index ? r.addClass('active') : r.removeClass('active')});
-                                items.forEach(function(item) {
+                                indicatorItems.forEach(function (r, i) {
+                                    i == index ? r.addClass('active') : r.removeClass('active')
+                                });
+                                items.forEach(function (item) {
                                     item.getAttr('data-swipe-item') == index ? item.addClass('active') : item.removeClass('active');
                                 })
                             }
 
                             if (direction == 'right') {
                                 index--;
-                                if(index <= 0) index = 0;
+                                if (index <= 0) index = 0;
 
-                                indicatorItems.forEach(function(r, i) { i == index ? r.addClass('active') : r.removeClass('active')});
-                                items.forEach(function(item) {
+                                indicatorItems.forEach(function (r, i) {
+                                    i == index ? r.addClass('active') : r.removeClass('active')
+                                });
+                                items.forEach(function (item) {
                                     item.getAttr('data-swipe-item') == index ? item.addClass('active') : item.removeClass('active');
                                 })
                             }
@@ -239,64 +247,50 @@
 
     if ($.exists('#contact-form')) {
         var contactForm = new NES_API.FORM($.find('#contact-form').el);
-
-        contactForm.onSubmit(function(data) {
-            // ajax here
-            alert('Success');
-            return;
-            jQuery.ajax({
-                method: 'POST',
-                url: '',
-                data: {},
-                success: function() {
-
-                },
-                error: function() {
-
-                }
-            })
+        contactForm.onSubmit(function (data) {
+            var url = document.URL + "mail_library/config.php";
+            var param = {
+                name: document.getElementsByName('login')[0].value,
+                mail: document.getElementsByName('email')[1].value,
+                massage_text: document.getElementsByName('comment')[0].value
+            }
+            //console.log(param);
+            jQuery.post(url, param, function (data) {
+                //some event after submit
+                //answer - data
+            });
         });
     }
 
     if ($.exists('#create-platform-form')) {
         var createForm = new NES_API.FORM($.find('#create-platform-form').el);
 
-        createForm.onSubmit(function(data) {
+        createForm.onSubmit(function (data) {
             // ajax here
-            alert('Success');
-            return;
-            jQuery.ajax({
-                method: 'POST',
-                url: '',
-                data: {},
-                success: function() {
-
-                },
-                error: function() {
-
-                }
-            })
+            var url = document.URL + "mail_library/MC_library.php";
+            var param = {
+                user_mail: document.getElementsByName('email')[0].value,
+            }
+            jQuery.post(url, param, function (data) {
+                //some event after submit
+                //answer - data
+            });
         });
     }
 
     if ($.exists('#footer-create-platform-form')) {
         var footerCreateForm = new NES_API.FORM($.find('#footer-create-platform-form').el);
 
-        footerCreateForm.onSubmit(function(data) {
+        footerCreateForm.onSubmit(function (data) {
             // ajax here
-            alert('Success');
-            return;
-            jQuery.ajax({
-                method: 'POST',
-                url: '',
-                data: {},
-                success: function() {
-
-                },
-                error: function() {
-
-                }
-            })
+            var url = document.URL + "mail_library/MC_library.php";
+            var param = {
+                user_mail: document.getElementsByName('email')[2].value,
+            }
+            jQuery.post(url, param, function (data) {
+                //some event after submit
+                //answer - data
+            });
         });
     }
 
@@ -304,7 +298,7 @@
     if ($.exists('#login-form')) {
         var loginForm = new NES_API.FORM($.find('#login-form').el);
 
-        loginForm.onSubmit(function(data) {
+        loginForm.onSubmit(function (data) {
             // ajax here
             alert('Success');
             return;
@@ -312,10 +306,10 @@
                 method: 'POST',
                 url: '',
                 data: {},
-                success: function() {
+                success: function () {
 
                 },
-                error: function() {
+                error: function () {
 
                 }
             })
@@ -324,7 +318,7 @@
 
     if ($.exists('#signup-form')) {
         var signupForm = new NES_API.FORM($.find('#signup-form').el);
-        signupForm.onSubmit(function(data) {
+        signupForm.onSubmit(function (data) {
             // ajax here
             alert('Success');
             return;
@@ -332,25 +326,25 @@
                 method: 'POST',
                 url: '',
                 data: {},
-                success: function() {
+                success: function () {
 
                 },
-                error: function() {
+                error: function () {
 
                 }
             })
         });
     }
 
-    jQuery('.create-trading-btn').on('click', function() {
+    jQuery('.create-trading-btn').on('click', function () {
         jQuery('.footer-form').toggleClass('ready');
     });
-    jQuery('.submit-create-trading-form').on('click', function() {
+    jQuery('.submit-create-trading-form').on('click', function () {
         jQuery('#footer-create-platform-form').submit();
     });
 
     if (jQuery('.footer-form').length) {
-        window.addEventListener('click', function(e) {
+        window.addEventListener('click', function (e) {
             if (!jQuery('.footer-form')[0].contains(e.target)) {
                 // burger.classList.remove('active');
                 jQuery('.footer-form').removeClass('ready');
@@ -400,7 +394,10 @@ function offset(el) {
     var rect = el.getBoundingClientRect(),
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    return {
+        top: rect.top + scrollTop,
+        left: rect.left + scrollLeft
+    }
 }
 
 function isInViewport(el) {
