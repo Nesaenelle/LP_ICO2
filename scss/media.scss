@@ -419,13 +419,16 @@
     }
 
 
+
     header {
         height: 44px;
 
         .header-menu {
             display: none;
         }
-
+        .header-create-platform  {
+            display: flex;
+        }
         .burger {
             display: block;
         }

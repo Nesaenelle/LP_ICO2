@@ -16,6 +16,7 @@ header {
         font-size: 0;
         position: relative;
         min-width: 40px;
+
         img {
             width: 100%;
         }
@@ -31,17 +32,39 @@ header {
         padding: 0 20px 0 30px;
     }
 
+    .header-create-platform {
+        // display: none;
+        height: 44px;
+        width: calc(100% - (44px)*2);
+        background-color: #56a54b;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        color: #ffffff;
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
     .header-menu {
         display: flex;
         font-size: 18px;
         height: 100%;
         justify-content: space-between;
-        &.center {
 
-        }
-        &.right{
+        &.center {}
+
+        &.right {
             width: 135px;
             justify-content: flex-end;
+
             .header-menu-item {
                 padding: 0 10px;
             }
@@ -64,6 +87,7 @@ header {
             position: relative;
             height: 100%;
             padding: 0 23px;
+
             a {
                 color: #000;
                 height: 100%;
@@ -88,6 +112,7 @@ header {
 
             &.highlighted {
                 background: #56a54b;
+
                 a {
                     color: #fff;
                 }
@@ -118,27 +143,31 @@ header {
     .burger {
         display: none;
         width: 44px;
-         height: 44px;
-         background-color: #56a54b;
-         &__line {
+        height: 44px;
+        background-color: #56a54b;
+
+        &__line {
             position: absolute;
             height: 2px;
             background: #fff;
             display: block;
             right: 7px;
+
             &:nth-child(1) {
                 width: 10px;
-                top:12px;
-            } 
+                top: 12px;
+            }
+
             &:nth-child(2) {
                 width: 20px;
-                top:21px;
+                top: 21px;
             }
+
             &:nth-child(3) {
                 width: 30px;
-                top:30px;
+                top: 30px;
             }
-         }
+        }
     }
 
     .dropdown-menu {
@@ -148,16 +177,18 @@ header {
         width: 331px;
         // background-color: #516173;
         // border-radius: 4px;
-         background-color: #56a54b;
+        background-color: #56a54b;
         padding: 20px;
         right: 0;
         top: 0px;
         transition: 0.2s;
         box-shadow: 0 0 30px -5px #000;
+
         &.active {
             opacity: 1;
             visibility: visible;
         }
+
         &__close {
             background: url(img/close.svg) no-repeat;
             background-size: cover;
@@ -184,7 +215,7 @@ header {
         .header-menu {
             display: block;
             width: 100%;
-            
+
             &-item {
                 width: 100%;
                 margin: 0 !important;
@@ -193,15 +224,18 @@ header {
                 a {
                     width: 100%;
                     color: #fff;
+
                     .btn {
                         margin: 0;
                     }
                 }
+
                 &.highlighted {
                     background: #fff;
-                     a {
+
+                    a {
                         color: #56a54b;
-                     }
+                    }
                 }
 
                 &.active a:after {

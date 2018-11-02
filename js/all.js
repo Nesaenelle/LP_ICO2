@@ -92,6 +92,11 @@
                             jQuery('.footer-form').addClass('active');
                         }
 
+                        if(index == 1) {
+                            jQuery('.header-create-platform').removeClass('active');
+                        } else {
+                            jQuery('.header-create-platform').addClass('active');
+                        }
                     },
                     afterMove: function(index) {
                         if (index == 4) {
