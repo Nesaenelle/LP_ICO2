@@ -90,7 +90,7 @@
                         }
 
                         if (index == 7) {
-                            jQuery('.footer-form').removeClass('active ready');
+                            jQuery('.footer-form').removeClass('active ready sent');
                             jQuery('.scroll-down').fadeOut(200);
                         } else {
                             jQuery('.footer-form').addClass('active');
@@ -252,9 +252,9 @@
         contactForm.onSubmit(function (data) {
             var url = document.URL + "mail_library/config.php";
             var param = {
-                name: document.getElementsByName('login')[0].value,
-                mail: document.getElementsByName('email')[1].value,
-                massage_text: document.getElementsByName('comment')[0].value
+                name: data.login,
+                mail: data.email,
+                massage_text: data.comment
             }
             //console.log(param);
             jQuery.post(url, param, function (data) {
@@ -271,7 +271,7 @@
             // ajax here
             var url = document.URL + "mail_library/MC_library.php";
             var param = {
-                user_mail: document.getElementsByName('email')[0].value,
+                user_mail: data.email,
             }
             jQuery.post(url, param, function (data) {
                 //some event after submit
@@ -285,9 +285,12 @@
 
         footerCreateForm.onSubmit(function (data) {
             // ajax here
+
+            jQuery('.footer-form').addClass('sent');
+
             var url = document.URL + "mail_library/MC_library.php";
             var param = {
-                user_mail: document.getElementsByName('email')[2].value,
+                user_mail: data.email,
             }
             jQuery.post(url, param, function (data) {
                 //some event after submit
@@ -349,7 +352,7 @@
         window.addEventListener('click', function (e) {
             if (!jQuery('.footer-form')[0].contains(e.target)) {
                 // burger.classList.remove('active');
-                jQuery('.footer-form').removeClass('ready');
+                jQuery('.footer-form').removeClass('ready sent');
             }
         }, false);
     }

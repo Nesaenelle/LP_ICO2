@@ -423,7 +423,7 @@ a {
 
 .skills-section {
     // margin-top: 150px;
-
+    overflow: hidden;
     .skills {
         display: flex;
         align-items: flex-start;
