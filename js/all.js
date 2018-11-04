@@ -225,6 +225,24 @@
         }
     });
 
+    NES_API.add('parallax', {
+        constructor: function() {
+            var items = $.findAll('[data-paralax]');
+            // var images = document.querySelector('.sitemanager-block__site-images');
+
+            window.addEventListener('mousemove', function(e) {
+                // if (isInViewport(images)) {
+                    console.log(e);
+                    items.forEach(function(item) {
+                        var valX = (e.clientX)  / parseFloat(item.el.getAttribute('data-paralax'));
+                        var valY = (e.clientY)  / parseFloat(item.el.getAttribute('data-paralax'));
+                        item.el.style.transform = 'translate('+valX/2+'px, ' + valY + 'px)'
+                    });
+                // }
+            });
+        }
+    });
+
 
     NES_API.add('mobile-menu', {
         constructor: function () {
