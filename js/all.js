@@ -155,37 +155,43 @@
             var a = jQuery('[ data-roadmap-month="' + monthName + '-' + year + '"]');
             a.append(weAreHere);
 
-            jQuery('.roadmap').swipe({
-                swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
-                    if (phase == "end") {
-                        var roadmap__timeline = jQuery('.roadmap__timeline:visible');
-                        var width = jQuery('.roadmap__timeline_item:visible').width();
-                        var scrollLeft = roadmap__timeline[0].scrollLeft;
+            if(jQuery('.roadmap').length){
 
-                        if (direction == 'left') {
-                                roadmap__timeline.animate({scrollLeft: scrollLeft + width}, 500);
-                        }
-                        if (direction == 'right') {
-                            roadmap__timeline.animate({scrollLeft: scrollLeft - width}, 500);
-                        }
-                    }
-                }});
+                jQuery('.roadmap').swipe({
+                    swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
+                        if (phase == "end") {
+                            var roadmap__timeline = jQuery('.roadmap__timeline:visible');
+                            var width = jQuery('.roadmap__timeline_item:visible').width();
+                            var scrollLeft = roadmap__timeline[0].scrollLeft;
 
-            jQuery('.team-section .scroller').swipe({
-                swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
-                    if (phase == "end") {
-                        var roadmap__timeline = jQuery('.team-section .scroller');
-                        var width = window.innerWidth;
-                        var scrollLeft = roadmap__timeline[0].scrollLeft;
+                            if (direction == 'left') {
+                                    roadmap__timeline.animate({scrollLeft: scrollLeft + width}, 500);
+                            }
+                            if (direction == 'right') {
+                                roadmap__timeline.animate({scrollLeft: scrollLeft - width}, 500);
+                            }
+                        }
+                    }});
+            }
 
-                        if (direction == 'left') {
-                                roadmap__timeline.animate({scrollLeft: scrollLeft + width}, 500);
+            if(jQuery('.team-section .scroller').length) {
+
+                jQuery('.team-section .scroller').swipe({
+                    swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
+                        if (phase == "end") {
+                            var roadmap__timeline = jQuery('.team-section .scroller');
+                            var width = window.innerWidth;
+                            var scrollLeft = roadmap__timeline[0].scrollLeft;
+
+                            if (direction == 'left') {
+                                    roadmap__timeline.animate({scrollLeft: scrollLeft + width}, 500);
+                            }
+                            if (direction == 'right') {
+                                roadmap__timeline.animate({scrollLeft: scrollLeft - width}, 500);
+                            }
                         }
-                        if (direction == 'right') {
-                            roadmap__timeline.animate({scrollLeft: scrollLeft - width}, 500);
-                        }
-                    }
-                }});
+                    }});
+            }
 
             jQuery('.roadmap__timeline').on('scroll', function() {
                 if(jQuery(this).is(':visible')) {
@@ -215,7 +221,7 @@
 
             window.addEventListener('scroll', function () {
                 elements.forEach(function (elem) {
-                    if (isInViewport(elem.el, 90)) {
+                    if (isInViewport(elem.el, 0)) {
                         if (!elem.getAttr('data-animate')) {
                             elem.setAttr('data-animate', true);
                         }
@@ -228,17 +234,13 @@
     NES_API.add('parallax', {
         constructor: function() {
             var items = $.findAll('[data-paralax]');
-            // var images = document.querySelector('.sitemanager-block__site-images');
 
             window.addEventListener('mousemove', function(e) {
-                // if (isInViewport(images)) {
-                    console.log(e);
-                    items.forEach(function(item) {
-                        var valX = (e.clientX)  / parseFloat(item.el.getAttribute('data-paralax'));
-                        var valY = (e.clientY)  / parseFloat(item.el.getAttribute('data-paralax'));
-                        item.el.style.transform = 'translate('+valX/2+'px, ' + valY + 'px)'
-                    });
-                // }
+                items.forEach(function(item) {
+                    var valX = (e.clientX)  / parseFloat(item.el.getAttribute('data-paralax'));
+                    var valY = (e.clientY)  / parseFloat(item.el.getAttribute('data-paralax'));
+                    item.el.style.transform = 'translate('+valX/2+'px, ' + valY + 'px)'
+                });
             });
         }
     });
