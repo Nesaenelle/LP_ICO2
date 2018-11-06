@@ -75,7 +75,7 @@
             if (jQuery(".main").length) {
                 jQuery(".main").onepage_scroll({
                     easing: "ease",
-                    animationTime: 800,
+                    animationTime: 1000,
                     // updateURL: true, 
                     beforeMove: function (index) {
                         links.forEach(function (link) {
