@@ -60,7 +60,7 @@
             var links = $.findAll('[data-navigation-link]');
             var routes = [''];
             jQuery('[data-navigation-link]').on('click', function (e) {
-                e.preventDefault();
+                // e.preventDefault();
                 var id = this.getAttribute('data-navigation-link');
                 // self.navigate(id, 0, 500);
 

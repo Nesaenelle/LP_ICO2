@@ -12,16 +12,16 @@
 
 <body>
     <header>
-            <a href="index.html" class="logo""><img src="img/logo.svg"></a>
+            <a href="index.php" class="logo""><img src="img/logo.svg"></a>
          
             <ul class="header-menu center">
-                <li class="header-menu-item"><a href="index.html#about">about</a></li>
-                <li class="header-menu-item"><a href="index.html#skills">skills</a></li>
-                <li class="header-menu-item"><a href="index.html#roadmap">roadmap</a></li>
-                <li class="header-menu-item highlighted"><a href="index.html#create-platform">create platform</a></li>
-                <li class="header-menu-item"><a href="index.html#team">team</a></li>
+                <li class="header-menu-item"><a href="index.php#2">about</a></li>
+                <li class="header-menu-item"><a href="index.php#3">skills</a></li>
+                <li class="header-menu-item"><a href="index.php#4">roadmap</a></li>
+                <li class="header-menu-item highlighted"><a href="index.php#5">create platform</a></li>
+                <li class="header-menu-item"><a href="index.php#6">team</a></li>
                 <li class="header-menu-item"><a href="http://blog.exchange2.net/" target="_blank">blog</a></li>
-                <li class="header-menu-item"><a href="index.html#contact">contact</a></li>
+                <li class="header-menu-item"><a href="index.php#7">contact</a></li>
             </ul>
             <ul class="header-menu right">
                 <li class="header-menu-item">
@@ -41,13 +41,13 @@
             <div class="dropdown-menu" data-menu-dropdown>
                 <div class="dropdown-menu__close" data-menu-dropdown-close></div>
                 <ul class="header-menu">
-                    <li class="header-menu-item"><a href="index.html#about">about</a></li>
-                    <li class="header-menu-item"><a href="index.html#skills">skills</a></li>
-                    <li class="header-menu-item"><a href="index.html#roadmap">roadmap</a></li>
-                    <li class="header-menu-item highlighted"><a href="index.html#create-platform">create platform</a></li>
-                    <li class="header-menu-item"><a href="index.html#team">team</a></li>
+                    <li class="header-menu-item"><a href="index.php#2">about</a></li>
+                    <li class="header-menu-item"><a href="index.php#3">skills</a></li>
+                    <li class="header-menu-item"><a href="index.php#4">roadmap</a></li>
+                    <li class="header-menu-item highlighted"><a href="index.php5">create platform</a></li>
+                    <li class="header-menu-item"><a href="index.php#6">team</a></li>
                     <li class="header-menu-item"><a href="http://blog.exchange2.net/" target="_blank">blog</a></li>
-                    <li class="header-menu-item"><a href="index.html#contact">contact</a></li>
+                    <li class="header-menu-item"><a href="index.php#7">contact</a></li>
                 </ul>
                 <ul class="header-menu">
                     <li class="header-menu-item">
