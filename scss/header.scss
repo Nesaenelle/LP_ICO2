@@ -59,7 +59,9 @@ header {
         height: 100%;
         justify-content: space-between;
 
-        &.center {}
+        &.center {
+            margin-right: auto;
+        }
 
         &.right {
             width: 135px;
