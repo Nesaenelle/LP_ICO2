@@ -72,12 +72,25 @@
                 jQuery(".main").moveDown();
             });
 
+            jQuery('.main-navigation__prev').on('click', function() {
+                jQuery(".main").moveUp();
+            });
+
+            jQuery('.main-navigation__next').on('click', function() {
+                jQuery(".main").moveDown();
+            });
+
+            jQuery('.main-navigation__total').text(jQuery('.main section').length);
+
             if (jQuery(".main").length) {
                 jQuery(".main").onepage_scroll({
                     easing: "ease",
                     animationTime: 1000,
                     // updateURL: true, 
                     beforeMove: function (index) {
+
+                        jQuery('.main-navigation__current').text(index);
+
                         links.forEach(function (link) {
                             if (link.getAttr('data-navigation-link') == index) {
                                 link.addClass('active');
@@ -85,28 +98,30 @@
                                 link.removeClass('active');
                             }
                         });
-                        if (index == 4) {
+                        if (index == 3) {
                             $.find('.roadmap').setAttr('data-animate', true);
                         }
 
-                        if (index == 7) {
-                            jQuery('.footer-form').removeClass('active ready sent');
-                            jQuery('.scroll-down').fadeOut(200);
-                        } else {
-                            jQuery('.footer-form').addClass('active');
-                            jQuery('.scroll-down').fadeIn(200);
-                        }
+                        // if (index == 7) {
+                        //     jQuery('.footer-form').removeClass('active ready sent');
+                        //     jQuery('.scroll-down').fadeOut(200);
+                        // } else {
+                        //     jQuery('.footer-form').addClass('active');
+                        //     jQuery('.scroll-down').fadeIn(200);
+                        // }
 
                         if (index == 1) {
+                            jQuery('.main-navigation').addClass('white');
                             jQuery('.header-create-platform').removeClass('active');
                         } else {
+                            jQuery('.main-navigation').removeClass('white');
                             jQuery('.header-create-platform').addClass('active');
                         }
                     },
                     afterMove: function (index) {
-                        if (index == 4) {
-                            $.find('.roadmap').setAttr('data-animate', true);
-                        }
+                        // if (index == 3) {
+                        //     $.find('.roadmap').setAttr('data-animate', true);
+                        // }
                     },
                     loop: false,
                     keyboard: false,
@@ -148,12 +163,12 @@
             ];
             var date = new Date();
             var monthIndex = date.getMonth();
-            var monthName = months[monthIndex - 1].toLowerCase();
+            var monthName = 'november'//months[monthIndex - 1].toLowerCase();
             var year = date.getFullYear();
 
             var weAreHere = jQuery('<div class="we-are-here">We are here</div>');
             var a = jQuery('[ data-roadmap-month="' + monthName + '-' + year + '"]');
-            a.append(weAreHere);
+            a.prepend(weAreHere);
 
             if(jQuery('.roadmap').length){
 
@@ -165,7 +180,7 @@
                             var scrollLeft = roadmap__timeline[0].scrollLeft;
 
                             if (direction == 'left') {
-                                    roadmap__timeline.animate({scrollLeft: scrollLeft + width}, 500);
+                                roadmap__timeline.animate({scrollLeft: scrollLeft + width}, 500);
                             }
                             if (direction == 'right') {
                                 roadmap__timeline.animate({scrollLeft: scrollLeft - width}, 500);
