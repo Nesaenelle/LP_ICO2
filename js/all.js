@@ -102,13 +102,13 @@
                             $.find('.roadmap').setAttr('data-animate', true);
                         }
 
-                        // if (index == 7) {
+                        if (index == 5) {
                         //     jQuery('.footer-form').removeClass('active ready sent');
-                        //     jQuery('.scroll-down').fadeOut(200);
-                        // } else {
+                            jQuery('.scroll-down').fadeOut(200);
+                        } else {
                         //     jQuery('.footer-form').addClass('active');
-                        //     jQuery('.scroll-down').fadeIn(200);
-                        // }
+                            jQuery('.scroll-down').fadeIn(200);
+                        }
 
                         if (index == 1) {
                             jQuery('.main-navigation').addClass('white');

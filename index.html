@@ -7,65 +7,60 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
 </head>
 
 <body>
     <header>
-            <a href="#home" class="logo" data-navigation-link="1"><img src="img/logo.svg"></a>
-         
-            <ul class="header-menu center">
-                <li class="header-menu-item" data-navigation-link="2"><a href="#2">Secure Wallet</a></li>
-                <li class="header-menu-item" data-navigation-link="3"><a href="#3">Exchange</a></li>
-                <li class="header-menu-item" data-navigation-link="4"><a href="#4">Margin trading</a></li>
-          <!--       <li class="header-menu-item highlighted" data-navigation-link="5"><a href="#5">create platform</a></li>
+        <a href="#home" class="logo" data-navigation-link="1"><img src="img/logo.svg"></a>
+        <ul class="header-menu center">
+            <li class="header-menu-item" data-navigation-link="2"><a href="#2">Secure Wallet</a></li>
+            <li class="header-menu-item" data-navigation-link="3"><a href="#3">Exchange</a></li>
+            <li class="header-menu-item" data-navigation-link="4"><a href="#4">Margin trading</a></li>
+            <!--       <li class="header-menu-item highlighted" data-navigation-link="5"><a href="#5">create platform</a></li>
                 <li class="header-menu-item" data-navigation-link="6"><a href="#6">team</a></li>
                 <li class="header-menu-item"><a href="http://blog.exchange2.net/" target="_blank">blog</a></li>
                 <li class="header-menu-item" data-navigation-link="7"><a href="#7">contact</a></li> -->
+        </ul>
+        <ul class="header-menu right">
+            <li class="header-menu-item">
+                <a href="login.php" class="js-popup">log in</a>
+            </li>
+            <li class="header-menu-item">
+                <a href="signup.php" class="js-popup">sign up</a>
+            </li>
+        </ul>
+        <div class="header-create-platform">
+            <a href="#" data-navigation-link="5">Create Trading Platform</a>
+        </div>
+        <div class="burger" data-menu>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+        </div>
+        <div class="dropdown-menu" data-menu-dropdown>
+            <div class="dropdown-menu__close" data-menu-dropdown-close></div>
+            <ul class="header-menu">
+                <li class="header-menu-item" data-navigation-link="2"><a href="#2">about</a></li>
+                <li class="header-menu-item" data-navigation-link="3"><a href="#3">skills</a></li>
+                <li class="header-menu-item" data-navigation-link="4"><a href="#4">roadmap</a></li>
+                <li class="header-menu-item highlighted" data-navigation-link="5"><a href="#5">create platform</a></li>
+                <li class="header-menu-item" data-navigation-link="6"><a href="#6">team</a></li>
+                <li class="header-menu-item"><a href="http://blog.exchange2.net/" target="_blank">blog</a></li>
+                <li class="header-menu-item" data-navigation-link="7"><a href="#7">contact</a></li>
             </ul>
-            <ul class="header-menu right">
+            <ul class="header-menu">
                 <li class="header-menu-item">
-                    <a href="login.php" class="js-popup">log in</a>
+                    <a href="login.html" class="js-popup">Log in</a>
                 </li>
                 <li class="header-menu-item">
-                    <a href="signup.php" class="js-popup">sign up</a>
+                    <a href="signup.html" class="js-popup">Sign up</a>
                 </li>
             </ul>
-            
-            <div class="header-create-platform">
-                <a href="#" data-navigation-link="5">Create Trading Platform</a>
-            </div>
-
-            <div class="burger" data-menu>
-                <span class="burger__line"></span>
-                <span class="burger__line"></span>
-                <span class="burger__line"></span>
-            </div>
-
-            <div class="dropdown-menu" data-menu-dropdown>
-                <div class="dropdown-menu__close" data-menu-dropdown-close></div>
-                <ul class="header-menu">
-                    <li class="header-menu-item" data-navigation-link="2"><a href="#2">about</a></li>
-                    <li class="header-menu-item" data-navigation-link="3"><a href="#3">skills</a></li>
-                    <li class="header-menu-item" data-navigation-link="4"><a href="#4">roadmap</a></li>
-                    <li class="header-menu-item highlighted" data-navigation-link="5"><a href="#5">create platform</a></li>
-                    <li class="header-menu-item" data-navigation-link="6"><a href="#6">team</a></li>
-                    <li class="header-menu-item"><a href="http://blog.exchange2.net/" target="_blank">blog</a></li>
-                    <li class="header-menu-item" data-navigation-link="7"><a href="#7">contact</a></li>
-                </ul>
-                <ul class="header-menu">
-                    <li class="header-menu-item">
-                        <a href="login.html" class="js-popup">Log in</a>
-                    </li>
-                    <li class="header-menu-item">
-                        <a href="signup.html" class="js-popup">Sign up</a>
-                    </li>
-                </ul>
-            </div>
+        </div>
     </header>
-
     <div class="main-navigation white">
         <div class="main-navigation__prev">prev</div>
         <div class="main-navigation__page">
@@ -75,19 +70,13 @@
         </div>
         <div class="main-navigation__next">next</div>
     </div>
-
     <main class="main">
-       
-            <section class="main-section">        
-                <div class="container">
-                    <div>
-                        
-                        <div class="main-title">CRYPTO TRADING PLATFORM <br>WHAT YOU NEED!</div>
-
-                        <!-- <button class="mobile btn main-btn" data-navigation-link="5">Create Trading Platform</button> -->
-
-                        <div class="secondary-title">What New on Crypto?</div>
-                    </div>
+        <section class="main-section">
+            <div class="container">
+                <div class="main-title">CRYPTO TRADING PLATFORM <br>WHAT YOU NEED!</div>
+                <!-- <button class="mobile btn main-btn" data-navigation-link="5">Create Trading Platform</button> -->
+                <div class="main-section__bottom">
+                    <div class="secondary-title">What New on Crypto?</div>
                     <div class="slick-slider">
                         <div class="slick-slider__item">
                             <div class="slick-slider__item_text">
@@ -95,23 +84,10 @@
                                 <span>YOUR OWN CRYPTO</span>
                                 <span>EXCHANGE PLATFORM</span>
                             </div>
-                            
                             <div class="slick-slider__item_img">
                                 <div style="background: url(img/chains.jpg)" class="slick-slider__item_img_bg"></div>
                             </div>
-                            <div class="slick-slider__item_text">Everyone can create his own cryptocurrency exchange platform in 30 minutes.</div>
-                            <a href="" class="slick-slider__item_link">read</a>
-                        </div>
-                        <div class="slick-slider__item">
-                             <div class="slick-slider__item_text">
-                                <span>BITCOIN</span>
-                                <span>IS FALLING</span>
-                             </div>
-                            
-                            <div class="slick-slider__item_img">
-                                <div style="background: url(img/chains.jpg)" class="slick-slider__item_img_bg"></div>
-                            </div>
-                             <div class="slick-slider__item_text">Why bitcoin and other cryptocurrencies are falling. Opinions of representatives of the industry.</div>
+                            <div class="slick-slider__item_descr">Everyone can create his own cryptocurrency exchange platform in 30 minutes.</div>
                             <a href="" class="slick-slider__item_link">read</a>
                         </div>
                         <div class="slick-slider__item">
@@ -122,48 +98,59 @@
                             <div class="slick-slider__item_img">
                                 <div style="background: url(img/chains.jpg)" class="slick-slider__item_img_bg"></div>
                             </div>
-                             <div class="slick-slider__item_text">Why bitcoin and other cryptocurrencies are falling. Opinions of representatives of the industry.</div>
+                            <div class="slick-slider__item_descr">Why bitcoin and other cryptocurrencies are falling. Opinions of representatives of the industry.</div>
+                            <a href="" class="slick-slider__item_link">read</a>
+                        </div>
+                        <div class="slick-slider__item">
+                            <div class="slick-slider__item_text">
+                                <span>BITCOIN</span>
+                                <span>IS FALLING</span>
+                            </div>
+                            <div class="slick-slider__item_img">
+                                <div style="background: url(img/chains.jpg)" class="slick-slider__item_img_bg"></div>
+                            </div>
+                            <div class="slick-slider__item_descr">Why bitcoin and other cryptocurrencies are falling. Opinions of representatives of the industry.</div>
                             <a href="" class="slick-slider__item_link">read</a>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="about-section"  data-swipe id="about">
-                <div class="container">   
-                    <div class="main-title">WHY WE ARE BETTER THAN <br>ANOTHER 100000+ PLATFORMS? <div class="main-title__shadow" data-paralax="30">ABOUT</div></div>
-                    <div class="about-list">                    
-                        <div class="about__item active" data-swipe-item="0">
-                            <div class="about__item_img">
-                                <span>Vestibulum rutrum quam vitae fringilla tincidunt.</span>
-                                <div class="about__item_img_bg" style="background: url(img/chains.jpg)"></div>
-                            </div>
-                            <div class="about__item_text">98% of all funds are stored offline. Our trading platform is a network of secure protected microservices written in Golang.</div>
+            </div>
+        </section>
+        <section class="about-section" data-swipe id="about">
+            <div class="container">
+                <div class="main-title">WHY WE ARE BETTER THAN ANOTHER <br>100000+ PLATFORMS? <div class="main-title__shadow" data-paralax="30">ABOUT</div>
+                </div>
+                <div class="about-list">
+                    <div class="about__item active" data-swipe-item="0">
+                        <div class="about__item_img">
+                            <span>Vestibulum rutrum quam vitae fringilla tincidunt.</span>
+                            <div class="about__item_img_bg" style="background: url(img/chains.jpg)"></div>
                         </div>
-                        <div class="about__item" data-swipe-item="1">
-                            <div class="about__item_img">
-                               <span> Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. </span>
-                                <div class="about__item_img_bg" style="background: url(img/chains.jpg)"></div>
-                            </div>
-                            <div class="about__item_text">Each trading pair is a dedicated microservice written in go that is capable to run more than a million transactions per a second. We use in-memory storage to store all operations and our own data storage system to handle fast trading operations.</div>
-                        </div>
-                        <div class="about__item" data-swipe-item="2">
-                            <div class="about__item_img">
-                               <span> Cras quis nulla <br>commodo, aliquam <br>lectus sed, blandit <br>augue.</span>
-                                <div class="about__item_img_bg" style="background: url(img/bitcoin.jpeg)"></div>
-                            </div>
-                            <div class="about__item_text">Everyone can create his own cryptocurrency exchange platform in 30 minutes.</div>
-                        </div>
-
+                        <div class="about__item_text">98% of all funds are stored offline. Our trading platform is a network of secure protected microservices written in Golang.</div>
                     </div>
-                    <div class="swipe-indicator">
-                        <span class="active"></span>
-                        <span></span>
-                        <span></span>
+                    <div class="about__item" data-swipe-item="1">
+                        <div class="about__item_img">
+                            <span> Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. </span>
+                            <div class="about__item_img_bg" style="background: url(img/chains.jpg)"></div>
+                        </div>
+                        <div class="about__item_text">Each trading pair is a dedicated microservice written in go that is capable to run more than a million transactions per a second. We use in-memory storage to store all operations and our own data storage system to handle fast trading operations.</div>
+                    </div>
+                    <div class="about__item" data-swipe-item="2">
+                        <div class="about__item_img">
+                            <span> Cras quis nulla <br>commodo, aliquam <br>lectus sed, blandit <br>augue.</span>
+                            <div class="about__item_img_bg" style="background: url(img/bitcoin.jpeg)"></div>
+                        </div>
+                        <div class="about__item_text">Everyone can create his own cryptocurrency exchange platform in 30 minutes.</div>
                     </div>
                 </div>
-            </section>
-
-<!--             <section class="skills-section" id="skills">
+                <div class="swipe-indicator">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+        <!--             <section class="skills-section" id="skills">
                 <div class="container">   
                     <div class="main-title">WE HAVE <br>THE THINGS YOU LOVE <div class="main-title__shadow" data-paralax="30">SKILLS</div></div>
                 </div>
@@ -193,66 +180,103 @@
                 </div>
                 
             </section> -->
-
-            <section class="roadmap-section" id="roadmap">
-                <div class="container">   
-                    <div class="main-title">THIS IS <br>OUR PLAN <div class="main-title__shadow" data-paralax="30">ROAD</div></div>
+        <section class="roadmap-section" id="roadmap">
+            <div class="container">
+                <div class="main-title">THIS IS <br>OUR PLAN <div class="main-title__shadow" data-paralax="30">ROAD</div>
                 </div>
-                <div class="roadmap" data-roadmap data-animate>
-                    <div class="roadmap__years">
-                        <div class="container">
-                            <div class="roadmap__years_item active" data-roadmap-year="1">2019</div>
-                            <div class="roadmap__years_item" data-roadmap-year="2">2020</div>
-                        </div>
+            </div>
+            <div class="roadmap" data-roadmap data-animate>
+                <div class="roadmap__years">
+                    <div class="container">
+                        <div class="roadmap__years_item active" data-roadmap-year="1">2019</div>
+                        <div class="roadmap__years_item" data-roadmap-year="2">2020</div>
                     </div>
-                    <div class="roadmap__timeline" data-roadmap-timeline="1">
-                        <div class="container">
-                            <div class="roadmap__timeline_item" style="width: 20%">
-                                <div class="roadmap__timeline_text">Start of development <br>Exchange #2</div>
-                                <div class="roadmap__timeline_month" data-roadmap-month="march-2019">MARCH<div class="roadmap__timeline_month_line"></div></div>
+                </div>
+                <div class="roadmap__timeline" data-roadmap-timeline="1">
+                    <div class="container">
+                        <div class="roadmap__timeline_item" style="width: 20%">
+                            <div class="roadmap__timeline_text">Start of development <br>Exchange #2</div>
+                            <div class="roadmap__timeline_month" data-roadmap-month="march-2019">MARCH<div class="roadmap__timeline_month_line"></div>
                             </div>
-                            <div class="roadmap__timeline_item" style="width: 50%">
-                                <div class="roadmap__timeline_text">First introduction to the public Interviewing potential users</div>
-                                <div class="roadmap__timeline_month" data-roadmap-month="june-2019">JUNE<div class="roadmap__timeline_month_line"></div></div>
+                        </div>
+                        <div class="roadmap__timeline_item" style="width: 50%">
+                            <div class="roadmap__timeline_text">First introduction to the public Interviewing potential users</div>
+                            <div class="roadmap__timeline_month" data-roadmap-month="june-2019">JUNE<div class="roadmap__timeline_month_line"></div>
                             </div>
-                            <div class="roadmap__timeline_item" style="width: 20%">
-                                <div class="roadmap__timeline_text">Запуск онлайн кошелька для <br> криптовалют</div>
-                                <div class="roadmap__timeline_month" data-roadmap-month="november-2019">NOVEMBER<div class="roadmap__timeline_month_line"></div></div>
+                        </div>
+                        <div class="roadmap__timeline_item" style="width: 20%">
+                            <div class="roadmap__timeline_text">Запуск онлайн кошелька для <br> криптовалют</div>
+                            <div class="roadmap__timeline_month" data-roadmap-month="november-2019">NOVEMBER<div class="roadmap__timeline_month_line"></div>
                             </div>
-      <!--                       <div class="roadmap__timeline_item" style="width: 20%">
+                        </div>
+                        <!--                       <div class="roadmap__timeline_item" style="width: 20%">
                                 <div class="roadmap__timeline_text">Incorporation in Estonia and getting Virtual Currency Exchange and Wallet Service license</div>
                                 <div class="roadmap__timeline_month" data-roadmap-month="october-2019">OCTOBER <div class="roadmap__timeline_month_line"></div></div>
                             </div> -->
-                        </div>
-                        <div class="roadmap__timeline_line"></div>
                     </div>
-
-                    <div class="roadmap__timeline" data-roadmap-timeline="2">
-                        <div class="container">
-                            <div class="roadmap__timeline_item" style="width: 25%">
-                                <div class="roadmap__timeline_text">Official launch of exchange <br>and support of FIAT currencies</div>
-                                <div class="roadmap__timeline_month" data-roadmap-month="january-2020">JANUARY<div class="roadmap__timeline_month_line"></div></div>
-                            </div>
-                            <div class="roadmap__timeline_item" style="width: 25%">
-                                <div class="roadmap__timeline_text">Launch of mobile <br>wallet service</div>
-                                <div class="roadmap__timeline_month" data-roadmap-month="march-2020">MARCH<div class="roadmap__timeline_month_line"></div></div>
-                            </div>
-                            <div class="roadmap__timeline_item" style="width: 25%">
-                                <div class="roadmap__timeline_text">Launch of payment <br> gateway service</div>
-                                <div class="roadmap__timeline_month" data-roadmap-month="may-2020">MAY<div class="roadmap__timeline_month_line"></div></div>
-                            </div>
-                            <div class="roadmap__timeline_item" style="width: 25%">
-                                <div class="roadmap__timeline_text">You can now buy a cup of coffee <br> using wallet app  and br NFC <br> on your smartphone</div>
-                                <div class="roadmap__timeline_month" data-roadmap-month="july-2019">JULY<div class="roadmap__timeline_month_line"></div></div>
-                            </div>
-                        </div>
-                        <div class="roadmap__timeline_line"></div>
-                    </div>
-                    <div class="roadmap-indicator"></div>
+                    <div class="roadmap__timeline_line"></div>
                 </div>
-            </section>
-            
-<!--             <section class="create-platform-section" id="create-platform">
+                <div class="roadmap__timeline" data-roadmap-timeline="2">
+                    <div class="container">
+                        <div class="roadmap__timeline_item" style="width: 25%">
+                            <div class="roadmap__timeline_text">Official launch of exchange <br>and support of FIAT currencies</div>
+                            <div class="roadmap__timeline_month" data-roadmap-month="january-2020">JANUARY<div class="roadmap__timeline_month_line"></div>
+                            </div>
+                        </div>
+                        <div class="roadmap__timeline_item" style="width: 25%">
+                            <div class="roadmap__timeline_text">Launch of mobile <br>wallet service</div>
+                            <div class="roadmap__timeline_month" data-roadmap-month="march-2020">MARCH<div class="roadmap__timeline_month_line"></div>
+                            </div>
+                        </div>
+                        <div class="roadmap__timeline_item" style="width: 25%">
+                            <div class="roadmap__timeline_text">Launch of payment <br> gateway service</div>
+                            <div class="roadmap__timeline_month" data-roadmap-month="may-2020">MAY<div class="roadmap__timeline_month_line"></div>
+                            </div>
+                        </div>
+                        <div class="roadmap__timeline_item" style="width: 25%">
+                            <div class="roadmap__timeline_text">You can now buy a cup of coffee <br> using wallet app and br NFC <br> on your smartphone</div>
+                            <div class="roadmap__timeline_month" data-roadmap-month="july-2019">JULY<div class="roadmap__timeline_month_line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roadmap__timeline_line"></div>
+                </div>
+                <div class="roadmap-indicator"></div>
+            </div>
+        </section>
+        <section class="partners-section">
+            <div class="container">
+                <div class="main-title">Our <br>Friendly services<div class="main-title__shadow" data-paralax="30">PARTNERS</div>
+                </div>
+                <div class="partners-list">
+                    <div class="partners-list__item">
+                        <img src="" alt="">
+                        <div class="partners-list__item__text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.</div>
+                    </div>
+                    <div class="partners-list__item">
+                        <img src="" alt="">
+                        <div class="partners-list__item__text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.</div>
+                    </div>
+                    <div class="partners-list__item">
+                        <img src="" alt="">
+                        <div class="partners-list__item__text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.</div>
+                    </div>
+                    <div class="partners-list__item">
+                        <img src="" alt="">
+                        <div class="partners-list__item__text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.</div>
+                    </div>
+                    <div class="partners-list__item">
+                        <img src="" alt="">
+                        <div class="partners-list__item__text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.</div>
+                    </div>
+                    <div class="partners-list__item">
+                        <img src="" alt="">
+                        <div class="partners-list__item__text">The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--             <section class="create-platform-section" id="create-platform">
                 <div class="create-platform">
                     <div class="create-platform__content">                    
                         <div class="create-platform__title">
@@ -272,8 +296,7 @@
                     <div class="create-platform__bg" style="background: url(img/contact.jpg)"></div>
                 </div>
             </section> -->
-
-   <!--          <section class="team-section" id="team">
+        <!--          <section class="team-section" id="team">
                 <div class="container">   
                     <div  class="main-title">WE <br>ARE <div class="main-title__shadow" data-paralax="30">TEAM</div></div>
                  </div>
@@ -326,12 +349,76 @@
                 </div>
                 <div class="team-indicator"></div>
             </section> -->
-
-            <section class="contacts-section" id="contact">          
-                <div class="container">     
-                    <div class="main-title">Feel Free to contant US<div class="main-title__shadow" data-paralax="30">CONTACTS</div></div>
+        <section class="contacts-section" id="contact">
+            <div class="container">
+                <div class="main-title">Feel Free to <br>contant US<div class="main-title__shadow" data-paralax="30">CONTACTS</div>
                 </div>
- <!--                <div class="form-block">                    
+                <div class="contacts-list">
+                    <div class="contacts-list__item">
+                        <img src="" alt="">
+                        <div>Type something</div>
+                    </div>
+                    <div class="contacts-list__item">
+                        <img src="" alt="">
+                        <div>Type something</div>
+                    </div>
+                    <div class="contacts-list__item">
+                        <img src="" alt="">
+                        <div>Type something</div>
+                    </div>
+                    <div class="contacts-list__item">
+                        <img src="" alt="">
+                        <div>Type something</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contacts-footer">
+                <div class="contacts-label">START YOUR TRADE NOW</div>
+                <div class="container">
+                    <div class="contacts-footer__button">
+                        <div class="btn create-trading-btn">Create Your Account</div>
+                    </div>
+                    <div class="contacts-footer__list">
+                        <div>Info</div>
+                        <div><a href="">User support</a></div>
+                        <div><a href="">Knowledge base</a></div>
+                        <div><a href="">FAQ</a></div>
+                        <div><a href="">Fees and limits</a></div>
+                        <div><a href="">Referral program</a></div>
+                    </div>
+                    <div class="contacts-footer__list">
+                        <div>Trade Now</div>
+                        <div><a href="">Secure Wallet</a></div>
+                        <div><a href="">Exchange</a></div>
+                        <div><a href="">Margin Trade</a></div>
+                    </div>
+                    <div class="contacts-footer__list">
+                        <div>About</div>
+                        <div><a href="">News</a></div>
+                        <div><a href="">Blog</a></div>
+                        <div><a href="">Our Features</a></div>
+                        <div><a href="">Road map</a></div>
+                        <div><a href="">Reviews</a></div>
+                    </div>
+                    <div class="contacts-footer__list">
+                        <div>Documents</div>
+                        <div><a href="">User agreement</a></div>
+                        <div><a href="">Privacy Policy</a></div>
+                        <div><a href="">AML/KYC Policy</a></div>
+                        <div><a href="">Token Purchase Agreement</a></div>
+                        <div><a href="">Wrongdepo Policy</a></div>
+                        <div><a href="">Media-Kit</a></div>
+                    </div>
+                    <div class="contacts-footer__list">
+                        <div>Follow us</div>
+                    </div>
+                    <div class="contacts-footer__button">
+                        <div class="copyright">© 2019 Exchange2.net</div>
+                    </div>
+                </div>
+            </div>
+            <!--                <div class="form-block">                    
                     <div class="form-block__bg" style="background: url(img/contact.jpeg)"></div>
                     <form class="form" id="contact-form" novalidate="">
                         <input type="text" class="input" placeholder="Name" required data-pattern="login" name="login" data-error-msg="Name is invalid">
@@ -340,9 +427,8 @@
                         <button class="btn">Send</button>
                     </form>
                 </div> -->
-            </section>
+        </section>
     </main>
-
     <footer class="footer">
         <div class="footer-socials">
             <a href="" target="_blank"><img src="img/facebook.svg" alt=""></a>
@@ -364,9 +450,7 @@
             <div class="create-trading-btn">Create Your Account</div>
             <div class="submit-create-trading-form">JOIN NOW</div>
         </div>
-
     </footer>
-   
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/slick.min.js"></script>
