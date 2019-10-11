@@ -252,7 +252,7 @@
         input {
             display: none;
             &:checked+.modal-checkbox-icon {
-                background: url(img/check_icon.svg) #fff no-repeat;
+                background: url(./../img/check_icon.svg) #fff no-repeat;
 
                 background-size: 70%;
             }

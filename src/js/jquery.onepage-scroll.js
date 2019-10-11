@@ -13,6 +13,7 @@
  * License: GPL v3
  *
  * ========================================================== */
+import jQuery from 'jquery';
 
 !function($){
 
@@ -81,10 +82,10 @@
 
 
   $.fn.onepage_scroll = function(options){
-    var settings = $.extend({}, defaults, options),
-        el = $(this),
-        sections = $(settings.sectionContainer)
-        total = sections.length,
+    var settings = $.extend({}, defaults, options);
+    var el = $(this);
+    var sections = $(settings.sectionContainer);
+    var total = sections.length,
         status = "off",
         topPos = 0,
         leftPos = 0,
@@ -123,10 +124,11 @@
     }
 
     $.fn.moveDown = function() {
-      var el = $(this)
-      index = $(settings.sectionContainer +".active").data("index");
-      current = $(settings.sectionContainer + "[data-index='" + index + "']");
-      next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
+      var el = $(this);
+      const index = $(settings.sectionContainer +".active").data("index");
+      const current = $(settings.sectionContainer + "[data-index='" + index + "']");
+      const next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
+      let pos;
       if(next.length < 1) {
         if (settings.loop == true) {
           pos = 0;
@@ -158,10 +160,10 @@
 
     $.fn.moveUp = function() {
       var el = $(this)
-      index = $(settings.sectionContainer +".active").data("index");
-      current = $(settings.sectionContainer + "[data-index='" + index + "']");
-      next = $(settings.sectionContainer + "[data-index='" + (index - 1) + "']");
-
+      const index = $(settings.sectionContainer +".active").data("index");
+      const current = $(settings.sectionContainer + "[data-index='" + index + "']");
+      const next = $(settings.sectionContainer + "[data-index='" + (index - 1) + "']");
+      let pos;
       if(next.length < 1) {
         if (settings.loop == true) {
           pos = ((total - 1) * 100) * -1;
@@ -262,7 +264,7 @@
 
 
     function init_scroll(event, delta) {
-        deltaOfInterest = delta;
+        const deltaOfInterest = delta;
         var timeNow = new Date().getTime();
         // Cancel scroll if currently animating or within quiet period
         if(timeNow - lastAnimation < quietPeriod + settings.animationTime) {
@@ -325,7 +327,7 @@
         posLeft = (el.find(".onepage-pagination").width() / 2) * -1;
         el.find(".onepage-pagination").css("margin-left", posLeft);
       } else {
-        posTop = (el.find(".onepage-pagination").height() / 2) * -1;
+        const posTop = (el.find(".onepage-pagination").height() / 2) * -1;
         el.find(".onepage-pagination").css("margin-top", posTop);
       }
       $('ul.onepage-pagination').html(paginationList);
@@ -424,4 +426,4 @@
   }
 
 
-}(window.jQuery);
+}(jQuery);

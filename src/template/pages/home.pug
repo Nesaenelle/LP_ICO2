@@ -1,0 +1,212 @@
+extends ../layout.pug
+
+block content
+	main.main
+		section.main-section
+			.container
+				.main-title
+					| CRYPTO TRADING PLATFORM 
+					br
+					| WHAT YOU NEED!
+				// <button class="mobile btn main-btn" data-navigation-link="5">Create Trading Platform</button>
+				.main-section__bottom
+					.secondary-title What New on Crypto?
+					.slick-slider
+						.slick-slider__item
+							.slick-slider__item_text
+								span CREATE 
+								span YOUR OWN CRYPTO
+								span EXCHANGE PLATFORM
+							.slick-slider__item_img
+								.slick-slider__item_img_bg(style='background: url(img/chains.jpg)')
+							.slick-slider__item_descr Everyone can create his own cryptocurrency exchange platform in 30 minutes.
+							a.slick-slider__item_link(href='') read
+						.slick-slider__item
+							.slick-slider__item_text
+								span BITCOIN
+								span IS FALLING
+							.slick-slider__item_img
+								.slick-slider__item_img_bg(style='background: url(img/chains.jpg)')
+							.slick-slider__item_descr
+								| Why bitcoin and other cryptocurrencies are falling. Opinions of representatives of the industry.
+							a.slick-slider__item_link(href='') read
+						.slick-slider__item
+							.slick-slider__item_text
+								span BITCOIN
+								span IS FALLING
+							.slick-slider__item_img
+								.slick-slider__item_img_bg(style='background: url(img/chains.jpg)')
+							.slick-slider__item_descr
+								| Why bitcoin and other cryptocurrencies are falling. Opinions of representatives of the industry.
+							a.slick-slider__item_link(href='') read
+		section#about.about-section(data-swipe='')
+			.container
+				.main-title
+					| WHY WE ARE BETTER THAN ANOTHER 
+					br
+					| 100000+ PLATFORMS? 
+					.main-title__shadow(data-paralax='30') ABOUT
+				.about-list
+					.about__item.active(data-swipe-item='0')
+						.about__item_img
+							span Vestibulum rutrum quam vitae fringilla tincidunt.
+							.about__item_img_bg(style='background: url(img/chains.jpg)')
+						.about__item_text
+							| 98% of all funds are stored offline. Our trading platform is a network of secure protected microservices written in Golang.
+					.about__item(data-swipe-item='1')
+						.about__item_img
+							span Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. 
+							.about__item_img_bg(style='background: url(img/chains.jpg)')
+						.about__item_text
+							| Each trading pair is a dedicated microservice written in go that is capable to run more than a million transactions per a second. We use in-memory storage to store all operations and our own data storage system to handle fast trading operations.
+					.about__item(data-swipe-item='2')
+						.about__item_img
+							span
+								| Cras quis nulla 
+								br
+								| commodo, aliquam 
+								br
+								| lectus sed, blandit 
+								br
+								| augue.
+							.about__item_img_bg(style='background: url(img/bitcoin.jpeg)')
+						.about__item_text Everyone can create his own cryptocurrency exchange platform in 30 minutes.
+				.swipe-indicator
+					span.active
+					span
+					span
+		section#roadmap.roadmap-section
+			.container
+				.main-title
+					| THIS IS 
+					br
+					| OUR PLAN 
+					.main-title__shadow(data-paralax='30') ROAD
+				.roadmap(data-roadmap='' data-animate='')
+					.roadmap__years
+						.container
+							.roadmap__years_item.active(data-roadmap-year='1') 2019
+							.roadmap__years_item(data-roadmap-year='2') 2020
+					.roadmap__timeline(data-roadmap-timeline='1')
+						.container
+							.roadmap__timeline_item(style='width: 20%')
+								.roadmap__timeline_text
+									| Start of development 
+									br
+									| Exchange #2
+								.roadmap__timeline_month(data-roadmap-month='march-2019') MARCH
+									.roadmap__timeline_month_line
+							.roadmap__timeline_item(style='width: 50%')
+								.roadmap__timeline_text First introduction to the public Interviewing potential users
+								.roadmap__timeline_month(data-roadmap-month='june-2019') JUNE
+									.roadmap__timeline_month_line
+							.roadmap__timeline_item(style='width: 20%')
+								.roadmap__timeline_text 
+									| Запуск онлайн кошелька для 
+									<br> 
+									| криптовалют 
+								.roadmap__timeline_month(data-roadmap-month='november-2019') NOVEMBER
+									.roadmap__timeline_month_line
+						.roadmap__timeline_line
+					.roadmap__timeline(data-roadmap-timeline='2')
+						.container
+							.roadmap__timeline_item(style='width: 40%')
+								.roadmap__timeline_text
+									| Старт работы 
+									<br>
+									| криптовалютной биржи
+								.roadmap__timeline_month(data-roadmap-month='march-2020') JANUARY
+									.roadmap__timeline_month_line
+							.roadmap__timeline_item(style='width: 25%')
+								.roadmap__timeline_text
+									| Начало работы с фиатными 
+									<br>
+									| валютами на 
+									<br>
+									| криптовалютной биржеy;
+								.roadmap__timeline_month(data-roadmap-month='july-2020')
+									| JULY
+									.roadmap__timeline_month_line
+						.roadmap__timeline_line
+				.roadmap-indicator
+		section.partners-section
+			.container
+				.main-title
+					| Our 
+					br
+					| Friendly services
+					.main-title__shadow(data-paralax='30') PARTNERS
+				.partners-list
+					each val in [1,2,3,4,5,6]
+						.partners-list__item
+							img(src='' alt='')
+							.partners-list__item__text
+								| The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.
+
+		section#contact.contacts-section
+			.container
+				.main-title
+					| Feel Free to 
+					br
+					| contant US
+					.main-title__shadow(data-paralax='30') CONTACTS
+				.contacts-list
+					each val in ['facebook-black', 'twitter-black', 'telegram-black']
+						.contacts-list__item
+							img(src=('img/' + val + '.svg') alt='')
+							.contacts-list__item__text Type something
+			.contacts-footer
+				.contacts-label START YOUR TRADE NOW
+				.container
+					.contacts-footer__button
+						.btn.create-trading-btn Create Your Account
+					.contacts-footer__list
+						div Info
+						div
+							a(href='') User support
+						div
+							a(href='') Knowledge base
+						div
+							a(href='') FAQ
+						div
+							a(href='') Fees and limits
+						div
+							a(href='') Referral program
+					.contacts-footer__list
+						div Trade Now
+						div
+							a(href='') Secure Wallet
+						div
+							a(href='') Exchange
+						div
+							a(href='') Margin Trade
+					.contacts-footer__list
+						div About
+						div
+							a(href='') News
+						div
+							a(href='') Blog
+						div
+							a(href='') Our Features
+						div
+							a(href='') Road map
+						div
+							a(href='') Reviews
+					.contacts-footer__list
+						div Documents
+						div
+							a(href='') User agreement
+						div
+							a(href='') Privacy Policy
+						div
+							a(href='') AML/KYC Policy
+						div
+							a(href='') Token Purchase Agreement
+						div
+							a(href='') Wrongdepo Policy
+						div
+							a(href='') Media-Kit
+					.contacts-footer__list
+						div Follow us
+					.contacts-footer__bottom
+						.copyright &copy; 2019 Exchange2.net

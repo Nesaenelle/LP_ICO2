@@ -1,0 +1,21 @@
+mixin product-item(params)
+	.catalog__goods__grid__item
+		.catalog__goods__grid__item--article Артикул: 
+			span 1234
+		.catalog__goods__grid__item--favorite Избранное
+			svg
+				use(xlink:href="#icon-favorite")
+		a(class="catalog__goods__grid__item--link" href="product-card.html")
+			img(class="catalog__goods__grid__item--img" src="img/trainersearch.png" alt="")
+			.catalog__goods__grid__item--descr= params.descr
+			.catalog__goods__grid__item--title= params.title
+		.catalog__goods__grid__item--price= params.price
+
+		.catalog__goods__grid__item__buttons
+			button(class="btn btn--buy")
+				svg
+					use(xlink:href="#icon-cart")
+				span Купить
+			a(href="compare.html")
+				button(class="btn btn--compare")
+					img(src="img/balance.png", alt="")

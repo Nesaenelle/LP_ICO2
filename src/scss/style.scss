@@ -8,7 +8,7 @@
 @import 'modal.scss';
 @import 'footer.scss';
 @import 'inputs.scss';
-@import 'icons.scss';
+// @import 'icons.scss';
 @import 'media.scss';
 @import 'slick.scss';
 @import 'slick-theme.scss';
@@ -56,7 +56,7 @@
     src: //url('fonts/Rubik-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
     // url('fonts/Rubik-Light.woff2') format('woff2'), /* Super Modern Browsers */
     // url('fonts/Rubik-Light.woff') format('woff'), /* Pretty Modern Browsers */
-    url('fonts/HelveticaNeue.ttf') format('truetype');
+    url('./../fonts/HelveticaNeue.ttf') format('truetype');
     /* Safari, Android, iOS */
     // url('fonts/Rubik-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
     // font-weight: 600;
