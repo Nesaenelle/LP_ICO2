@@ -50,7 +50,7 @@ a {
 }
 
 .main-section {
-    background: #ccc;
+    background: url(../img/2883368.jpg);
     .main-title {
         color: #fff;
     }
@@ -313,8 +313,8 @@ a {
         margin: 0 15px;
 
         &_text {       
-            height: 60px; 
-            line-height: 1.3em;
+            height: 65px; 
+            line-height: 1.2em;
             span {
                 // position: absolute;
                 // font-family: Poppins;
@@ -330,7 +330,7 @@ a {
 
             &_bg {
                 height: 91px;
-                background-size: cover;
+                background-size: cover!important;
 
             }
         }

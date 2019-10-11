@@ -111,9 +111,11 @@
                         }
 
                         if (index == 1) {
+                            jQuery('.footer').fadeIn(300);
                             jQuery('.main-navigation').addClass('white');
                             jQuery('.header-create-platform').removeClass('active');
                         } else {
+                            jQuery('.footer').fadeOut(300);
                             jQuery('.main-navigation').removeClass('white');
                             jQuery('.header-create-platform').addClass('active');
                         }
@@ -461,7 +463,7 @@ $('.slick-slider').slick({
     speed: 300,
     slidesToShow: 2,
     slidesToScroll: 2,
-    arrows: true,
+    arrows: false,
     nextArrow: '<div class="arrow-right"></div>',
     prevArrow: '<div class="arrow-left"></div>',
     responsive: [{
