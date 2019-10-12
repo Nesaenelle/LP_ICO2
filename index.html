@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<head>
+  <title>LP</title>
+  <link rel="shortcut icon" href="/favicon.png">
+  <meta content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1" name="viewport">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:100,300,400,500,600,700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,500,600,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+<link href="styles.css" rel="stylesheet"></head>
+<body>
+<header><a class="logo" href="index.html"><img src="img/logo.svg"></a>
+  <ul class="header-menu center">
+    <li class="header-menu-item"><a href="secure_wallet.html" data-translate="secure_wallet"></a></li>
+    <li class="header-menu-item"><a href="exchange.html" data-translate="exchange"></a></li>
+    <li class="header-menu-item"><a href="margin_trading.html" data-translate="margin_trading"></a></li>
+    <li class="header-menu-item">
+      <div class="header-menu-item__dots">...</div>
+      <ul class="submenu">
+        <li><a href="news.html" data-translate="news"></a></li>
+        <li><a href="support.html" data-translate="support"></a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="knownladge.html" data-translate="knownladge_base"></a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="header-menu right">
+    <li class="header-menu-item"><a href="login.php" target="_blank" data-translate="login">Log in</a></li>
+    <li class="header-menu-item"><a href="signup.php" target="_blank" data-translate="signup">Sign up</a></li>
+    <li class="header-menu-item" data-language>
+      <div class="language-value" data-language-value>Eng</div>
+      <ul class="language-list" data-language-list>
+        <li class="active" data-language-item="eng">Eng</li>
+        <li data-language-item="ru">Rus</li>
+        <li data-language-item="cn">简体</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="header-create-platform"><a href="#" data-translate="create_trading_platform"></a></div>
+  <div class="burger" data-menu=""><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></div>
+  <div class="dropdown-menu" data-menu-dropdown="">
+    <div class="dropdown-menu__close" data-menu-dropdown-close=""></div>
+    <ul class="header-menu">
+      <li class="header-menu-item"><a href="secure_wallet.html" data-translate="secure_wallet"></a></li>
+      <li class="header-menu-item"><a href="exchange.html" data-translate="exchange"></a></li>
+      <li class="header-menu-item"><a href="margin_trading.html" data-translate="margin_trading"></a></li>
+      <li class="header-menu-item"><a href="news.html" data-translate="news"></a></li>
+      <li class="header-menu-item"><a href="support.html" data-translate="support"></a></li>
+      <li class="header-menu-item"><a href="faq.html">FAQ</a></li>
+      <li class="header-menu-item"><a href="knownladge.html" data-translate="knownladge_base"></a></li>
+    </ul>
+    <ul class="language" data-language>
+      <li class="active" data-language-item="eng">Eng</li>
+      <li data-language-item="ru">Ru</li>
+      <li data-language-item="cn">简体</li>
+    </ul>
+    <button class="btn">Create Your Account</button>
+  </div>
+</header>
+  <div class="main-navigation white">
+    <div class="main-navigation__prev">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a-1" d="M10.24 7.38L6.98 4.12v21.56h-2V4.16L1.76 7.38.34 5.98 6 .32l5.66 5.66z"></path>
+        </defs>
+        <g fill="none" fill-rule="evenodd" transform="translate(18 11)"></g>
+        <mask id="b-1" fill="#fff">
+          <use xlink:href="#a-1"></use>
+        </mask>
+        <g fill="#000" mask="url(#b-1)">
+          <path d="M-18-11h48v48h-48z"></path>
+        </g>
+      </svg>
+    </div>
+    <div class="main-navigation__page"><span class="main-navigation__current">1</span><span class="main-navigation__slash">/</span><span class="main-navigation__total"></span></div>
+    <div class="main-navigation__next">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a-2" d="M10.24 18.62l-3.26 3.26V.32h-2v21.52l-3.22-3.22-1.42 1.4L6 25.68l5.66-5.66z"></path>
+        </defs>
+        <g fill="none" fill-rule="evenodd" transform="translate(18 11)"></g>
+        <mask id="b-2" fill="#fff">
+          <use xlink:href="#a-2"></use>
+        </mask>
+        <g fill="#000" mask="url(#b-2)">
+          <path d="M-18-11h48v48h-48z"></path>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <main class="main">
+    <section class="main-section">
+      <div class="container">
+        <div class="main-title" data-translate="title1"></div>
+        <!-- <button class="mobile btn main-btn" data-navigation-link="5">Create Trading Platform</button>-->
+        <div class="main-section__bottom">
+          <div class="secondary-title" data-translate="subtitle1"></div>
+          <div class="slick-slider">
+            <div class="slick-slider__item">
+              <div class="slick-slider__item_text" data-translate="slider_text1"></div>
+              <div class="slick-slider__item_img">
+                <div class="slick-slider__item_img_bg" style="background: url(img/chains.jpg)"></div>
+              </div>
+              <div class="slick-slider__item_descr" data-translate="slider_descr1"></div><a class="slick-slider__item_link" href="" data-translate="read"></a>
+            </div>
+            <div class="slick-slider__item">
+              <div class="slick-slider__item_text" data-translate="slider_text2"></div>
+              <div class="slick-slider__item_img">
+                <div class="slick-slider__item_img_bg" style="background: url(img/chains.jpg)"></div>
+              </div>
+              <div class="slick-slider__item_descr" data-translate="slider_descr2"></div><a class="slick-slider__item_link" href="" data-translate="read"></a>
+            </div>
+            <div class="slick-slider__item">
+              <div class="slick-slider__item_text" data-translate="slider_text2"></div>
+              <div class="slick-slider__item_img">
+                <div class="slick-slider__item_img_bg" style="background: url(img/chains.jpg)"></div>
+              </div>
+              <div class="slick-slider__item_descr" data-translate="slider_descr2"></div><a class="slick-slider__item_link" href="" data-translate="read"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-section" id="about" data-swipe="">
+      <div class="container">
+        <div class="main-title"><span data-translate="title2"></span>
+          <div class="main-title__shadow" data-paralax="30" data-translate="about"></div>
+        </div>
+        <div class="about-list">
+          <div class="about__item active" data-swipe-item="0">
+            <div class="about__item_img"><span data-translate="about_img_text1"></span>
+              <div class="about__item_img_bg" style="background: url(img/chains.jpg)"></div>
+            </div>
+            <div class="about__item_text" data-translate="about_text1"></div>
+          </div>
+          <div class="about__item" data-swipe-item="1">
+            <div class="about__item_img"><span data-translate="about_img_text2"></span>
+              <div class="about__item_img_bg" style="background: url(img/chains.jpg)"></div>
+            </div>
+            <div class="about__item_text" data-translate="about_text2"></div>
+          </div>
+          <div class="about__item" data-swipe-item="2">
+            <div class="about__item_img"><span data-translate="about_img_text3"></span>
+              <div class="about__item_img_bg" style="background: url(img/bitcoin.jpeg)"></div>
+            </div>
+            <div class="about__item_text" data-translate="about_text3"></div>
+          </div>
+        </div>
+        <div class="swipe-indicator"><span class="active"></span><span></span><span></span></div>
+      </div>
+    </section>
+    <section class="roadmap-section" id="roadmap">
+      <div class="container">
+        <div class="main-title"><span data-translate="title3"></span>
+          <div class="main-title__shadow" data-paralax="30" data-translate="road"></div>
+        </div>
+      </div>
+      <div class="roadmap" data-roadmap="" data-animate="">
+        <div class="roadmap__years">
+          <div class="container">
+            <div class="roadmap__years_item active" data-roadmap-year="1">2019</div>
+            <div class="roadmap__years_item" data-roadmap-year="2">2020</div>
+          </div>
+        </div>
+        <div class="roadmap__timeline" data-roadmap-timeline="1">
+          <div class="container">
+            <div class="roadmap__timeline_item" style="width: 20%">
+              <div class="roadmap__timeline_text" data-translate="roadmap_text1"></div>
+              <div class="roadmap__timeline_month" data-roadmap-month="march-2019"><span data-translate="march"></span>
+                <div class="roadmap__timeline_month_line"></div>
+              </div>
+            </div>
+            <div class="roadmap__timeline_item" style="width: 50%">
+              <div class="roadmap__timeline_text" data-translate="roadmap_text2"></div>
+              <div class="roadmap__timeline_month" data-roadmap-month="june-2019"><span data-translate="june"></span>
+                <div class="roadmap__timeline_month_line"></div>
+              </div>
+            </div>
+            <div class="roadmap__timeline_item" style="width: 20%">
+              <div class="roadmap__timeline_text" data-translate="roadmap_text3"></div>
+              <div class="roadmap__timeline_month" data-roadmap-month="november-2019"><span data-translate="november"></span>
+                <div class="roadmap__timeline_month_line"></div>
+              </div>
+            </div>
+          </div>
+          <div class="roadmap__timeline_line"></div>
+        </div>
+        <div class="roadmap__timeline" data-roadmap-timeline="2">
+          <div class="container">
+            <div class="roadmap__timeline_item" style="width: 40%">
+              <div class="roadmap__timeline_text" data-translate="roadmap_text4"></div>
+              <div class="roadmap__timeline_month" data-roadmap-month="march-2020"><span data-translate="january"></span>
+                <div class="roadmap__timeline_month_line"></div>
+              </div>
+            </div>
+            <div class="roadmap__timeline_item" style="width: 25%">
+              <div class="roadmap__timeline_text" data-translate="roadmap_text5"></div>
+              <div class="roadmap__timeline_month" data-roadmap-month="july-2020"><span data-translate="july"></span>
+                <div class="roadmap__timeline_month_line"></div>
+              </div>
+            </div>
+          </div>
+          <div class="roadmap__timeline_line"></div>
+        </div>
+      </div>
+      <div class="roadmap-indicator">
+        <div class="roadmap-indicator__inner"></div>
+      </div>
+    </section>
+    <section class="partners-section">
+      <div class="container">
+        <div class="main-title"><span data-translate="title4"></span>
+          <div class="main-title__shadow" data-paralax="30" data-translate="partners"></div>
+        </div>
+        <div class="partners-list">
+          <div class="partners-list__item"><a href="" target="_blank"><img src="" alt=""></a>
+            <div class="partners-list__item__text" data-translate="partners_text1"></div>
+          </div>
+          <div class="partners-list__item"><a href="" target="_blank"><img src="" alt=""></a>
+            <div class="partners-list__item__text" data-translate="partners_text2"></div>
+          </div>
+          <div class="partners-list__item"><a href="" target="_blank"><img src="" alt=""></a>
+            <div class="partners-list__item__text" data-translate="partners_text3"></div>
+          </div>
+          <div class="partners-list__item"><a href="" target="_blank"><img src="" alt=""></a>
+            <div class="partners-list__item__text" data-translate="partners_text4"></div>
+          </div>
+          <div class="partners-list__item"><a href="" target="_blank"><img src="" alt=""></a>
+            <div class="partners-list__item__text" data-translate="partners_text5"></div>
+          </div>
+          <div class="partners-list__item"><a href="" target="_blank"><img src="" alt=""></a>
+            <div class="partners-list__item__text" data-translate="partners_text6"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts-section" id="contact">
+      <div class="container">
+        <div class="main-title"><span data-translate="title5"></span>
+          <div class="main-title__shadow" data-paralax="30" data-translate="contacts"></div>
+        </div>
+        <div class="contacts-list"><a class="contacts-list__item" href="" target="_blank"><img src="img/facebook-black.svg" alt="">
+            <div class="contacts-list__item__text" data-translate="type_something"></div></a><a class="contacts-list__item" href="" target="_blank"><img src="img/twitter-black.svg" alt="">
+            <div class="contacts-list__item__text" data-translate="type_something"></div></a><a class="contacts-list__item" href="" target="_blank"><img src="img/telegram-black.svg" alt="">
+            <div class="contacts-list__item__text" data-translate="type_something"></div></a><a class="contacts-list__item" href="" target="_blank"><img src="img/envelope.svg" alt="">
+            <div class="contacts-list__item__text" data-translate="type_something"></div></a>
+        </div>
+        <div class="copyright-mobile">&copy; 2019 Exchange2.net</div>
+      </div>
+<div class="contacts-footer">
+  <div class="contacts-label">START YOUR TRADE NOW</div>
+  <div class="container">
+    <div class="contacts-footer__button">
+      <div class="btn create-trading-btn">Create Your Account</div>
+    </div>
+    <div class="contacts-footer__list">
+      <div>Info</div>
+      <div><a href="support.html">User support</a></div>
+      <div><a href="knowledge_base.html">Knowledge base</a></div>
+      <div><a href="faq.html">FAQ</a></div>
+      <div><a href="">Fees and limits</a></div>
+      <div><a href="">Referral program</a></div>
+    </div>
+    <div class="contacts-footer__list">
+      <div>Trade Now</div>
+      <div><a href="">Secure Wallet</a></div>
+      <div><a href="">Exchange</a></div>
+      <div><a href="">Margin Trade</a></div>
+    </div>
+    <div class="contacts-footer__list">
+      <div>About</div>
+      <div><a href="news.html">News</a></div>
+      <div><a href="">Blog</a></div>
+      <div><a href="">Our Features</a></div>
+      <div><a href="">Road map</a></div>
+      <div><a href="">Reviews</a></div>
+    </div>
+    <div class="contacts-footer__list">
+      <div>Documents</div>
+      <div><a href="">User agreement</a></div>
+      <div><a href="">Privacy Policy</a></div>
+      <div><a href="">AML/KYC Policy</a></div>
+      <div><a href="">Token Purchase Agreement</a></div>
+      <div><a href="">Wrongdepo Policy</a></div>
+      <div><a href="">Media-Kit</a></div>
+    </div>
+    <div class="contacts-footer__list">
+      <div>Follow us</div>
+      <ul>
+        <li><a href="" target="_blank"><img src="img/facebook-black.svg" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="img/bra-github.svg" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="img/twitter-black.svg" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="img/bra-blogger.svg" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="img/bra-reddit.svg" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="img/bra-instagram.svg" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="img/youtube.svg" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="img/medium.svg" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="img/telegram-black.svg" alt=""></a></li>
+      </ul>
+    </div>
+    <div class="contacts-footer__bottom">
+      <div class="copyright">&copy; 2019 Exchange2.net</div>
+    </div>
+  </div>
+</div>
+    </section>
+  </main>
+<script>
+  var translateConfig = {
+  	eng: {
+  		secure_wallet: 'Secure Wallet',
+  		exchange: 'Exchange',
+  		margin_trading: 'Margin trading',
+  		news: 'News',
+  		support: 'Support',
+  		knownladge_base: 'Knownladge Base',
+  		login: 'Log in',
+  		signup: 'Sign up',
+  		create_trading_platform: 'Create Trading Platform',
+  		slider_text1: '<span> CREATE </span><span> YOUR OWN CRYPTO</span> <span> EXCHANGE PLATFORM</span>',
+  		slider_text2: '<span> BITCOIN </span> <span> IS FALLING</span>',
+  		slider_descr1: 'Everyone can create his own cryptocurrency exchange platform in 30 minutes.',
+  		slider_descr2: 'Why bitcoin and other cryptocurrencies are falling. Opinions of representatives of the industry.',
+  		read: 'read',
+  		title1: 'CRYPTO TRADING PLATFORM <br> WHAT YOU NEED!',
+  		subtitle1: 'What New on Crypto?', 
+  		title2: 'WHY WE ARE BETTER THAN ANOTHER <br> 100000+ PLATFORMS? ',
+  		about: 'ABOUT',
+  		about_img_text1: 'Vestibulum rutrum quam vitae fringilla tincidunt.',
+  		about_text1: '98% of all funds are stored offline. Our trading platform is a network of secure protected microservices written in Golang.',
+  		about_img_text2: 'Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. ',
+  		about_text2: 'Each trading pair is a dedicated microservice written in go that is capable to run more than a million transactions per a second. We use in-memory storage to store all operations and our own data storage system to handle fast trading operations.',
+  		about_img_text3: 'Cras quis nulla commodo, aliquam lectus sed, blandit augue.',
+  		about_text3: 'Everyone can create his own cryptocurrency exchange platform in 30 minutes.',
+  		title3: 'THIS IS <br> OUR PLAN',
+  		road: 'ROAD',
+  		roadmap_text1: 'Start of development <br>Exchange #2',
+  		roadmap_text2: 'First introduction to the public Interviewing potential users',
+  		roadmap_text3: 'Запуск онлайн кошелька для <br> криптовалют',
+  		roadmap_text4: 'Старт работы <br> криптовалютной биржи',
+  		roadmap_text5: 'Начало работы с фиатными валютами на <br> криптовалютной бирже',
+  		march: 'MARCH',
+  		june: 'JUNE',
+  		november: 'NOVEMBER',
+  		january: 'JANUARY',
+  		july: 'JULY',
+  		title4: 'Our <br> Friendly services',
+  		partners: 'PARTNERS',
+  		partners_text1: ' The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.',
+  		partners_text2: ' The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.',
+  		partners_text3: ' The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.',
+  		partners_text4: ' The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.',
+  		partners_text5: ' The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.',
+  		partners_text6: ' The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.',
+  		title5: 'Feel Free to <br> contant US',
+  		contacts: 'CONTACTS',
+  		type_something: 'Type something',
+  		title_news: 'NEWS'
+  	}, 
+  	ru: {
+  		about: 'О компании'
+  	},
+  	cn: {
+  		
+  	}	
+  };
+</script>
+  <footer class="footer white">
+    <div class="footer-socials"><a href="" target="_blank">
+        <svg id="Capa_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96.124px" height="96.123px" viewbox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;" xml:space="preserve">
+          <g>
+            <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803				    c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654				    c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246				    c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"></path>
+          </g>
+        </svg></a><a href="" target="_blank">
+        <svg id="Capa_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="97.073px" height="97.073px" viewbox="0 0 97.073 97.073" style="enable-background:new 0 0 97.073 97.073;" xml:space="preserve">
+          <g>
+            <path d="M96.771,28.015c-0.476-0.762-1.4-1.115-2.259-0.861c-1.603,0.469-3.637,0.895-6.047,1.266				    c2.232-1.142,4.011-2.364,5.28-3.635c0.688-0.687,0.781-1.768,0.225-2.562c-0.559-0.794-1.605-1.076-2.485-0.663				    c-2.331,1.091-4.868,1.651-7.542,1.667C79.387,13.457,71.251,9.84,70.938,9.705c-4.966-2.253-9.696-2.929-13.926-1.99				    c-11.329,2.517-16.511,15.99-14.816,27.031c-3.011-0.208-19.053-1.823-39.209-13.267C2.363,21.125,1.596,21.13,0.977,21.5				    C0.36,21.868-0.013,22.538,0,23.256C0.235,35.21,11.155,40.916,15.838,42.814c-0.99,0.102-2.515,0.124-3.994,0.062				    c-0.888-0.038-1.706,0.528-1.982,1.381c-0.276,0.854,0.048,1.786,0.794,2.282c3.279,2.185,6.566,3.617,9.77,4.261				    c-0.693,0.048-1.415,0.08-2.117,0.103c-0.892,0.028-1.657,0.644-1.876,1.509c-0.218,0.866,0.163,1.771,0.936,2.219				    c2.998,1.741,7.652,3.817,12.814,3.817l0.372-0.004h-0.001c-0.569,0.21-1.208,0.395-1.903,0.549				    c-0.212,0.047-0.425,0.091-0.637,0.13c-0.903,0.169-1.574,0.933-1.628,1.849c-0.055,0.917,0.522,1.752,1.399,2.025				    c3.797,1.188,7.34,1.463,10.351,0.793c0.567-0.126,1.127-0.29,1.66-0.484h0.001c-0.081,3.068-1.695,13.383-19.041,17.236				    L20.53,80.59c-1.088,0.242-3.392,0.524-6.305,0.524c-1.2,0-2.403-0.047-3.578-0.139c-0.969-0.083-1.846,0.551-2.091,1.487				    c-0.245,0.938,0.216,1.915,1.095,2.321c6.643,3.073,13.941,4.75,21.694,4.983c0.021,0,0.04,0.001,0.061,0.001				    c4.157,0,8.313-0.455,12.354-1.353c7.41-1.646,14.61-4.807,21.398-9.395l0.003-0.001c0.149-0.058,0.292-0.132,0.424-0.224				    c9.662-6.666,16.771-15.994,21.125-27.727c0.016-0.04,0.028-0.081,0.041-0.122c1.762-5.874,2.371-11.186,1.814-15.788				    c3.432-1.105,6.117-2.701,7.983-4.741C97.154,29.761,97.245,28.777,96.771,28.015z"></path>
+          </g>
+        </svg></a><a href="" target="_blank">
+        <svg id="Capa_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="97.103px" height="97.104px" viewbox="0 0 97.103 97.104" style="enable-background:new 0 0 97.103 97.104;" xml:space="preserve">
+          <g>
+            <path d="M93.82,0.37c-0.697-0.469-1.6-0.494-2.32-0.066L3.388,52.585c-0.748,0.444-1.158,1.291-1.043,2.152				    c0.113,0.86,0.732,1.571,1.568,1.805l22.389,6.233c0.68,0.188,1.409,0.036,1.956-0.41l35.768-29.219L39.075,64.993				    c-0.301,0.382-0.462,0.854-0.462,1.339v28.602c0,0.966,0.636,1.814,1.563,2.083c0.201,0.06,0.405,0.087,0.607,0.087				    c0.728,0,1.425-0.366,1.83-1.004l15.577-24.45l22.772,6.338c0.598,0.167,1.24,0.067,1.764-0.271				    c0.521-0.339,0.873-0.885,0.967-1.499L94.753,2.493C94.878,1.665,94.515,0.838,93.82,0.37z"></path>
+          </g>
+        </svg></a></div>
+    <div class="scroll-down">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewbox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+        <g>
+          <g>
+            <path d="M50.3,93c-1.6,0-3.8-0.2-6-0.4C32.1,91.3,22.9,81.3,22.9,69V31.2c0-12.3,9.1-22.3,21.4-23.6c2.2-0.2,4.4-0.4,6-0.4    s3.8,0.2,6,0.4c12.3,1.3,21.4,11.3,21.4,23.6v37.7c0,12.3-9.1,22.3-21.4,23.6C54.2,92.8,52,93,50.3,93z M50.3,10.9    c-1.6,0-3.5,0.2-5.7,0.4c-10.4,1.1-18.1,9.7-18.1,19.9v37.7c0,10.4,7.7,19,18.1,19.9c2.2,0.2,4.2,0.4,5.7,0.4    c1.5,0,3.5-0.2,5.7-0.4c10.2-1.1,18.1-9.7,18.1-19.9V31.2c0-10.4-7.7-19-18.1-19.9C53.8,11,52,10.9,50.3,10.9z"></path>
+          </g>
+        </g>
+        <g>
+          <circle cx="50.3" cy="74.7" r="5.5"></circle>
+        </g>
+      </svg>
+    </div>
+    <div class="copyright">&copy; Exchange2.net 2018</div>
+    <div class="footer-form active">
+      <div class="footer-form__text">Become <br>exchange platform <br>owner</div>
+      <form class="form" id="footer-create-platform-form" novalidate="">
+        <input class="input" type="email" data-pattern="email" name="email" placeholder="Email" data-error-msg="Email is invalid" required="">
+      </form>
+      <div class="create-trading-btn">Create Your Account</div>
+      <div class="submit-create-trading-form">JOIN NOW</div>
+    </div>
+  </footer>
+<script type="text/javascript" src="bundle.js"></script></body>
