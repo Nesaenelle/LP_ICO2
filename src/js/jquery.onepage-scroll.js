@@ -193,8 +193,9 @@ import jQuery from 'jquery';
     }
 
     $.fn.moveTo = function(page_index) {
-      current = $(settings.sectionContainer + ".active")
-      next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
+      const current = $(settings.sectionContainer + ".active")
+      const next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
+      let pos;
       if(next.length > 0) {
         if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
         current.removeClass("active")
@@ -334,7 +335,7 @@ import jQuery from 'jquery';
     }
 
     if(window.location.hash != "" && window.location.hash != "#1") {
-      init_index =  window.location.hash.replace("#", "")
+      const init_index =  window.location.hash.replace("#", "")
 
       if (parseInt(init_index) <= total && parseInt(init_index) > 0) {
         $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active")

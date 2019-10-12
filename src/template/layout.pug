@@ -11,31 +11,7 @@ head
 	link(href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet")
 body
 	include  parts/header.pug
-		
-	.main-navigation.white
-		.main-navigation__prev
-			svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13' height='32' )
-				defs
-					path#a-1(d='M10.24 7.38L6.98 4.12v21.56h-2V4.16L1.76 7.38.34 5.98 6 .32l5.66 5.66z')
-				g(fill='none' fill-rule='evenodd' transform='translate(18 11)')
-				mask#b-1(fill='#fff')
-					use(xlink:href='#a-1')
-				g(fill='#000' mask='url(#b-1)')
-					path(d='M-18-11h48v48h-48z')
-		.main-navigation__page
-			span.main-navigation__current 1
-			span.main-navigation__slash /
-			span.main-navigation__total
-		.main-navigation__next
-			svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13' height='32' )
-				defs
-					path#a-2(d='M10.24 18.62l-3.26 3.26V.32h-2v21.52l-3.22-3.22-1.42 1.4L6 25.68l5.66-5.66z')
-				g(fill='none' fill-rule='evenodd' transform='translate(18 11)')
-				mask#b-2(fill='#fff')
-					use(xlink:href='#a-2')
-				g(fill='#000' mask='url(#b-2)')
-					path(d='M-18-11h48v48h-48z')
-
+	
 	main(class=htmlWebpackPlugin.options.page + '-page')
 		block content
 		.overlay

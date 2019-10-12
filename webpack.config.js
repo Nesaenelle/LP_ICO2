@@ -56,17 +56,11 @@ module.exports = {
             template: 'src/template/pages/home.pug',
             page: 'home'
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'business_sale.html',
-        //     template: 'src/template/pages/business_sale.pug',
-        //     page: 'services'
-        // }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'apply_for_a_business_sale.html',
-        //     template: 'src/template/pages/apply_for_a_business_sale.pug',
-        //     page: 'business'
-        // }),
-
+        new HtmlWebpackPlugin({
+            filename: 'news.html',
+            template: 'src/template/pages/news.pug',
+            page: 'news'
+        }),
         new ExtractTextPlugin({ allChunks: true, filename: "styles.css" }),
         new CopyWebpackPlugin([
             { from: 'src/img', to: 'img' }

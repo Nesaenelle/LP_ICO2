@@ -1,6 +1,31 @@
 extends ../layout.pug
 
 block content
+
+	.main-navigation.white
+		.main-navigation__prev
+			svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
+				defs
+					path#a-1(d='M10.24 7.38L6.98 4.12v21.56h-2V4.16L1.76 7.38.34 5.98 6 .32l5.66 5.66z')
+				g(fill='none' fill-rule='evenodd' transform='translate(18 11)')
+				mask#b-1(fill='#fff')
+					use(xlink:href='#a-1')
+				g(fill='#000' mask='url(#b-1)')
+					path(d='M-18-11h48v48h-48z')
+		.main-navigation__page
+			span.main-navigation__current 1
+			span.main-navigation__slash /
+			span.main-navigation__total
+		.main-navigation__next
+			svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
+				defs
+					path#a-2(d='M10.24 18.62l-3.26 3.26V.32h-2v21.52l-3.22-3.22-1.42 1.4L6 25.68l5.66-5.66z')
+				g(fill='none' fill-rule='evenodd' transform='translate(18 11)')
+				mask#b-2(fill='#fff')
+					use(xlink:href='#a-2')
+				g(fill='#000' mask='url(#b-2)')
+					path(d='M-18-11h48v48h-48z')
+
 	main.main
 		section.main-section
 			.container
@@ -82,53 +107,55 @@ block content
 					br
 					| OUR PLAN 
 					.main-title__shadow(data-paralax='30') ROAD
-				.roadmap(data-roadmap='' data-animate='')
-					.roadmap__years
-						.container
-							.roadmap__years_item.active(data-roadmap-year='1') 2019
-							.roadmap__years_item(data-roadmap-year='2') 2020
-					.roadmap__timeline(data-roadmap-timeline='1')
-						.container
-							.roadmap__timeline_item(style='width: 20%')
-								.roadmap__timeline_text
-									| Start of development 
-									br
-									| Exchange #2
-								.roadmap__timeline_month(data-roadmap-month='march-2019') MARCH
-									.roadmap__timeline_month_line
-							.roadmap__timeline_item(style='width: 50%')
-								.roadmap__timeline_text First introduction to the public Interviewing potential users
-								.roadmap__timeline_month(data-roadmap-month='june-2019') JUNE
-									.roadmap__timeline_month_line
-							.roadmap__timeline_item(style='width: 20%')
-								.roadmap__timeline_text 
-									| Запуск онлайн кошелька для 
-									<br> 
-									| криптовалют 
-								.roadmap__timeline_month(data-roadmap-month='november-2019') NOVEMBER
-									.roadmap__timeline_month_line
-						.roadmap__timeline_line
-					.roadmap__timeline(data-roadmap-timeline='2')
-						.container
-							.roadmap__timeline_item(style='width: 40%')
-								.roadmap__timeline_text
-									| Старт работы 
-									<br>
-									| криптовалютной биржи
-								.roadmap__timeline_month(data-roadmap-month='march-2020') JANUARY
-									.roadmap__timeline_month_line
-							.roadmap__timeline_item(style='width: 25%')
-								.roadmap__timeline_text
-									| Начало работы с фиатными 
-									<br>
-									| валютами на 
-									<br>
-									| криптовалютной биржеy;
-								.roadmap__timeline_month(data-roadmap-month='july-2020')
-									| JULY
-									.roadmap__timeline_month_line
-						.roadmap__timeline_line
-				.roadmap-indicator
+			.roadmap(data-roadmap='' data-animate='')
+				.roadmap__years
+					.container
+						.roadmap__years_item.active(data-roadmap-year='1') 2019
+						.roadmap__years_item(data-roadmap-year='2') 2020
+				.roadmap__timeline(data-roadmap-timeline='1')
+					.container
+						.roadmap__timeline_item(style='width: 20%')
+							.roadmap__timeline_text
+								| Start of development 
+								br
+								| Exchange #2
+							.roadmap__timeline_month(data-roadmap-month='march-2019') MARCH
+								.roadmap__timeline_month_line
+						.roadmap__timeline_item(style='width: 50%')
+							.roadmap__timeline_text First introduction to the public Interviewing potential users
+							.roadmap__timeline_month(data-roadmap-month='june-2019') JUNE
+								.roadmap__timeline_month_line
+						.roadmap__timeline_item(style='width: 20%')
+							.roadmap__timeline_text 
+								| Запуск онлайн кошелька для 
+								<br> 
+								| криптовалют 
+							.roadmap__timeline_month(data-roadmap-month='november-2019') NOVEMBER
+								.roadmap__timeline_month_line
+					.roadmap__timeline_line
+				.roadmap__timeline(data-roadmap-timeline='2')
+					.container
+						.roadmap__timeline_item(style='width: 40%')
+							.roadmap__timeline_text
+								| Старт работы 
+								<br>
+								| криптовалютной биржи
+							.roadmap__timeline_month(data-roadmap-month='march-2020') JANUARY
+								.roadmap__timeline_month_line
+						.roadmap__timeline_item(style='width: 25%')
+							.roadmap__timeline_text
+								| Начало работы с фиатными 
+								<br>
+								| валютами на 
+								<br>
+								| криптовалютной биржеy;
+							.roadmap__timeline_month(data-roadmap-month='july-2020')
+								| JULY
+								.roadmap__timeline_month_line
+					.roadmap__timeline_line
+			.roadmap-indicator
+				.roadmap-indicator__inner
+
 		section.partners-section
 			.container
 				.main-title
@@ -151,7 +178,7 @@ block content
 					| contant US
 					.main-title__shadow(data-paralax='30') CONTACTS
 				.contacts-list
-					each val in ['facebook-black', 'twitter-black', 'telegram-black']
+					each val in ['facebook-black', 'twitter-black', 'telegram-black', 'envelope']
 						.contacts-list__item
 							img(src=('img/' + val + '.svg') alt='')
 							.contacts-list__item__text Type something
@@ -208,5 +235,10 @@ block content
 							a(href='') Media-Kit
 					.contacts-footer__list
 						div Follow us
+						ul
+							each val in ['facebook-black', 'bra-github', 'twitter-black', 'bra-blogger',  'bra-reddit', 'bra-instagram', 'youtube', 'medium', 'telegram-black']
+								li
+									a(href='' target='_blank')
+										img(src=('img/' + val + '.svg') alt='')
 					.contacts-footer__bottom
 						.copyright &copy; 2019 Exchange2.net

@@ -60,27 +60,6 @@
         }
     }
 
-    .skills-section .skills__bg {
-        height: 400px;
-        background-size: contain !important;
-    }
-
-    .skills-section .skills__title {
-        font-size: 28px;
-    }
-
-    .skills-section .skills__list li {
-        font-size: 20px;
-    }
-
-    .skills-section .skills__try-now {
-        margin-top: 30px;
-    }
-
-    .skills-section .skills__soon {
-        margin-top: 8px;
-    }
-
     .roadmap__years {
         margin-top: 60px;
     }
@@ -118,22 +97,6 @@
         height: 100vh;
     }
 
-    .team-section .team-banner {
-        height: 220px;
-    }
-
-    .team-section .team-list__item_name {
-        font-size: 16px;
-    }
-
-    .team-section .team-list__item_position {
-        font-size: 16px;
-        margin-top: 15px;
-    }
-
-    .team-section .team-list__item_socials {
-        margin-top: 25px;
-    }
 }
 
 
@@ -171,10 +134,6 @@
         background-position: center !important;
     }
 
-    .about-section .about__item_img span {
-        font-size: 38px;
-    }
-
     .about-section .about__item:nth-child(1) {
         width: 220px;
     }
@@ -206,42 +165,6 @@
 
     .about-section .about__item:nth-child(3) .about__item_img_bg {
         width: 220px;
-    }
-
-    .skills-section .skills__title {
-        font-size: 24px;
-    }
-
-    .skills-section .skills__list li {
-        font-size: 16px;
-    }
-
-    .skills-section .skills__bg {
-        height: 350px;
-        width: 45%;
-        margin-right: 10px;
-    }
-
-    .skills-section .skills__content {
-        margin-top: 60px;
-        width: 55%;
-    }
-
-    .skills-section .skills__try-now,
-    .skills-section .skills__soon {
-        font-size: 14px;
-
-        b {
-            width: 35%;
-            font-size: 18px;
-            margin-right: 15px;
-        }
-
-        span {
-            text-align: right;
-            width: 65%;
-
-        }
     }
 
     .roadmap__timeline .container {
@@ -309,10 +232,6 @@
 
     footer .footer-form .form {
         padding: 0 20px 20px;
-    }
-
-    .about-section .about__item_img span {
-        font-size: 28px;
     }
 
     .about-section .about__item:nth-child(1),
@@ -386,18 +305,6 @@
     .create-platform-section .create-platform .form {
         display: block;
     }
-
-    .team-section .team-list {
-        width: 90%;
-        .team-list__item_name, .team-list__item_position {
-            font-size: 14px;
-        }
-        .team-list__item_socials img {
-            width: 19px;
-            height: 19px;
-        }
-    }
-
 }
 
 //mobile
@@ -452,45 +359,6 @@
         display: block;
     }
 
-    .mobile-currency {
-        display: block;
-
-        &__title {
-            display: block;
-        }
-    }
-
-    .currencies-list {
-        margin-top: -5px;
-        position: absolute;
-        display: none;
-        right: 0;
-        width: 141px;
-        flex-wrap: wrap;
-        background-color: #e8e8e8;
-        z-index: 99;
-
-        li {
-            width: 100%;
-            margin-top: 10px;
-            text-align: right;
-            padding-right: 20px;
-            margin-left: 0;
-
-            &:first-child {
-                margin-top: 15px;
-            }
-
-            &:last-child {
-                margin-bottom: 15px;
-            }
-
-            &.active:after {
-                content: none;
-            }
-        }
-    }
-
     .onepage-pagination {
         right: 2px;
         height: calc((25px) *7);
@@ -510,9 +378,9 @@
         display: none;
     }
 
-    .slick-slider {
-        display: none !important;
-    }
+    // .slick-slider {
+    //     display: none !important;
+    // }
 
     .main-title__shadow {
         display: none;
@@ -562,50 +430,7 @@
     }
 
 
-
-    .skills-section .skills__content {
-        padding: 0 20px;
-        margin-top: 15px;
-        width: 100%;
-    }
-
-    .skills-section .skills__title {
-        font-size: 16px;
-    }
-
-    .skills-section .skills__bg {
-        height: 186px;
-        margin: 20px auto 10px;
-        width: 100%;
-        background-position: center !important;
-    }
-
-    .skills-section .skills__list li {
-        font-size: 14px;
-    }
-
-    .skills-section .skills__try-now,
-    .skills-section .skills__soon {
-        font-size: 12px;
-
-        b {
-            width: 35%;
-            font-size: 16px;
-            margin-right: 15px;
-        }
-
-        span {
-            text-align: right;
-            width: 65%;
-
-        }
-    }
-
     @media screen and (max-height: 620px) {
-
-        .skills-section .skills__bg {
-            height: 125px;
-        }
         .about-section  .about__item{
             &:nth-child(1), &:nth-child(2), &:nth-child(3) {
                 .about__item_img_bg {
@@ -614,7 +439,6 @@
             }
         }
     }
-
 
 
     .roadmap__years {
@@ -664,89 +488,10 @@
         }
     }
 
-    .team-section .team-banner {
-        height: 150px;
-    }
-
-    .team-section .team-list {
-        width: 90%;
-    }
-    .team-section {
-        .scroller {
-            overflow: hidden;
-            &__content {
-                width: 1200px;
-            }
-        }
-        .team-banner {
-            height: 260px;
-        }
-        .team-list {
-            width: 75%;
-            justify-content: flex-start;
-        }
-
-        .team-list__item:first-child {
-            width: 254px;
-        }
-        .team-list__item:nth-child(2) {
-            width: 170px;
-        }
-        .team-list__item:nth-child(3) {
-            width: 185px;
-        }
-        .team-list__item:nth-child(4) {
-            width: 192px;
-        }
-    }
-
-    .team-section .team-list__item_name,
-    .team-section .team-list__item_position {
-        font-size: 14px;
-    }
-
-    .team-section .team-list__item_socials a {
-        margin-right: 5px;
-
-        img {
-            width: 18px;
-            height: 18px;
-        }
-    }
-
     .form {
         width: 50%;
         padding-right: 30px;
     }
-
-    .login-section,
-    .signup-section {
-        min-height: 450px;
-
-        .form-block__bg {
-            display: none;
-        }
-
-        .form-block .form {
-            width: 100%;
-            margin: 0;
-            padding: 0 20px;
-        }
-    }
-
-    .table thead th,
-    .table tbody tr td {
-        font-size: 12px;
-
-        &:nth-child(n + 4) {
-            display: none;
-        }
-    }
-
-    // .table tbody tr:nth-child(n + 6) {
-    //     display: table-cell;
-    // }
-
 
     .contacts-section .form-block__bg {
         display: none;
@@ -766,17 +511,9 @@
         height: 44px;
     }
 
-    // .form .input,
-    // .form .textarea {
-    //     font-size: 16px;
-    // }
 
     .form .textarea {
         height: 150px;
-    }
-
-    footer {
-        height: auto;
     }
 
     footer .footer-socials img {
@@ -798,28 +535,10 @@
 
 
 @media screen and (max-width: 375px) {
-
-    header {
-        .dropdown-menu {
-            width: 100%;
-            padding: 10px 0;
-        }
-    }
-
     .main-btn {
         width: 100%;
     }
 
-    .team-section .team-banner {
-        background-position-y: 72%;
-    }
-
-    .team-section .team-banner {
-        height: 180px;
-    }
-    .skills-section .skills__bg {
-        height: 85px;
-    }
     .about-section .about__item:nth-child(1) .about__item_text, .about-section .about__item:nth-child(2) .about__item_text, .about-section .about__item:nth-child(3) .about__item_text {
         font-size: 12px;
     }

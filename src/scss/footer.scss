@@ -9,6 +9,22 @@ footer {
     height: 60px;
     z-index: 10;
     // background: #fff;
+    @media screen and (max-width: 768px) {
+        padding: 14px;
+        height: 40px;
+    }
+    &.white {
+        .footer-socials {
+            svg {
+                fill: #fff;
+            }
+        }
+        .scroll-down {
+            svg {
+                fill: #fff;
+            }
+        }
+    }
 
     .copyright {
         font-size: 14px;
@@ -23,10 +39,14 @@ footer {
 
         a {}
 
-        img {
+        img, svg {
             margin-right: 38px;
             width: 16px;
             height: 16px;
+            transition: 0.5s;
+            @media screen and (max-width: 600px) {
+                margin-right: 25px;
+            }
         }
     }
 
@@ -35,8 +55,17 @@ footer {
         position: relative;
         z-index: 100;
 
-        img {
+        img{
             width: 42px;
+        }
+
+        svg {
+            width: 42px;
+            fill: #000;
+            transition: 0.5s;
+            @media screen and (max-width: 600px) {
+                width: 35px;
+            }
         }
 
         animation: go-go 1.5s infinite;

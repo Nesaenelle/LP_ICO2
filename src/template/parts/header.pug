@@ -3,11 +3,11 @@ header
 		img(src='img/logo.svg')
 	ul.header-menu.center
 		li.header-menu-item
-			a(href='#2') Secure Wallet
+			a(href='secure_wallet.html') Secure Wallet
 		li.header-menu-item
-			a(href='#3') Exchange
+			a(href='exchange.html') Exchange
 		li.header-menu-item
-			a(href='#4') Margin trading
+			a(href='margin_trading.html') Margin trading
 		li.header-menu-item
 			.header-menu-item__dots ...
 			ul
@@ -21,9 +21,15 @@ header
 					a(href='knownladge.html') Knownladge Base
 	ul.header-menu.right
 		li.header-menu-item
-			a.js-popup(href='login.php') Log in
+			a(href='login.php' target="_blank") Log in
 		li.header-menu-item
-			a.js-popup(href='signup.php') Sign up
+			a(href='signup.php' target="_blank") Sign up
+		li.header-menu-item
+			.language-value Eng
+			ul.language-list
+				li Eng
+				li Rus
+				li 简体
 	.header-create-platform
 		a(href='#' data-navigation-link='5') Create Trading Platform
 	.burger(data-menu='')
@@ -33,12 +39,12 @@ header
 	.dropdown-menu(data-menu-dropdown='')
 		.dropdown-menu__close(data-menu-dropdown-close='')
 		ul.header-menu
-			li.header-menu-item(data-navigation-link='2')
-				a(href='#2') Secure Wallet
-			li.header-menu-item(data-navigation-link='3')
-				a(href='#3') Exchange
-			li.header-menu-item(data-navigation-link='4')
-				a(href='#4') Margin trading
+			li.header-menu-item()
+				a(href='secure_wallet.html') Secure Wallet
+			li.header-menu-item()
+				a(href='exchange.html') Exchange
+			li.header-menu-item()
+				a(href='margin_trading.html') Margin trading
 			li.header-menu-item
 				a(href='news.html') News
 			li.header-menu-item
@@ -47,3 +53,9 @@ header
 				a(href='faq.html') FAQ
 			li.header-menu-item
 				a(href='knownladge.html') Knownladge Base
+		
+		ul.language
+			li.active Eng
+			li Ru
+			li 简体
+		button.btn Create Your Account
