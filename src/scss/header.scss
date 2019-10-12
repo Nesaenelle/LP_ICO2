@@ -95,8 +95,10 @@ header {
                 font-size: 16px;
                 color: #56a54b;
                 font-weight: 600;
-                @media screen and (max-width: 768px) {
-
+                cursor: pointer;
+                white-space: nowrap;
+                @media screen and (max-width: 980px) {
+                    font-size: 14px;
                 }
             }
             &-list {
@@ -108,6 +110,21 @@ header {
                 left: auto;
                 right: -14px;
                 transition: 0.2s;
+                @media screen and (max-width: 1280px) {
+                    top: 9px;
+                }
+                @media screen and (max-width: 980px) {
+                    top: 11px;
+                    right: -16px;
+                }
+                @media screen and (max-width: 768px) {
+                    right: -15px;
+                    width: 68px;
+                }
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
                 li {
                     padding: 14px 10px;
                     text-align: center;
@@ -115,6 +132,12 @@ header {
                     font-size: 16px;
                     font-weight: 600;
                     cursor: pointer;
+                    @media screen and (max-width: 980px) {
+                        font-size: 14px;
+                    }
+                    &.active {
+                        color: #56a54b;
+                    }
                     &:hover {
                         color: #56a54b;
                     }
@@ -136,7 +159,7 @@ header {
                 padding-bottom: 12px;
             }
             &:hover {
-                ul {
+                .submenu {
                     opacity: 1;
                     visibility: visible;
                 }
@@ -278,7 +301,7 @@ header {
             height: auto;
         }
         .btn {
-            margin: 30px auto 0;
+            margin: 10vh auto 0;
             display: block;
             background: #fff;
             padding: 15px;

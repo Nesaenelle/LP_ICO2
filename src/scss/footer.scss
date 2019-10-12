@@ -127,7 +127,7 @@ footer {
         }
 
         &.sent {
-            .input {
+            .input, .form{
                 display: none;
             }
             .create-trading-btn,
@@ -152,7 +152,10 @@ footer {
         align-items: center;
         justify-content: center;
         transition: 0.2s;
-
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+            height: 45px;
+        }
         &:hover {
             background: darken(#56a54b, 5%);
         }

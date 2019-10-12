@@ -3,13 +3,13 @@ export default class Navigation {
     constructor() {
         var links = $('[data-navigation-link]');
         var routes = [''];
+        let total_length = $('.main section').length;
         $('[data-navigation-link]').on('click', function(e) {
             e.preventDefault();
             var id = this.getAttribute('data-navigation-link');
             // self.navigate(id, 0, 500);
 
             $(".main").moveTo(id);
-            NES_API['mobile-menu'].close();
         });
 
         $(".scroll-down").on('click', function() {
@@ -24,9 +24,9 @@ export default class Navigation {
             $(".main").moveDown();
         });
 
-        $('.main-navigation__total').text($('.main section').length);
+        $('.main-navigation__total').text(total_length);
 
-        if ($(".main").length) {
+        if ($(".main").length && $('.main > section').length > 1) {
             $(".main").onepage_scroll({
                 easing: "ease",
                 animationTime: 1000,
@@ -52,6 +52,12 @@ export default class Navigation {
                     } else {
                         //     $('.footer-form').addClass('active');
                         $('.scroll-down').fadeIn(200);
+                    }
+
+                    if(index == total_length) {
+                        $('.footer').fadeOut(300);
+                    } else {
+                        $('.footer').fadeIn(300);
                     }
 
                     if (index == 1) {

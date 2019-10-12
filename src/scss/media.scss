@@ -14,7 +14,7 @@
         font-size: 30px;
 
         &__shadow {
-            font-size: 230px;
+            font-size: 200px;
         }
     }
 
@@ -187,7 +187,7 @@
     }
 
     .roadmap__timeline_item {
-        width: 25% !important;
+        width: 30% !important;
     }
 
     .create-platform-section .create-platform__title {
@@ -221,10 +221,6 @@
         }
     }
 
-    footer .create-trading-btn {
-        font-size: 16px;
-    }
-
     footer .footer-form__text {
         font-size: 18px;
         padding: 20px 20px 20px 20px;
@@ -245,7 +241,7 @@
         .about__item_img {
             min-width: 240px;
             min-height: 60px;
-            height: 60px;
+            height: 120px;
             width: 240px;
         }
 
@@ -359,6 +355,10 @@
         display: block;
     }
 
+    .roadmap__timeline_item {
+
+    }
+
     .onepage-pagination {
         right: 2px;
         height: calc((25px) *7);
@@ -375,7 +375,7 @@
     }
 
     .secondary-title {
-        display: none;
+        // display: none;
     }
 
     // .slick-slider {

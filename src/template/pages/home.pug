@@ -1,5 +1,7 @@
 extends ../layout.pug
 
+include ../parts/footer
+
 block content
 
 	.main-navigation.white
@@ -29,13 +31,10 @@ block content
 	main.main
 		section.main-section
 			.container
-				.main-title
-					| CRYPTO TRADING PLATFORM 
-					br
-					| WHAT YOU NEED!
+				.main-title(data-translate="title1")
 				// <button class="mobile btn main-btn" data-navigation-link="5">Create Trading Platform</button>
 				.main-section__bottom
-					.secondary-title What New on Crypto?
+					.secondary-title(data-translate="subtitle1")
 					.slick-slider
 						.slick-slider__item
 							.slick-slider__item_text
@@ -67,10 +66,8 @@ block content
 		section#about.about-section(data-swipe='')
 			.container
 				.main-title
-					| WHY WE ARE BETTER THAN ANOTHER 
-					br
-					| 100000+ PLATFORMS? 
-					.main-title__shadow(data-paralax='30') ABOUT
+					span(data-translate="title2")
+					.main-title__shadow(data-paralax='30' data-translate="about")
 				.about-list
 					.about__item.active(data-swipe-item='0')
 						.about__item_img
@@ -103,10 +100,8 @@ block content
 		section#roadmap.roadmap-section
 			.container
 				.main-title
-					| THIS IS 
-					br
-					| OUR PLAN 
-					.main-title__shadow(data-paralax='30') ROAD
+					span(data-translate="title3")
+					.main-title__shadow(data-paralax='30' data-translate="road")
 			.roadmap(data-roadmap='' data-animate='')
 				.roadmap__years
 					.container
@@ -159,86 +154,28 @@ block content
 		section.partners-section
 			.container
 				.main-title
-					| Our 
-					br
-					| Friendly services
-					.main-title__shadow(data-paralax='30') PARTNERS
+					span(data-translate="title4")
+					.main-title__shadow(data-paralax='30' data-translate="partners")
 				.partners-list
 					each val in [1,2,3,4,5,6]
 						.partners-list__item
 							img(src='' alt='')
 							.partners-list__item__text
 								| The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.
-
 		section#contact.contacts-section
 			.container
 				.main-title
-					| Feel Free to 
-					br
-					| contant US
-					.main-title__shadow(data-paralax='30') CONTACTS
+					span(data-translate="title5")
+					.main-title__shadow(data-paralax='30' data-translate="contacts")
 				.contacts-list
 					each val in ['facebook-black', 'twitter-black', 'telegram-black', 'envelope']
 						.contacts-list__item
 							img(src=('img/' + val + '.svg') alt='')
 							.contacts-list__item__text Type something
-			.contacts-footer
-				.contacts-label START YOUR TRADE NOW
-				.container
-					.contacts-footer__button
-						.btn.create-trading-btn Create Your Account
-					.contacts-footer__list
-						div Info
-						div
-							a(href='') User support
-						div
-							a(href='') Knowledge base
-						div
-							a(href='') FAQ
-						div
-							a(href='') Fees and limits
-						div
-							a(href='') Referral program
-					.contacts-footer__list
-						div Trade Now
-						div
-							a(href='') Secure Wallet
-						div
-							a(href='') Exchange
-						div
-							a(href='') Margin Trade
-					.contacts-footer__list
-						div About
-						div
-							a(href='') News
-						div
-							a(href='') Blog
-						div
-							a(href='') Our Features
-						div
-							a(href='') Road map
-						div
-							a(href='') Reviews
-					.contacts-footer__list
-						div Documents
-						div
-							a(href='') User agreement
-						div
-							a(href='') Privacy Policy
-						div
-							a(href='') AML/KYC Policy
-						div
-							a(href='') Token Purchase Agreement
-						div
-							a(href='') Wrongdepo Policy
-						div
-							a(href='') Media-Kit
-					.contacts-footer__list
-						div Follow us
-						ul
-							each val in ['facebook-black', 'bra-github', 'twitter-black', 'bra-blogger',  'bra-reddit', 'bra-instagram', 'youtube', 'medium', 'telegram-black']
-								li
-									a(href='' target='_blank')
-										img(src=('img/' + val + '.svg') alt='')
-					.contacts-footer__bottom
-						.copyright &copy; 2019 Exchange2.net
+				.copyright-mobile &copy; 2019 Exchange2.net
+			include ./../parts/main-footer.pug
+	include ./../translate.pug
+
+
+block footer
+	+footer({showMouse: true, initClass: 'white'})

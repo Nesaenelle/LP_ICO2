@@ -1,37 +1,37 @@
 header
-	a.logo(href='index.html#home' data-navigation-link='1')
+	a.logo(href='index.html')
 		img(src='img/logo.svg')
 	ul.header-menu.center
 		li.header-menu-item
-			a(href='secure_wallet.html') Secure Wallet
+			a(href='secure_wallet.html' data-translate="secure_wallet")
 		li.header-menu-item
-			a(href='exchange.html') Exchange
+			a(href='exchange.html' data-translate="exchange")
 		li.header-menu-item
-			a(href='margin_trading.html') Margin trading
+			a(href='margin_trading.html' data-translate="margin_trading")
 		li.header-menu-item
 			.header-menu-item__dots ...
-			ul
+			ul.submenu
 				li
-					a(href='news.html') News
+					a(href='news.html' data-translate="news")
 				li
-					a(href='support.html') Support
+					a(href='support.html' data-translate="support")
 				li
 					a(href='faq.html') FAQ
 				li
-					a(href='knownladge.html') Knownladge Base
+					a(href='knownladge.html' data-translate="knownladge_base")
 	ul.header-menu.right
 		li.header-menu-item
-			a(href='login.php' target="_blank") Log in
+			a(href='login.php' target="_blank" data-translate='login') Log in
 		li.header-menu-item
-			a(href='signup.php' target="_blank") Sign up
-		li.header-menu-item
-			.language-value Eng
-			ul.language-list
-				li Eng
-				li Rus
-				li 简体
+			a(href='signup.php' target="_blank" data-translate='signup') Sign up
+		li.header-menu-item(data-language)
+			.language-value(data-language-value) Eng
+			ul.language-list(data-language-list)
+				li(data-language-item="eng" class="active") Eng
+				li(data-language-item="ru") Rus
+				li(data-language-item="cn") 简体
 	.header-create-platform
-		a(href='#' data-navigation-link='5') Create Trading Platform
+		a(href='#' data-translate="create_trading_platform")
 	.burger(data-menu='')
 		span.burger__line
 		span.burger__line
@@ -40,22 +40,22 @@ header
 		.dropdown-menu__close(data-menu-dropdown-close='')
 		ul.header-menu
 			li.header-menu-item()
-				a(href='secure_wallet.html') Secure Wallet
+				a(href='secure_wallet.html' data-translate="secure_wallet")
 			li.header-menu-item()
-				a(href='exchange.html') Exchange
+				a(href='exchange.html' data-translate="exchange")
 			li.header-menu-item()
-				a(href='margin_trading.html') Margin trading
+				a(href='margin_trading.html' data-translate="margin_trading")
 			li.header-menu-item
-				a(href='news.html') News
+				a(href='news.html' data-translate="news")
 			li.header-menu-item
-				a(href='support.html') Support
+				a(href='support.html' data-translate="support")
 			li.header-menu-item
 				a(href='faq.html') FAQ
 			li.header-menu-item
-				a(href='knownladge.html') Knownladge Base
+				a(href='knownladge.html' data-translate="knownladge_base")
 		
-		ul.language
-			li.active Eng
-			li Ru
-			li 简体
+		ul.language(data-language)
+			li.active(data-language-item="eng") Eng
+			li(data-language-item="ru") Ru
+			li(data-language-item="cn") 简体
 		button.btn Create Your Account

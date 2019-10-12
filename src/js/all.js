@@ -8,6 +8,7 @@ import Navigatioin from './navigation';
 import Parallax from './parallax';
 import Menu from './menu';
 import Swipe from './swipe';
+import Translate from './translate';
 
 
 const navigation = new Navigatioin();
@@ -15,6 +16,7 @@ const roadmap = new Roadmap();
 const parallax = new Parallax();
 const menu = new Menu();
 const swipe = new Swipe();
+const translate = new Translate();
 
 // NES_API.add('animation', {
 //     constructor: function () {

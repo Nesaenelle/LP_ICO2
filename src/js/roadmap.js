@@ -56,25 +56,6 @@ export default class Roadmap {
                 }});
         }
 
-        // if(jQuery('.team-section .scroller').length) {
-
-        //     jQuery('.team-section .scroller').swipe({
-        //         swipeStatus: function (event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
-        //             if (phase == "end") {
-        //                 var roadmap__timeline = jQuery('.team-section .scroller');
-        //                 var width = window.innerWidth;
-        //                 var scrollLeft = roadmap__timeline[0].scrollLeft;
-
-        //                 if (direction == 'left') {
-        //                         roadmap__timeline.animate({scrollLeft: scrollLeft + width}, 500);
-        //                 }
-        //                 if (direction == 'right') {
-        //                     roadmap__timeline.animate({scrollLeft: scrollLeft - width}, 500);
-        //                 }
-        //             }
-        //         }});
-        // }
-
         $('.roadmap__timeline').on('scroll', function() {
             if($(this).is(':visible')) {
                 var procent = (this.scrollLeft/(this.scrollWidth - window.innerWidth) ) * 100;

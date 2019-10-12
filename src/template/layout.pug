@@ -12,13 +12,14 @@ head
 body
 	include  parts/header.pug
 	
-	main(class=htmlWebpackPlugin.options.page + '-page')
-		block content
-		.overlay
+	//- main(class=htmlWebpackPlugin.options.page + '-page')
+	block content
+		//- .overlay
 		
-	include  parts/footer.pug
+	block footer
+	//- include  parts/footer.pug
 
-	block modals
+	//- block modals
 
 	//- include parts/modals.pug
 
