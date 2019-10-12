@@ -379,6 +379,10 @@ a {
 
                 .about__item_text {
                     min-width: 420px;
+                    margin-top: 10px;
+                    @media screen and (max-width: 980px) {
+                        margin-top: 0;
+                    }
                 }
             }
 
@@ -426,8 +430,15 @@ a {
                 line-height: 24px
             }
 
+            &:hover {
+                .about__item_img {
+                    transform: scale(1.03);
+                }
+            }
+
             &_img {
                 position: relative;
+                transition: 0.1s;
 
                 span {
                     position: absolute;

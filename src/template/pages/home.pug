@@ -37,32 +37,23 @@ block content
 					.secondary-title(data-translate="subtitle1")
 					.slick-slider
 						.slick-slider__item
-							.slick-slider__item_text
-								span CREATE 
-								span YOUR OWN CRYPTO
-								span EXCHANGE PLATFORM
+							.slick-slider__item_text(data-translate="slider_text1")
 							.slick-slider__item_img
 								.slick-slider__item_img_bg(style='background: url(img/chains.jpg)')
-							.slick-slider__item_descr Everyone can create his own cryptocurrency exchange platform in 30 minutes.
-							a.slick-slider__item_link(href='') read
+							.slick-slider__item_descr(data-translate="slider_descr1")
+							a.slick-slider__item_link(href='' data-translate="read")
 						.slick-slider__item
-							.slick-slider__item_text
-								span BITCOIN
-								span IS FALLING
+							.slick-slider__item_text(data-translate="slider_text2")
 							.slick-slider__item_img
 								.slick-slider__item_img_bg(style='background: url(img/chains.jpg)')
-							.slick-slider__item_descr
-								| Why bitcoin and other cryptocurrencies are falling. Opinions of representatives of the industry.
-							a.slick-slider__item_link(href='') read
+							.slick-slider__item_descr(data-translate="slider_descr2")
+							a.slick-slider__item_link(href='' data-translate="read")
 						.slick-slider__item
-							.slick-slider__item_text
-								span BITCOIN
-								span IS FALLING
+							.slick-slider__item_text(data-translate="slider_text2")
 							.slick-slider__item_img
 								.slick-slider__item_img_bg(style='background: url(img/chains.jpg)')
-							.slick-slider__item_descr
-								| Why bitcoin and other cryptocurrencies are falling. Opinions of representatives of the industry.
-							a.slick-slider__item_link(href='') read
+							.slick-slider__item_descr(data-translate="slider_descr2")
+							a.slick-slider__item_link(href='' data-translate="read")
 		section#about.about-section(data-swipe='')
 			.container
 				.main-title
@@ -71,28 +62,19 @@ block content
 				.about-list
 					.about__item.active(data-swipe-item='0')
 						.about__item_img
-							span Vestibulum rutrum quam vitae fringilla tincidunt.
+							span(data-translate="about_img_text1")
 							.about__item_img_bg(style='background: url(img/chains.jpg)')
-						.about__item_text
-							| 98% of all funds are stored offline. Our trading platform is a network of secure protected microservices written in Golang.
+						.about__item_text(data-translate="about_text1")
 					.about__item(data-swipe-item='1')
 						.about__item_img
-							span Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. 
+							span(data-translate="about_img_text2")
 							.about__item_img_bg(style='background: url(img/chains.jpg)')
-						.about__item_text
-							| Each trading pair is a dedicated microservice written in go that is capable to run more than a million transactions per a second. We use in-memory storage to store all operations and our own data storage system to handle fast trading operations.
+						.about__item_text(data-translate="about_text2")
 					.about__item(data-swipe-item='2')
 						.about__item_img
-							span
-								| Cras quis nulla 
-								br
-								| commodo, aliquam 
-								br
-								| lectus sed, blandit 
-								br
-								| augue.
+							span(data-translate="about_img_text3")
 							.about__item_img_bg(style='background: url(img/bitcoin.jpeg)')
-						.about__item_text Everyone can create his own cryptocurrency exchange platform in 30 minutes.
+						.about__item_text(data-translate="about_text3")
 				.swipe-indicator
 					span.active
 					span
@@ -110,42 +92,32 @@ block content
 				.roadmap__timeline(data-roadmap-timeline='1')
 					.container
 						.roadmap__timeline_item(style='width: 20%')
-							.roadmap__timeline_text
-								| Start of development 
-								br
-								| Exchange #2
-							.roadmap__timeline_month(data-roadmap-month='march-2019') MARCH
+							.roadmap__timeline_text(data-translate="roadmap_text1")
+							.roadmap__timeline_month(data-roadmap-month='march-2019')
+								span(data-translate="march")
 								.roadmap__timeline_month_line
 						.roadmap__timeline_item(style='width: 50%')
-							.roadmap__timeline_text First introduction to the public Interviewing potential users
-							.roadmap__timeline_month(data-roadmap-month='june-2019') JUNE
+							.roadmap__timeline_text(data-translate="roadmap_text2")
+							.roadmap__timeline_month(data-roadmap-month='june-2019')
+								span(data-translate="june")
 								.roadmap__timeline_month_line
 						.roadmap__timeline_item(style='width: 20%')
-							.roadmap__timeline_text 
-								| Запуск онлайн кошелька для 
-								<br> 
-								| криптовалют 
-							.roadmap__timeline_month(data-roadmap-month='november-2019') NOVEMBER
+							.roadmap__timeline_text(data-translate="roadmap_text3")
+							.roadmap__timeline_month(data-roadmap-month='november-2019')
+								span(data-translate="november")
 								.roadmap__timeline_month_line
 					.roadmap__timeline_line
 				.roadmap__timeline(data-roadmap-timeline='2')
 					.container
 						.roadmap__timeline_item(style='width: 40%')
-							.roadmap__timeline_text
-								| Старт работы 
-								<br>
-								| криптовалютной биржи
-							.roadmap__timeline_month(data-roadmap-month='march-2020') JANUARY
+							.roadmap__timeline_text(data-translate="roadmap_text4")
+							.roadmap__timeline_month(data-roadmap-month='march-2020')
+								span(data-translate="january")
 								.roadmap__timeline_month_line
 						.roadmap__timeline_item(style='width: 25%')
-							.roadmap__timeline_text
-								| Начало работы с фиатными 
-								<br>
-								| валютами на 
-								<br>
-								| криптовалютной биржеy;
+							.roadmap__timeline_text(data-translate="roadmap_text5")
 							.roadmap__timeline_month(data-roadmap-month='july-2020')
-								| JULY
+								span(data-translate="july")
 								.roadmap__timeline_month_line
 					.roadmap__timeline_line
 			.roadmap-indicator
@@ -159,9 +131,9 @@ block content
 				.partners-list
 					each val in [1,2,3,4,5,6]
 						.partners-list__item
-							img(src='' alt='')
-							.partners-list__item__text
-								| The monkey-rope is found in all whalers; but it was only in the Pequod that the monkey and his holder were ever tied together.
+							a(href="" target="_blank")
+								img(src='' alt='')
+							.partners-list__item__text(data-translate=('partners_text' + val))
 		section#contact.contacts-section
 			.container
 				.main-title
@@ -169,9 +141,9 @@ block content
 					.main-title__shadow(data-paralax='30' data-translate="contacts")
 				.contacts-list
 					each val in ['facebook-black', 'twitter-black', 'telegram-black', 'envelope']
-						.contacts-list__item
+						a(href="" target="_blank" class="contacts-list__item")
 							img(src=('img/' + val + '.svg') alt='')
-							.contacts-list__item__text Type something
+							.contacts-list__item__text(data-translate="type_something")
 				.copyright-mobile &copy; 2019 Exchange2.net
 			include ./../parts/main-footer.pug
 	include ./../translate.pug
